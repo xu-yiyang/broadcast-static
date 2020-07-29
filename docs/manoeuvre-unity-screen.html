@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1,maximum-scale=2,minimum-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="plugins/DataTables-1.10.12/media/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="src/css/main.min.css">
+	<!-- 加载百度地图 -->
+	<!-- <script src="http://api.map.baidu.com/api?v=2.0&ak=Pg78EjHlM1Ma0Bs5gZwkmgrQ"></script> -->
+	<!-- 图标本地链接 -->
+	<!-- <link rel="stylesheet" href="./iconfont/iconfont.css"> -->
+	<!-- 图标在线链接 -->
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_484596_zku8231edwunb3xr.css">
+</head>
+<body>
+<div class="gb-screen scroll">
+	<div class="gb-screen-tit">
+		<h1>浙江省应急广播系统平台</h1>
+		<!-- 消息滚动 -->
+		<div class="gb-marquee">
+			<marquee behavior="" direction="" align="absmiddle" onmouseover=stop() onmouseout=start()>
+				<a href="##">
+					<i class="iconfont icon-guangbo i"></i>
+					<em class="i">国家应急平台消息国家应急平台消息国家应急平台消息</em>
+				</a>
+				<a href="##">
+					<i class="iconfont icon-guangbo i"></i>
+					<em class="i">国家应急平台消息国家应急平台消息国家应急平台消息</em>
+				</a>
+			</marquee>
+		</div>
+	</div>
+	<div class="gb-screen-main">
+		<div class="gb-screen-chart">
+			<div class="chart-body">
+				<label class="gb-screen-lab">单一事件</label>
+				<div class="block gb-charts-table">
+					<h4>
+					 	<button class="layui-btn layui-btn-danger">杭州西湖区雷暴红色警报消息播发统计</button>
+					 	<span class="j-table-chart-tab">
+					 		<em class="list"><i class="iconfont icon-liebiao"></i>列表</em>
+					 		<em class="cur chart"><i class="iconfont icon-zhexian"></i>折线图</em>
+					 	</span>
+				 	</h4>
+				 	<div class="gb-table-chart-tab">
+				 		<div class="gb-ctab" id="table-main" style="display: none;">
+							<div class="tablecont">
+							    <table class="table-main display" cellspacing="0" width="100%">
+							        <thead>
+								        <tr>
+								            <th>区域名</th>
+								            <th>传输覆盖平台资源名</th>
+								            <th>接受回执</th>
+								            <th>播发反馈</th>
+								            <th>接受回执时间</th>
+								            <th>播发反馈时间</th>
+								        </tr>
+							        </thead>
+							        <tfoot>
+								        <tr>
+								            <th></th>
+								            <th></th>
+								            <th></th>
+								            <th></th>
+								            <th></th>
+								            <th></th>
+								        </tr>
+							        </tfoot>
+							        <tbody>
+							        	<tr>
+							        		<td>区域名区域名1</td>
+							        		<td>传输覆盖平台资源名1</td>
+							        		<td>接受回执接受回执1</td>
+							        		<td>播发反馈播发反馈1</td>
+							        		<td>2017-09-08  18:10:20</td>
+							        		<td>2017-09-08  18:10:20</td>
+							        	</tr>
+							        	<tr>
+							        		<td>区域名区域名2</td>
+							        		<td>传输覆盖平台资源名2</td>
+							        		<td>接受回执接受回执2</td>
+							        		<td>播发反馈播发反馈2</td>
+							        		<td>2017-09-08  18:10:20</td>
+							        		<td>2017-09-08  18:10:20</td>
+							        	</tr>
+							        	<tr>
+							        		<td>区域名区域名3</td>
+							        		<td>传输覆盖平台资源名3</td>
+							        		<td>接受回执接受回执3</td>
+							        		<td>播发反馈播发反馈3</td>
+							        		<td>2017-09-08  18:10:20</td>
+							        		<td>2017-09-08  18:10:20</td>
+							        	</tr>
+							        	<tr>
+							        		<td>区域名区域名4</td>
+							        		<td>传输覆盖平台资源名4</td>
+							        		<td>接受回执接受回执4</td>
+							        		<td>播发反馈播发反馈4</td>
+							        		<td>2017-09-08  18:10:20</td>
+							        		<td>2017-09-08  18:10:20</td>
+							        	</tr>
+							        	<tr>
+							        		<td>区域名区域名5</td>
+							        		<td>传输覆盖平台资源名5</td>
+							        		<td>接受回执接受回执5</td>
+							        		<td>播发反馈播发反馈5</td>
+							        		<td>2017-09-08  18:10:20</td>
+							        		<td>2017-09-08  18:10:20</td>
+							        	</tr>
+							        </tbody>
+							    </table>
+							</div>
+						</div>
+					 	<div class="gb-chart-incident-line gb-chart-incident">
+							<div class="gb-chart-item border-bottom">
+								<div class="gb-chart gb-line" id="line-population"></div>
+							</div>
+							<div class="gb-chart-item">
+								<div class="gb-chart gb-line" id="line-district"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="gb-screen-map">
+			<div class="map-body gb-all-incident">
+				<!-- 地图 -->
+				<div id="unity-map" class="gb-map"></div>
+				<div class="gb-map-zoom">
+					<span class="cur j-zoom-province"><em>省</em></span>
+					<span class="j-zoom-city"><em>市</em></span>
+					<span class="j-zoom-county"><em>县</em></span>
+				</div>
+				<div class="gb-map-legend">
+					<span class="j-legend-succeed">
+						<i></i>
+						<em>已覆盖</em>
+					</span>
+					<span class="j-legend-process">
+						<i></i>
+						<em>未完全覆盖</em>
+					</span>
+					<span class="j-legend-failure">
+						<i></i>
+						<em>未覆盖</em>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="http://api.map.baidu.com/api?v=2.0&ak=Pg78EjHlM1Ma0Bs5gZwkmgrQ"></script>
+<script src="plugins/jquery-1.11.3.min.js"></script>
+<!-- 表格插件 -->
+<script src="plugins/DataTables-1.10.12/media/js/jquery.dataTables.min.js"></script>
+<!-- echarts插件 -->
+<script src="plugins/echarts.min.js"></script>
+<!-- echarts和百度地图结合插件 -->
+<script src="plugins/bmap.min.js"></script>
+<script src="plugins/AreaRestriction_min.js"></script>
+<!-- layui插件 -->
+<script src="plugins/layui/layui.js"></script>
+<!-- 打包过的主要js -->
+<script src="src/js/main.min.js"></script>
+<script>
+// 覆盖人口
+populationChart = echarts.init(document.getElementById('line-population'));
+populationOption = {
+    title: {
+        text: '时间',
+        textStyle:{
+        	color:'#7c8491',
+        	fontSize:13,
+        },
+        bottom:'4%',
+        left:"1%"
+    },
+    tooltip: {
+        // trigger: 'axis',
+        formatter: function (params, ticket, callback) {
+    		var html='<div class="gb-line-formatter gb-screen-formatter-red">'+params.seriesName+'<br /><em>'+params.data.percent+'</em>%，<em>'+params.data.value+'</em>万人</div>';
+		    // 固定在顶部
+		    return html;
+		},
+    	position: function (point, params, dom, rect, size) {
+		    // 固定在顶部
+		    return {left:point[0]-$(dom).width()/2, top:point[1]-$(dom).height()-10};
+		},
+        backgroundColor: 'rgba(255,255,255,0)',
+        axisPointer: {
+            type: 'line',
+	        lineStyle: {
+	            type: 'dashed',
+	            color:'#6e6fe6'
+	        },
+        },
+    },
+    grid: {
+    	top:'1%',
+        left: '3%',
+        right: '2%',
+        bottom:"18%",
+        containLabel: true
+    },
+    // 区域缩放
+    dataZoom: [
+        {
+            start: 10,
+            end: 90,
+            backgroundColor:"#425067",
+            fillerColor:"#949eff",
+            borderColor:"none",
+            handleIcon: handleIcon,
+    		handleSize: '60%',
+    		handleStyle: {
+	            color: '#c7ccff',
+	        },
+	        textStyle:{
+	        	color:'#7c8491'
+	        },
+			showDataShadow:false,
+			height: 22,
+        },
+        {
+            type: 'inside',
+        }
+    ],
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        //坐标轴名称
+    	name: '覆盖人口',
+        nameGap: 30,
+        // nameRotate:0,
+        nameLocation: "center",
+        nameTextStyle:{
+        	color:"#7c8491",
+        },
+        data: ['0', '5:00', '5:20', '5:40', '6:00', '6:20', '6:40', '6:45', '6:50', '6:55', '7:40', '8:40'],
+        splitLine: { //设置X轴的网格
+            show: true,
+            interval: 'auto',
+			lineStyle:{
+				color: '#364154'//网格线颜色
+			}
+        },
+        //刻度横线
+        axisTick: {
+            show: false
+        },
+        //刻度字样式
+        axisLabel: {
+            textStyle: {
+                color: '#7c8491',
+                fontSize:'12',
+                align: 'center'
+            },
+        },
+        //刻度线
+        axisLine: {
+            lineStyle: {
+                color:"#364154"//刻度线颜色
+            }
+        },
+    },
+    yAxis: {
+        //坐标轴名称
+    	name: '单位：万人',
+        nameGap: 40,
+        // nameRotate:0,
+        nameLocation: "middle",
+        nameTextStyle:{
+        	color:"#7c8491",
+        },
+        //刻度横线
+        axisTick: {
+            show: false
+        },
+        //刻度字样式
+        axisLabel: {
+            textStyle: {
+                color: '#7c8491',
+                fontSize:'12',
+            }
+        },
+        //刻度线
+        axisLine: {
+            lineStyle: {
+                color:"#364154"//刻度线颜色
+            }
+        },
+        //网格线
+        splitLine:{
+			lineStyle:{
+				color: '#364154'//网格线颜色
+			}
+		},
+    },
+    series: [{
+    	name:'覆盖人口',
+        type: 'line',
+        symbol:'image://../src/images/icon-line-formatter.png',
+        // showSymbol:false,
+        symbolSize:'15',
+        data: [
+        	{value:120,percent:15},
+        	{value:130,percent:15},
+        	{value:140,percent:15},
+        	{value:150,percent:15},
+        	{value:160,percent:15},
+        	{value:160,percent:15},
+        	{value:160,percent:15},
+        	{value:160,percent:15},
+        	{value:120,percent:15},
+        	{value:180,percent:15},
+        	{value:160,percent:15},
+        	{value:260,percent:15},
+        ],
+        itemStyle:{
+        	normal:{
+        		color:"#949eff"
+        	}
+        }
+    }]
+};
+populationChart.setOption(populationOption);
+
+// 覆盖区域
+districtChart = echarts.init(document.getElementById('line-district'));
+districtOption = {
+    title: {
+        text: '时间',
+        textStyle:{
+        	color:'#7c8491',
+        	fontSize:13,
+        },
+        bottom:'4%',
+        left:"1%"
+    },
+    tooltip: {
+        // trigger: 'axis',
+        formatter: function (params, ticket, callback) {
+    		var html='<div class="gb-line-formatter gb-screen-formatter-yellow">'+params.seriesName+'<br /><em>'+params.data.percent+'</em>%，<em>'+params.data.value+'</em>万人</div>';
+		    // 固定在顶部
+		    return html;
+		},
+    	position: function (point, params, dom, rect, size) {
+		    // 固定在顶部
+		    return {left:point[0]-$(dom).width()/2, top:point[1]-$(dom).height()-10};
+		},
+        backgroundColor: 'rgba(255,255,255,0)',
+        axisPointer: {
+            type: 'line',
+	        lineStyle: {
+	            type: 'dashed',
+	            color:'#6e6fe6'
+	        },
+        },
+    },
+    grid: {
+    	top:'1%',
+        left: '3%',
+        right: '2%',
+        bottom:"18%",
+        containLabel: true
+    },
+    // 区域缩放
+    dataZoom: [
+        {
+            start: 10,
+            end: 90,
+            backgroundColor:"#425067",
+            fillerColor:"#54cd7f",
+            borderColor:"none",
+            handleIcon: handleIcon,
+    		handleSize: '60%',
+    		handleStyle: {
+	            color: '#abf1c4',
+	        },
+	        textStyle:{
+	        	color:'#7c8491'
+	        },
+			showDataShadow:false,
+			height: 22,
+        },
+        {
+            type: 'inside',
+        }
+    ],
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        //坐标轴名称
+    	name: '覆盖区域',
+        nameGap: 30,
+        // nameRotate:0,
+        nameLocation: "center",
+        nameTextStyle:{
+        	color:"#7c8491",
+        },
+        data: ['0', '5:00', '5:20', '5:40', '6:00', '6:20', '6:40', '6:45', '6:50', '6:55', '7:40', '8:40'],
+        splitLine: { //设置X轴的网格
+            show: true,
+            interval: 'auto',
+			lineStyle:{
+				color: '#364154'//网格线颜色
+			}
+        },
+        //刻度横线
+        axisTick: {
+            show: false
+        },
+        //刻度字样式
+        axisLabel: {
+            textStyle: {
+                color: '#7c8491',
+                fontSize:'12',
+                align: 'center'
+            },
+        },
+        //刻度线
+        axisLine: {
+            lineStyle: {
+                color:"#364154"//刻度线颜色
+            }
+        },
+    },
+    yAxis: {
+        //坐标轴名称
+    	name: '单位：平方公里',
+        nameGap: 40,
+        // nameRotate:0,
+        nameLocation: "middle",
+        nameTextStyle:{
+        	color:"#7c8491",
+        },
+        //刻度横线
+        axisTick: {
+            show: false
+        },
+        //刻度字样式
+        axisLabel: {
+            textStyle: {
+                color: '#7c8491',
+                fontSize:'12',
+            }
+        },
+        //刻度线
+        axisLine: {
+            lineStyle: {
+                color:"#364154"//刻度线颜色
+            }
+        },
+        //网格线
+        splitLine:{
+			lineStyle:{
+				color: '#364154'//网格线颜色
+			}
+		},
+    },
+    series: [{
+    	name:'覆盖人口',
+        type: 'line',
+        symbol:'image://../src/images/icon-taskNumformatter.png',
+        // showSymbol:false,
+        symbolSize:'15',
+        data: [
+        	{value:120,percent:15},
+        	{value:130,percent:15},
+        	{value:140,percent:15},
+        	{value:150,percent:15},
+        	{value:160,percent:15},
+        	{value:160,percent:15},
+        	{value:160,percent:15},
+        	{value:160,percent:15},
+        	{value:120,percent:15},
+        	{value:180,percent:15},
+        	{value:160,percent:15},
+        	{value:260,percent:15},
+        ],
+        itemStyle:{
+        	normal:{
+        		color:"#54cd7f"
+        	}
+        }
+    }]
+};
+districtChart.setOption(districtOption);
+
+
+// 地图
+unitybmap = new BMap.Map("unity-map"); // 创建地图实例，禁止点击地图底图
+unitybmap.setMapStyle({
+	styleJson: [{
+		"featureType": "water",
+		"elementType": "all",
+		"stylers": {
+			"color": "#021019"
+		}
+	}, {
+		"featureType": "highway",
+		"elementType": "geometry.fill",
+		"stylers": {
+			"color": "#000000"
+		}
+	}, {
+		"featureType": "highway",
+		"elementType": "geometry.stroke",
+		"stylers": {
+			"color": "#147a92"
+		}
+	}, {
+		"featureType": "arterial",
+		"elementType": "geometry.fill",
+		"stylers": {
+			"color": "#000000"
+		}
+	}, {
+		"featureType": "arterial",
+		"elementType": "geometry.stroke",
+		"stylers": {
+			"color": "#0b3d51"
+		}
+	}, {
+		"featureType": "local",
+		"elementType": "geometry",
+		"stylers": {
+			"color": "#000000"
+		}
+	}, {
+		"featureType": "land",
+		"elementType": "all",
+		"stylers": {
+			"color": "#08304b"
+		}
+	}, {
+		"featureType": "railway",
+		"elementType": "geometry.fill",
+		"stylers": {
+			"color": "#000000"
+		}
+	}, {
+		"featureType": "railway",
+		"elementType": "geometry.stroke",
+		"stylers": {
+			"color": "#08304b"
+		}
+	}, {
+		"featureType": "subway",
+		"elementType": "geometry",
+		"stylers": {
+			"lightness": -70
+		}
+	}, {
+		"featureType": "building",
+		"elementType": "geometry.fill",
+		"stylers": {
+			"color": "#000000"
+		}
+	}, {
+		"featureType": "all",
+		"elementType": "labels.text.fill",
+		"stylers": {
+			"color": "#857f7f"
+		}
+	}, {
+		"featureType": "all",
+		"elementType": "labels.text.stroke",
+		"stylers": {
+			"color": "#000000"
+		}
+	}, {
+		"featureType": "building",
+		"elementType": "geometry",
+		"stylers": {
+			"color": "#022338"
+		}
+	}, {
+		"featureType": "green",
+		"elementType": "geometry",
+		"stylers": {
+			"color": "#062032"
+		}
+	}, {
+		"featureType": "boundary",
+		"elementType": "all",
+		"stylers": {
+			"color": "#1e1c1c"
+		}
+	}, {
+		"featureType": "manmade",
+		"elementType": "all",
+		"stylers": {
+			"color": "#022338"
+		}
+	}]
+});
+unitybmap.centerAndZoom(new BMap.Point(120.166085,30.279006), 8);
+unitybmap.enableScrollWheelZoom(true);
+blist = [];
+districtLoading = 0;
+setTimeout(function () {
+    // 地图划分区域地点
+    addDistrict("杭州",unitybmap,"#ff5b57");
+    addDistrict("宁波",unitybmap,"#ff5b57");
+    addDistrict("嘉兴",unitybmap,"#fada00");
+    addDistrict("绍兴",unitybmap,"#14ae8f");
+    addDistrict("台州",unitybmap,"#14ae8f");
+    addDistrict("温州",unitybmap,"#ff5b57");
+    // #ff5b57代表未覆盖，#14ae8f代表已覆盖，#fada00代表未完全覆盖
+}, 100);
+
+// 表格
+
+var table = $('#table-main table').DataTable({
+	"dom": '<"top"f >rt<"bottom"ilp><"clear">', //dom定位
+	"dom": 'tiprl', //自定义显示项
+	//"dom":'<"domab"f>',
+	// "scrollY": "94%",//dt高度
+	// "scrollX": true
+	"lengthMenu": [20,30,40,50], //每页显示条数设置
+	"lengthChange": true, //是否允许用户自定义显示数量
+	"bPaginate": true, //翻页功能
+	"bFilter": true, //列筛序功能
+	"searching": true, //本地搜索
+	//"ordering": true, //排序功能
+	"order": [4, "asc"], //desc降序
+	"Info": true, //页脚信息
+	// "pagingType": "full_numbers",
+	"oLanguage":oLanguage ,
+	"columnDefs": [
+		{
+			orderable: false,
+
+			targets: 0
+		},{
+			orderable: false,
+
+			targets: 1
+		}, {
+			orderable: false,
+
+			targets: 2
+		}, {
+			orderable: false,
+
+			targets: 3
+		}
+	], //设置某列禁止排序
+
+	initComplete: function() { //列筛选
+		var api = this.api();
+		api.columns().indexes().flatten().each(function(i) {
+			if (i == 3) { //删除第一列与第二列的筛选框
+				var column = api.column(i);
+				var $span = $('<span class="addselect"><i class="iconfont icon-arrow-bottom"></i></span>').appendTo($(column.header()))
+				var select = $('<select><option value="">全部</option></select>')
+					.appendTo($(column.header()))
+					.on('change', function(evt) {
+						evt.stopPropagation();
+						var val = $.fn.dataTable.util.escapeRegex(
+							$(this).val()
+						);
+						column
+							.search(val ? '^' + val + '$' : '', true, false)
+							.draw();
+					});
+				column.data().unique().sort().each(function(d, j) {
+					function delHtmlTag(str) {
+						return str.replace(/<[^>]+>/g, ""); //去掉html标签
+					}
+
+					d = delHtmlTag(d)
+					select.append('<option value="' + d + '">' + d + '</option>')
+					$span.append(select)
+				});
+
+			}
+		});
+	},
+	fnDrawCallback: function(table) {
+		jumpPage($("#table-main"))
+    },
+})
+//自定义显示数量
+$('.gb-ctab').each(function(){
+	tabot($(this))
+})
+
+
+</script>
+</body>
+</html>

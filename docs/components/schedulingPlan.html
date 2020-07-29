@@ -1,0 +1,191 @@
+<div class="gb-table">
+	<div class="taskmsg" id="table-mainthr">
+		<div class="tkrange">
+			<div class="tklay">
+				<span class="talay-word"><i class="iconfont icon-rili"></i>发布时间</span>
+				<div class="layui-input-inline">
+			        <input type="text" class="layui-input" id="daterg" placeholder="选择时间范围">
+			        <span class="tocho iconfont icon-shijian" id="tochobtn"></span> 
+		    	</div>
+		    	<a href="#/newSchedulingPlan" class="add_tab newtk-btn" url="components/newSchedulingPlan.html" name="新建调度方案">新建调度方案</a>
+			</div>
+			<div class="tksearch">
+				<input type="text" value="请输入任务消息名称，发布部门，负责人" onfocus="if(this.value==defaultValue){this.value = '';this.style.color='#333'}" onblur="if(!value){this.value = defaultValue;this.style.color='#ccc';}" class="dsearch" aria-controls="table-main"/>
+				<span class="tksrh-btn"><i class="iconfont icon-sousuo"></i></span>
+			</div>
+		</div>
+		<div class="thetab">
+			<div class="tablecont">
+			    <table class="table-main display" cellspacing="0" width="100%">
+			        <thead>
+				        <tr>
+				        	<th></th>
+				            <th>序号</th>
+				            <th>事件类别</th>
+				            <th>事件等级</th>
+				            <th>调度/事件名称</th>
+				            <th>创建部门</th>
+				            <th>创建人</th>
+				            <th>编辑时间</th>
+				            <th>操作</th>
+				            <th></th>
+				        </tr>
+			        </thead>
+			        <tfoot>
+				        <tr>
+							<th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				        </tr>
+			        </tfoot>
+			         <tbody>
+			        	<tr>
+			        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_1' /><label for='check_1'></label></div></td>
+			        		<td><span class='tabnumb'>1</span></td>
+			        		<td>事件类别</td>
+			        		<td><span class='rankimg' vel='红色'><img src='src/images/rank-red.png'/></span></td>
+			        		<td><a href='#/viewSchedulingPlan' url='components/viewSchedulingPlan.html' class='view-cont add_tab' name='查看调度方案'>杭州市1级地震</a></td>
+			        		<td>杭州市西湖区应急广播中心</td>
+			        		<td>橙子</td>
+			        		<td>2017-09-18  18:10:20</td>
+			        		<td><a href='#/editSchedulingPlan' url='components/editSchedulingPlan.html' class='editbtn add_tab' name='编辑调度方案'><i class='iconfont icon-bianji'></i>编辑</a></td>
+			        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+			        	</tr>
+			        	<tr>
+			        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_2' /><label for='check_2'></label></div></td>
+			        		<td><span class='tabnumb'>2</span></td>
+			        		<td>事件类别</td>
+			        		<td><span class='rankimg' vel='蓝色'><img src='src/images/rank-blue.png'/></span></td>
+			        		<td><a href='#/viewSchedulingPlan' url='components/viewSchedulingPlan.html' class='view-cont add_tab' name='查看调度方案'>杭州市1级地震</a></td>
+			        		<td>浙江省应急办</td>
+			        		<td>橙子</td>
+			        		<td>2017-09-18  18:10:20</td>
+			        		<td><a href='#/editSchedulingPlan' url='components/editSchedulingPlan.html' class='editbtn add_tab' name='编辑调度方案'><i class='iconfont icon-bianji'></i>编辑</a></td>
+			        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+			        	</tr>
+			        	<tr>
+			        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_3' /><label for='check_3'></label></div></td>
+			        		<td><span class='tabnumb'>3</span></td>
+			        		<td>事件类别</td>
+			        		<td><span class='rankimg' vel='绿色'><img src='src/images/rank-green.png'/></span></td>
+			        		<td><a href='#/viewSchedulingPlan' url='components/viewSchedulingPlan.html' class='view-cont add_tab' name='查看调度方案'>杭州市1级地震</a></td>
+			        		<td>杭州市西湖区应急广播中心</td>
+			        		<td>橙子</td>
+			        		<td>2017-11-18  18:10:20</td>
+			        		<td><a href='#/editSchedulingPlan' url='components/editSchedulingPlan.html' class='editbtn add_tab' name='编辑调度方案'><i class='iconfont icon-bianji'></i>编辑</a></td>
+			        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+			        	</tr>
+			        	<tr>
+			        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_4' /><label for='check_4'></label></div></td>
+			        		<td><span class='tabnumb'>4</span></td>
+			        		<td>事件类别</td>
+			        		<td><span class='rankimg' vel='橙色'><img src='src/images/rank-orange.png'/></span></td>
+			        		<td><a href='#/viewSchedulingPlan' url='components/viewSchedulingPlan.html' class='view-cont add_tab' name='查看调度方案'>杭州市2级地震</a></td>
+			        		<td>浙江省应急办</td>
+			        		<td>橙子</td>
+			        		<td>2017-09-18  18:10:20</td>
+			        		<td><a href='#/editSchedulingPlan' url='components/editSchedulingPlan.html' class='editbtn add_tab' name='编辑调度方案'><i class='iconfont icon-bianji'></i>编辑</a></td>
+			        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+			        	</tr>
+			        	<tr>
+			        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_5' /><label for='check_5'></label></div></td>
+			        		<td><span class='tabnumb'>5</span></td>
+			        		<td>事件类别事件类别</td>
+			        		<td><span class='rankimg' vel='红色'><img src='src/images/rank-red.png'/></span></td>
+			        		<td><a href='#/viewSchedulingPlan' url='components/viewSchedulingPlan.html' class='view-cont add_tab' name='查看调度方案'>杭州市3级地震</a></td>
+			        		<td>浙江省应急办</td>
+			        		<td>橙子</td>
+			        		<td>2017-09-18  18:10:20</td>
+			        		<td><a href='#/editSchedulingPlan' url='components/editSchedulingPlan.html' class='editbtn add_tab' name='编辑调度方案'><i class='iconfont icon-bianji'></i>编辑</a></td>
+			        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+			        	</tr>
+			        	<tr>
+			        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_6' /><label for='check_6'></label></div></td>
+			        		<td><span class='tabnumb'>6</span></td>
+			        		<td>事件类别</td>
+			        		<td><span class='rankimg' vel='黄色'><img src='src/images/rank-yellow.png'/></span></td>
+			        		<td><a href='#/viewSchedulingPlan' url='components/viewSchedulingPlan.html' class='view-cont add_tab' name='查看调度方案'>杭州市4级地震</a></td>
+			        		<td>杭州市西湖区应急广播中心</td>
+			        		<td>橙子</td>
+			        		<td>2017-09-18  18:10:20</td>
+			        		<td><a href='#/editSchedulingPlan' url='components/editSchedulingPlan.html' class='editbtn add_tab' name='编辑调度方案'><i class='iconfont icon-bianji'></i>编辑</a></td>
+			        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="theche">
+				<div class="tocheck">
+					<input type="checkbox" name="checkall" id="checkAll" />
+					<label for="checkAll">全选</label>
+				</div>
+				<span class="chedel"><i class="iconfont icon-shanchu"></i>删除</span>
+			</div>
+		</div>
+		<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+	</div>
+
+	<div class="choose">
+		<p class="choword">确定删除此任务消息吗？</p>
+		<div class="chobtn">
+			<input type="button" value="删除" class="chopri cho-delete" />
+			<input type="button" value="取消" class="cho-cancel" />
+		</div>
+		<span class="triangle"><em></em></span>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*table*/
+		$(function () {
+           var table = $('#table-mainthr table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,8,9]  //禁止排序
+	               },{ 
+                    	"sType": "html-percent", 
+                       "aTargets": [3]  //指定列号使用自定义排序
+                    }  
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainthr"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       var column = api.column(i);
+                        if (i == 2 || i == 5 || i == 6) { //对第i列进行筛选
+ 							rowScreen(column);
+                        }else if (i==3) { //对第i列进行筛选
+ 							rowLevScreen(column);
+                        }
+                   });
+               }
+			})
+			userDef(table);//table配置--显示数量 搜索 全选 删除  
+       })
+	})
+</script>

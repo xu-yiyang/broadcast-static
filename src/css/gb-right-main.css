@@ -1,0 +1,4 @@
+.gb-right-main{width:100%;height: 100%; padding-left: 230px;transition: .5s all; }
+.gb-right-main .content{position: relative;height: 100%;}
+.gb-main-content{padding-top: 130px;height: 100%;}
+.gb-main-content .gb-main-item{height: 100%;overflow-x: auto;background: #f7f8fa;}

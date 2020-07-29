@@ -1,0 +1,78 @@
+<div class="gb-form">
+	<form class="layui-form" action="">
+		<div class="newform perset">
+			<p class="newform-tit"><i class="iconfont icon-xitongpeizhi2"></i>安全服务系统配置</p>
+			<div class="settingbox">
+				<div class="fortit">
+					<span class="oneitem-tit">安全服务系统配置</span>
+					<span class="toedit"><i class="iconfont icon-bianji"></i>编辑</span>
+				</div>
+				<div class="oneitem-cont">
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>IP地址</p>
+						<div class="tnoneimp">
+							<input type="text" readonly="readonly"/>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>端口</p>
+						<div class="tnoneimp">
+							<input type="text" readonly="readonly"/>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>协议</p>
+						<div class="layui-input-inline">
+					        <select name="type" lay-search="" disabled="disabled"><!-- disabled="disabled" -->
+								<option value="">请选择协议</option>
+								<option value="1">协议一</option>
+								<option value="2">协议二</option>
+								<option value="3">协议三</option>
+					        </select>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="tocreat" id="tosave">
+				<input type="button" value="保存" class="tocreatbtn" />
+			</div>
+			<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		layui.use('form', function(){
+			var form = layui.form;
+			form.render();
+
+			var itbtn = $('<span class="itbtn"></span>');
+			$('.layui-select-title').append(itbtn);
+			$('.gb-form .layui-form-radio').remove();
+		});
+
+		function rsetForm(){
+			layui.use('form', function(){
+				var form = layui.form;
+				form.render();
+
+				var itbtn = $('<span class="itbtn"></span>');
+				$('.layui-select-title').append(itbtn);
+				$('.gb-form .layui-form-radio').remove();
+			});
+		}
+		$('.toedit').click(function(){
+			if($(this).hasClass('disable-edit')){
+				$('.layui-input-inline select').attr("disabled",true);
+				rsetForm();
+			}else{
+				$('.layui-input-inline select').attr("disabled",false);
+				rsetForm();
+			}
+		})
+		$('.tocreatbtn').click(function(){
+			$('.layui-input-inline select').attr("disabled",true);
+			rsetForm();
+		})
+	})
+</script>

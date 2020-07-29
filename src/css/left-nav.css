@@ -1,0 +1,43 @@
+.gb-left-nav{width:230px;background: #252d3a;height: 100%;float: left;transition: .5s all;position: absolute;left: 0px;top: 0px;bottom: 0px;overflow-y: auto;overflow-x: hidden;}
+.gb-logo{display: block;}
+.gb-left-nav-ul li{color: #8c939e;text-align: center;}
+.gb-left-nav-ul li.cur{background: #1b212b;}
+.gb-left-nav-ul li.cur .text{border-left-color: #4579d8;}
+.gb-left-nav-ul li.cur .nav-tit{color: #fff;}
+.gb-left-nav-ul a{display: block;}
+.gb-left-nav-ul em{position: relative;display: inline-block;width: 49%;margin: auto;text-align: left;}
+.gb-left-nav-ul em .layui-badge{position: absolute;left:84%;top: 0px;}
+.gb-left-nav-ul .nav-tit{padding: 20px 0px;border-bottom: 1px solid #384252;}
+.gb-left-nav-ul .nav-tit .text{display: block;border-left:4px solid #252d3a;position: relative;}
+.gb-left-nav-ul .nav-tit .text em i{font-size: 19px;position: absolute;left: -40px;top: 0px;}
+.gb-left-nav-ul .nav-tit .arrow{position: absolute;right: 25px;top: 2px;}
+.gb-left-nav-ul .left-sub-nav{text-align: center;background: #2b3443;display: none;}
+.gb-left-nav-ul .left-sub-nav a{border-bottom: 1px solid #313c4d;padding: 20px 0px;}
+.gb-left-nav-ul .left-sub-nav a.cur{color: #fff;}
+
+/*收起状态*/
+/*.gb-left-nav.gb-packUp{width: 60px;}
+.gb-left-nav.gb-packUp .gb-left-nav-ul strong{display: none;}
+.gb-left-nav.gb-packUp .gb-left-nav-ul em{width: 100%;text-align: center;}
+.gb-left-nav.gb-packUp .gb-left-nav-ul .nav-tit .text em i{position: static;}*/
+.gb-packUp .gb-left-nav{/*left: -230px;*/}
+.gb-packUp .gb-right-main{padding-left:0px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

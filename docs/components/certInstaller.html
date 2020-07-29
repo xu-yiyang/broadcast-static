@@ -1,0 +1,104 @@
+<div class="gb-form">
+	<form class="layui-form" action="">
+		<div class="newform">
+			<p class="newform-tit"><i class="iconfont icon-anzhuangbao"></i>安装证书</p>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit">安装证书</p>
+				</div>
+				<div class="oneitem-cont">
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>CA厂商</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt impcol" value="请输入CA厂商"  onfocus="if(this.value == defaultValue){this.value = '';this.style.color = '#333'}" onblur="if(!value){this.value = defaultValue;this.style.color = '#ccc'}"/>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>设备选择</p>
+						<div class="layui-input-inline">
+							<select name="dispatch" lay-search="">
+								<option value="">请选择安全验证设备型号</option>
+								<option value="1">型号一</option>
+								<option value="2">型号二</option>
+								<option value="3">型号三</option>
+							</select>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>证书ID</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt impcol" value="请输入证书ID"  onfocus="if(this.value == defaultValue){this.value = '';this.style.color = '#333';}" onblur="if(!value){this.value = defaultValue;this.style.color = '#ccc'}"/>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>密码</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt impcol" value="请输入密码"  onfocus="if(this.value == defaultValue){this.value = '';this.style.color = '#333';this.type = 'password'}" onblur="if(!value){this.value = defaultValue;this.style.color = '#ccc';this.type = 'text'}"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tocreat">
+				<input type="button" value="确定安装" class="tocreatbtn" data-type="loading"/>
+				<div class="tomat">
+					<div class="layui-progress layui-progress-big" lay-filter="demo"><!--  lay-showpercent="true" -->
+					  <div class="layui-progress-bar" lay-percent="0%"></div><!--   layui-bg-red -->
+					</div>
+					<p class="forword">安装中...</p>
+				</div>
+			</div>
+			<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+		</div>
+	</form>
+</div>
+
+	
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		layui.use(['form', 'element'], function(){
+		    var element = layui.element //Tab的切换功能，切换事件监听等，需要依赖element模块
+		    ,form = layui.form;
+		    form.render();
+
+		    var itbtn = $('<span class="itbtn"></span>');
+		    $('.layui-select-title').append(itbtn);
+		    $('form .layui-form-radio').remove();
+
+		  
+			//触发事件
+			var active = {
+			    loading: function(othis){
+			      var DISABLED = 'layui-btn-disabled';
+			      if(othis.hasClass(DISABLED)) return;
+			      
+			      //模拟loading
+			      var n = 0,timer = setInterval(function(){
+			        n = n + Math.random()*10|0;  
+			        if(n>100){
+			          n = 100;
+			          clearInterval(timer);
+			          //othis.removeClass(DISABLED);
+			          $('.tocreat .tomat').hide();
+			          $('.tocreatbtn').val('安装成功');
+			        }
+			        element.progress('demo', n+'%');
+			      }, 300+Math.random()*1000);
+			      
+			      othis.addClass(DISABLED);
+			    }
+			};
+		  	
+
+			$('.tocreatbtn').click(function(){
+				$('.tocreat .tomat').show();
+				$('.tocreatbtn').val('确定安装');
+				var othis = $(this), type = $(this).data('type');
+				console.log(othis);
+				active[type] ? active[type].call(this, othis) : '';
+			});
+		});
+	})
+</script>

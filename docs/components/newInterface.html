@@ -1,0 +1,108 @@
+<div class="gb-form">
+	<form class="layui-form" action="">
+		<div class="newform">
+			<p class="newform-tit"><i class="iconfont icon-jiekou"></i>新增接口</p>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit">新增接口</p>
+				</div>
+				<div class="oneitem-cont">
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>接口名称</p>
+						<div class="oneimp">
+							<input type="text"  id="impcontent" class="imptxt" maxlength="20"/>
+							<span class="oneimp-count"><span class="countnew">0</span>/20</span>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>接口类型</p>
+						<div class="layui-input-inline">
+							<select name="dispatch" lay-search="">
+								<option value="">请选择接口所属部门类型</option>
+								<option value="1">上级平台</option>
+								<option value="2">国家应急广播平台</option>
+								<option value="3">下级平台</option>
+								<option value="4">其它部门</option>
+							</select>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>接入端口</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt impcol" value="请输入本平台服务端口"  onfocus="if(this.value == defaultValue){this.value = '';this.style.color = '#333'}" onblur="if(!value){this.value = defaultValue;this.style.color = '#ccc'}"/>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>接入端口</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt impcol" value="请输入对方平台服务端口"  onfocus="if(this.value == defaultValue){this.value = '';this.style.color = '#333'}" onblur="if(!value){this.value = defaultValue;this.style.color = '#ccc'}"/>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>协议</p>
+						<div class="layui-input-inline">
+							<select name="dispatch" lay-search="">
+								<option value="">请选择协议</option>
+								<option value="1">协议一</option>
+								<option value="2">协议二</option>
+							</select>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>密钥</p>
+						<div class="oneimp">
+							<input type="text"  id="secretkey" class="imptxt" maxlength="20"/>
+							<span class="oneimp-count"><span class="countser">0</span>/20</span>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>所属地区</p>
+						<div class="layui-input-inline">
+							<select name="dispatch" lay-search=""> 
+								<option value="">请选择所属地区</option>
+								<option value="1">地区一</option>
+								<option value="2">地区二</option>
+								<option value="3">地区三</option>
+								<option value="4">地区四</option>
+								<option value="5">地区五</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tocreat">
+				<div class="progcreat">
+					<input type="button" value="清空" class="toemptybtn" />
+					<input type="button" value="确定" class="tocreatbtn" />
+				</div>
+			</div>
+			<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+		</div>
+	</form>
+</div>
+
+	
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#secretkey').on('keyup', function() { 
+		    $('.oneimp-count .countser').html($('#secretkey').val().length);  
+		});
+
+		layui.use('form', function(){
+			var form = layui.form;
+			form.render();
+
+			var itbtn = $('<span class="itbtn"></span>');
+			$('.layui-select-title').append(itbtn);
+			$('.gb-form .layui-form-radio').remove();
+			
+		});
+		
+		$('.toemptybtn').click(function(){
+			$('.countser').html('0');
+		})
+	})
+</script>

@@ -1,0 +1,208 @@
+<div class="gb-form gb-viewfile">
+	<form class="layui-form" action="">
+		<div class="newform">
+			<p class="newform-tit"><i class="iconfont icon-iconfontxinjianwenjian"></i>查看任务消息</p>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">01</span><small>*</small>任务/事件名称</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit"><small>*</small>任务消息</p>
+					<div class="tnoneimp">
+						<input type="text" class="imptxt" value="任务消息" readonly="readonly"/>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">02</span><small>*</small>调度方案</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit">选择调度方案</p>
+					<div class="tnoneimp">
+						<input type="text" class="imptxt" value="Scheme one" readonly="readonly"/>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">03</span><small>*</small>事件类型</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit"><small>*</small>事件类型</p>
+					<div class="tnoneimp">
+						<input type="text" class="imptxt" value="Event type one" readonly="readonly"/>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">04</span><small>*</small>消息级别</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit"><small>*</small>消息级别</p>
+					<div class="tnoneimp">
+						<input type="text" class="imptxt" value="绿色" readonly="readonly"/>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">05</span><small>*</small>消息内容</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit"><small>*</small>消息内容</p>
+					<div class="msgcont">
+						<ul class="filelist">
+							<li>
+								<div class="filename"><i class="iconfont icon-1"></i><span class="thename">视频.mp4</span></div>
+							</li>
+							<li>
+								<div class="filename"><i class="iconfont icon-1"></i><span class="thename">文本.txt</span></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">06</span><small>*</small>覆盖范围</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit"><small>*</small>覆盖范围</p>
+					<div class="covarea-sel gb-tree-box left">
+						<!-- <span class="systit"><i class="iconfont icon-xuanze"></i>已选择地区</span> -->
+						<div class="gb-tree scroll">
+							<ul id="gb_tree_sel1" class="ztree ztree-close"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">07</span><small>*</small>调用系统资源</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit"><small>*</small>调用系统资源</p>
+					<div class="sysreso-sel gb-tree-box left">
+						<!-- <span class="systit"><i class="iconfont icon-xuanze"></i>已选择资源</span> -->
+						<div class="gb-tree scroll">
+							<ul id="gb_tree_sel2" class="ztree ztree-close"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">08</span>预覆盖人数/预覆盖面积</p>
+				</div>
+				<div class="oneitem-cont">
+					<div class="predictone">
+						<p class="oneitem-tit">预覆盖人数</p>
+						<p class="precount">1000万人</p>
+					</div>
+					<div class="predictwo">
+						<p class="oneitem-tit">预覆盖面积</p>
+						<p class="precount">120万平方公里</p>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">09</span>发布部门/负责人</p>
+				</div>
+				<div class="oneitem-cont">
+					<div class="predictone">
+						<p class="oneitem-tit">发布部门</p>
+						<p class="precount">杭州市广播中心</p>
+					</div>
+					<div class="predictwo">
+						<p class="oneitem-tit">负责人</p>
+						<p class="precount">橙子</p>
+					</div>
+				</div>
+			</div>
+			<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+		</div>
+	</form>
+</div>
+
+
+
+<script type="text/javascript">
+	// zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+	var selSetting = {
+		view:{
+			showLine:false
+			//,去掉连接线addDiyDom:addDiyDom
+		}
+	};
+	var allSetting = {
+		view:{
+			showLine:false,//去掉连接线
+		},
+		check:{//添加复选框
+			enable:true,
+		},
+		callback: {
+			onCheck: zTreeOnCheck
+		}
+	};
+
+
+	function zTreeOnCheck(event, treeId, treeNode) {
+		// 勾选复选框将触发这个方法，在这里调用ajax获取已选数据
+	    console.log(treeNode)
+		// 	selData=treeNode;//ajax获取的数据赋值给已选数据
+	 //    if(treeNode.checked){
+		//  //    var treeObj = $.fn.zTree.getZTreeObj("gb_tree_all1");//获取全部数据的树的对象
+		// 	// var nodes = treeObj.getChangeCheckedNodes();//获取勾选的数据
+	 //    }
+		// 	$.fn.zTree.init($(this), selSetting, selData);//初始化已选数据的树
+	};
+	// zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+	// 已选数据
+	var selData=[{
+	    name: "浙江省",
+	    open: true,
+	    children: [{
+	        name: "杭州市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "宁波市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "温州市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    }]
+	}];
+
+	$(document).ready(function() {
+		// 初始化树
+		ztree_Initialize();
+		// $.fn.zTree.init($("#gb_tree_all1"), allSetting, zNodes);
+		// $.fn.zTree.init($("#gb_tree_all2"), allSetting, zNodes);
+	});
+	function ztree_Initialize(argument) {
+		//带关闭按钮的树
+		$(".ztree-close").each(function() {
+			$.fn.zTree.init($(this), selSetting, selData);
+		});
+	}
+	
+</script>

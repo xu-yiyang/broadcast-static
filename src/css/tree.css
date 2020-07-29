@@ -1,0 +1,53 @@
+/*树*/
+.gb-tree{max-height: 250px;min-height: 150px; overflow-y: auto;}
+.gb-tree.gb-tree-noHeight{min-height: auto;max-height: none;}
+.gb-tree-box{width: 48.5%;}
+.gb-tree-box.left{float: left;}
+.gb-tree-box.right{float: right;}
+.gb-tree-box .systit{font-size: 12px;margin-bottom: 5px;display: block;}
+.gb-tree-box .systit i{font-size: 12px;margin-right: 8px;}
+.gb-tree-box{margin-top: 10px;}
+.gb-tree{border: 1px solid #d8d8d8;border-radius: 5px;padding: 10px;}
+
+
+.gb-tree .ztree li{margin-bottom: 6px;}
+.gb-tree .ztree .tree-icon{font-size: 12px;color: #7c8491;float: right;margin-left:20px;}
+.gb-tree .ztree .tree-icon:hover{color: #4579d8;}
+.gb-tree .ztree li ul{margin-top: 6px;}
+.gb-tree .ztree li>a{width: 96%;position: relative;}
+.gb-tree .ztree li>a:after{content: "";height: 1px;border-bottom: 1px dashed #ced5e0;right: 30px;top: 8px;position: absolute;left: 66px;}
+.gb-tree .ztree.ztree-resource li>a:after{left: 66px;}
+.gb-tree .ztree li span.button.noline_close{background-position: 2px -81px;}
+.gb-tree .ztree li span.button.noline_open{background-position: -11px -81px;}
+.gb-tree .ztree li span.button.ico_open{background-position: -43px -81px;}
+.gb-tree .ztree li span.button.ico_close{background-position: -43px -81px;}
+.gb-tree .ztree li span.button.ico_docu{background-position: -26px -81px;}
+
+.tree-icon-box{float: right;background: #fff;position: relative;z-index: 999;}
+.tree-icon-box i{float:none;}
+
+.ztree li span { background-color: #fff; position: relative; z-index: 9; display: inline-block; padding-right: 10px; }
+.ztree li span.button.chk{margin-top: 3px;}
+.gb-tree .ztree li span.button.chk.checkbox_false_full,.gb-tree .ztree li span.button.chk{float: right;position: relative;z-index: 99;}
+.gb-tree .ztree li span.button.chk.checkbox_false_full{background-position: 0 -101px;}
+.gb-tree .ztree li span.button.chk.checkbox_false_full_focus{background-position: 0 -101px;}
+
+.gb-tree .ztree li span.button.chk.checkbox_true_full{background-position: -14px -101px;}
+.gb-tree .ztree li span.button.chk.checkbox_true_full_focus{background-position: -14px -101px;}
+.gb-tree .ztree li span.button.chk.checkbox_true_part{background-position: -14px -101px;}
+.gb-tree .ztree li span.button.chk.checkbox_true_part_focus{background-position: -14px -101px;}
+
+.gb-tree .ztree li a.curSelectedNode{background: none;border:none;height: auto;padding-top: 1px;opacity: 1;}
+
+
+
+
+
+
+
+
+
+
+
+
+.sysreso-box{overflow: hidden;}

@@ -1,0 +1,66 @@
+<div class="roundout">
+	<div class="rodbot">
+		<span class="rodtit"><img src="src/images/lartit.png" alt="" /></span>
+		<ul class="roundlist">
+			<li class="mover">
+				<a href="#/monitoring" url="components/monitoring.html" name="实时监控" class="add_tab">
+					<img src="src/images/menu-realtime.png" alt="" />			
+				</a>
+			</li>
+			<li class="mover">
+				<a href="#/schedulingPlan" class="add_tab" url="components/schedulingPlan.html" name="调度方案">
+					<img src="src/images/menu-dispatch.png" alt="" />			
+				</a>
+			</li>
+			<li class="mover">
+				<a href="#/resourceInformation" class="add_tab" url="components/resourceInformation.html" name="资源信息">
+					<img src="src/images/menu-resource.png" alt="" />			
+				</a>
+			</li>
+			<li class="mover">
+				<a href="#/watch" class="add_tab" url="components/watch.html" name="值班管理">
+					<img src="src/images/menu-system.png" alt="" />				
+				</a>
+			</li>
+			<li class="mover">
+				<a href="#/systemLoginLog" class="add_tab" url="components/systemLoginLog.html" name="系统登录日志">	
+					<img src="src/images/menu-log.png" alt="" />	
+				</a>
+			</li>
+			<li class="mover">
+				<a href="#/uploadTheCertif" class="add_tab" url="components/uploadTheCertif.html" name="上传的证书">
+					<img src="src/images/menu-safety.png" alt="" />			
+				</a>
+			</li>
+			<li class="mover">
+				<a href="#/interfaceList" class="add_tab" url="components/interfaceList.html" name="消息接入">
+					<img src="src/images/menu-message.png" alt="" />			
+				</a>
+			</li>
+			<li class="mover">
+				<a href="#/manoeuvre" class="add_tab" url="components/manoeuvre.html" name="演练效果">
+					<img src="src/images/menu-emergency.png" alt="" />			
+				</a>
+			</li>
+		</ul>
+	</div>
+	<p class="gb-copyright">© 2017-2018 浙江省应急广播平台</p>
+</div>
+<script>
+$(".roundlist").css("opacity","0");
+setTimeout(function(){
+	$('.roundlist').roundabout({
+		minZ: 100,
+		maxZ: 300,
+		minOpacity: 1,
+		minScale: 0.85,
+		childSelector: '.mover',
+		clickToFocus: false,
+		tilt: -5,
+		autoplay: true,
+		autoplayDuration: 2200,
+		autoplayPauseOnHover: true,
+	});
+	$(".roundlist").animate({"opacity":1},600)
+},400)
+</script>

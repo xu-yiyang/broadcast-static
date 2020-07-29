@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1,maximum-scale=2,minimum-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="plugins/DataTables-1.10.12/media/css/jquery.dataTables.css">
+	<link rel="stylesheet" type="text/css" href="src/css/main.min.css">
+	<!-- 加载百度地图 -->
+	<!-- <script src="http://api.map.baidu.com/api?v=2.0&ak=Pg78EjHlM1Ma0Bs5gZwkmgrQ"></script> -->
+	<!-- 图标本地链接 -->
+	<!-- <link rel="stylesheet" href="./iconfont/iconfont.css"> -->
+	<!-- 图标在线链接 -->
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_484596_8i2vhz6rm2huxr.css">
+</head>
+<body>
+<div class="gb-screen scroll">
+	<div class="gb-screen-tit">
+		<h1>浙江省应急广播系统平台</h1>
+		<!-- 消息滚动 -->
+		<div class="gb-marquee">
+			<marquee behavior="" direction="" align="absmiddle" onmouseover=stop() onmouseout=start()>
+				<a href="##">
+					<i class="iconfont icon-guangbo i"></i>
+					<em class="i">国家应急平台消息国家应急平台消息国家应急平台消息</em>
+				</a>
+				<a href="##">
+					<i class="iconfont icon-guangbo i"></i>
+					<em class="i">国家应急平台消息国家应急平台消息国家应急平台消息</em>
+				</a>
+			</marquee>
+		</div>
+	</div>
+	<div class="gb-screen-main gb-all-screen">
+		<div class="gb-screen-chart">
+			<div class="chart-body">
+				<label class="gb-screen-lab">全事件</label>
+				<div class="block gb-all-incident-item">
+					<div class="gb-incident-count">
+						<button class="layui-btn layui-btn-danger">演练事件总数：<em>6</em></button>
+						<button class="layui-btn layui-btn-warm">演练发布总数：<em>6</em></button>
+					</div>
+					<div class="gb-chart-incident-pie border-bottom">
+						<div class="gb-chart-item">
+							<div class="gb-chart gb-pie" id="pie-incident"></div>
+						</div>
+						<div class="gb-chart-item">
+							<div class="gb-chart gb-pie" id="pie-incident-rank"></div>
+						</div>
+						<div class="gb-chart-item">
+							<div class="gb-chart gb-bar" id="bar-task-num"></div>
+						</div>
+					</div>
+					<div class="gb-charts-table gb-all-charts-table">
+					 	<h4>
+						 	<span class="j-table-chart-tab">
+						 		<em class="list"><i class="iconfont icon-liebiao"></i>列表</em>
+						 		<em class="cur chart"><i class="iconfont icon-zhexian"></i>折线图</em>
+						 	</span>
+					 	</h4>
+					 	<div class="gb-table-chart-tab">
+					 		<div class="gb-ctab" id="table-main" style="display: none;">
+								<div class="tablecont">
+								    <table class="table-main display" cellspacing="0" width="100%">
+								        <thead>
+									        <tr>
+									            <th>状态监测</th>
+									            <th>消息等级</th>
+									            <th>事件名称</th>
+									            <th>覆盖区域</th>
+									            <th>覆盖人口</th>
+									            <th>部门</th>
+									            <th>负责人</th>
+									            <th>发布时间</th>
+									        </tr>
+								        </thead>
+								        <tfoot>
+									        <tr>
+									            <th></th>
+									            <th></th>
+									            <th></th>
+									            <th></th>
+									            <th></th>
+									            <th></th>
+									        </tr>
+								        </tfoot>
+								        <tbody>
+								        	<tr>
+								        		<td>发布中</td>
+								        		<td><span class='rankimg' vel='红色'><img src='src/images/rank-red.png'/></span></td>
+								        		<td><a class='view-cont'>杭州西湖区雷暴红色警报消息</a></td>
+								        		<td>72万kem2</td>
+								        		<td>110万</td>
+								        		<td>杭州市西湖区应急广播中心</td>
+								        		<td>橙子</td>
+								        		<td>2017-11-09 12:0:0</td>
+								        	</tr>
+								        	<tr>
+								        		<td>发布中</td>
+								        		<td><span class='rankimg' vel='红色'><img src='src/images/rank-red.png'/></span></td>
+								        		<td><a class='view-cont'>杭州西湖区雷暴红色警报消息</a></td>
+								        		<td>72万kem2</td>
+								        		<td>110万</td>
+								        		<td>杭州市西湖区应急广播中心</td>
+								        		<td>橙子</td>
+								        		<td>2017-11-09 12:0:0</td>
+								        	</tr>
+								        	<tr>
+								        		<td>发布中</td>
+								        		<td><span class='rankimg' vel='红色'><img src='src/images/rank-red.png'/></span></td>
+								        		<td><a class='view-cont'>杭州西湖区雷暴红色警报消息</a></td>
+								        		<td>72万kem2</td>
+								        		<td>110万</td>
+								        		<td>杭州市西湖区应急广播中心</td>
+								        		<td>橙子</td>
+								        		<td>2017-11-09 12:0:0</td>
+								        	</tr>
+								        	<tr>
+								        		<td>发布中</td>
+								        		<td><span class='rankimg' vel='红色'><img src='src/images/rank-red.png'/></span></td>
+								        		<td><a class='view-cont'>杭州西湖区雷暴红色警报消息</a></td>
+								        		<td>72万kem2</td>
+								        		<td>110万</td>
+								        		<td>杭州市西湖区应急广播中心</td>
+								        		<td>橙子</td>
+								        		<td>2017-11-09 12:0:0</td>
+								        	</tr>
+								        	<tr>
+								        		<td>发布中</td>
+								        		<td><span class='rankimg' vel='红色'><img src='src/images/rank-red.png'/></span></td>
+								        		<td><a class='view-cont'>杭州西湖区雷暴红色警报消息</a></td>
+								        		<td>72万kem2</td>
+								        		<td>110万</td>
+								        		<td>杭州市西湖区应急广播中心</td>
+								        		<td>橙子</td>
+								        		<td>2017-11-09 12:0:0</td>
+								        	</tr>
+								        	<tr>
+								        		<td>发布中</td>
+								        		<td><span class='rankimg' vel='红色'><img src='src/images/rank-red.png'/></span></td>
+								        		<td><a class='view-cont'>杭州西湖区雷暴红色警报消息</a></td>
+								        		<td>72万kem2</td>
+								        		<td>110万</td>
+								        		<td>杭州市西湖区应急广播中心</td>
+								        		<td>橙子</td>
+								        		<td>2017-11-09 12:0:0</td>
+								        	</tr>
+								        	<tr>
+								        		<td>发布中</td>
+								        		<td><span class='rankimg' vel='红色'><img src='src/images/rank-red.png'/></span></td>
+								        		<td><a class='view-cont'>杭州西湖区雷暴红色警报消息</a></td>
+								        		<td>72万kem2</td>
+								        		<td>110万</td>
+								        		<td>杭州市西湖区应急广播中心</td>
+								        		<td>橙子</td>
+								        		<td>2017-11-09 12:0:0</td>
+								        	</tr>
+								        	<tr>
+								        		<td>发布中</td>
+								        		<td><span class='rankimg' vel='红色'><img src='src/images/rank-red.png'/></span></td>
+								        		<td><a class='view-cont'>杭州西湖区雷暴红色警报消息</a></td>
+								        		<td>72万kem2</td>
+								        		<td>110万</td>
+								        		<td>杭州市西湖区应急广播中心</td>
+								        		<td>橙子</td>
+								        		<td>2017-11-09 12:0:0</td>
+								        	</tr>
+								        </tbody>
+								    </table>
+								</div>
+							</div>
+							<div class="gb-chart-incident-bar gb-chart-incident">
+								<div class="gb-chart-item">
+									<div class="gb-chart gb-bar" id="bar-incident-type"></div>
+								</div>
+							</div>
+					 	</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="gb-screen-map">
+			<div class="map-body gb-all-incident cur">
+				<!-- 地图 -->
+				<div id="all-map" class="gb-map"></div>
+				<div class="gb-map-zoom">
+					<span class="cur j-zoom-province"><em>省</em></span>
+					<span class="j-zoom-city"><em>市</em></span>
+					<span class="j-zoom-county"><em>县</em></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="http://api.map.baidu.com/api?v=2.0&ak=Pg78EjHlM1Ma0Bs5gZwkmgrQ"></script>
+<script src="plugins/jquery-1.11.3.min.js"></script>
+<!-- 表格插件 -->
+<script src="plugins/DataTables-1.10.12/media/js/jquery.dataTables.min.js"></script>
+<!-- echarts插件 -->
+<script src="plugins/echarts.min.js"></script>
+<!-- echarts和百度地图结合插件 -->
+<script src="plugins/bmap.min.js"></script>
+<script src="plugins/AreaRestriction_min.js"></script>
+<!-- layui插件 -->
+<script src="plugins/layui/layui.js"></script>
+<!-- 打包过的主要js -->
+<script src="src/js/main.min.js"></script>
+<script>
+	incidentChart = echarts.init(document.getElementById('pie-incident'));
+    incidentRankChart = echarts.init(document.getElementById('pie-incident-rank'));
+    taskNumChart = echarts.init(document.getElementById('bar-task-num'));
+    incidentTypeChart = echarts.init(document.getElementById('bar-incident-type'));
+
+    // 事件发布
+	incidentOption = {
+	    title: {
+	        text: '事件发布',
+	        bottom: '0',
+	        left:'center',
+	        textStyle: { 
+	            color: '#7c8491'
+	        }
+	    },
+	    tooltip : {
+	        formatter: "{b} : {c} ({d}%)"
+	    },
+	    legend: {
+	        // orient: 'vertical',
+	        x: 'center',
+	        bottom: '10%',
+	        itemWidth:'10',
+	        itemHeight:'10',
+	        data:['气象局','水利','国家应急广播平台','应急办'],
+	        align:"right",
+	        textStyle:{
+	        	color:"#7c8491"
+	        }
+	    },
+	    series : [
+	        {
+	            type:'pie',
+	            radius : '65%',
+	            center: ['50%', '43%'],
+	            data:[
+		            {
+	                	value:25, 
+	                	name:'气象局',
+	                	itemStyle: {
+							normal: {
+								color: "#6e6fe6"
+							}
+				         }
+	                },{
+	                	value:30, 
+	                	name:'水利',
+	                	itemStyle: {
+							normal: {
+								color: "#9ca6ff"
+							}
+				         }
+	                },{
+	                	value:15, 
+	                	name:'国家应急广播平台',
+	                	itemStyle: {
+							normal: {
+								color: "#1ba5dd"
+							}
+				         }
+	                },{
+	                	value:25, 
+	                	name:'应急办',
+	                	itemStyle: {
+							normal: {
+								color: "#41cefb"
+							}
+				         }
+	                }
+	            ].sort(function (a, b) { return a.value - b.value; }),
+	            roseType: 'radius',
+	            label: {
+	                normal: {
+	                    textStyle: {
+	                        color: '#7c8491'
+	                    }
+	                }
+	            },
+	            labelLine: {
+	                normal: {
+	                    lineStyle: {
+	                        color: '#d8d8d8'
+	                    },
+	                    smooth: 0.2,
+	                    length: 0,
+	                    length2: 20
+	                }
+	            },
+	            itemStyle: {
+		             normal: {
+		                shadowBlur: 15,
+		                shadowColor: 'rgba(0, 0, 0, 0.4)',
+		                label:{
+		                	formatter:'{d}%',
+				        },
+		             }
+		         },
+
+	            animationType: 'scale',
+	            animationEasing: 'elasticOut',
+	            animationDelay: function (idx) {
+	                return Math.random() * 200;
+	            }
+	        }
+	    ]
+	};
+	incidentChart.setOption(incidentOption);
+
+	// 事件级别发布
+	incidentRankOption = {
+	    title: {
+	        text: '事件级别发布',
+	        bottom: '0',
+	        left:'center',
+	        textStyle: { 
+	            color: '#7c8491'
+	        }
+	    },
+	    tooltip : {
+	        formatter: "{b} : {c} ({d}%)"
+	    },
+	    legend: {
+	        // orient: 'vertical',
+	        x: 'center',
+	        bottom: '10%',
+	        itemWidth:'10',
+	        itemHeight:'10',
+	        data:['红色事件','橙色事件','黄色事件','蓝色事件','绿色事件'],
+	        align:"right",
+	        textStyle:{
+	        	color:"#7c8491"
+	        }
+	    },
+	    series : [
+	        {
+	            type:'pie',
+	            radius : '65%',
+	            center: ['50%', '43%'],
+	            data:[
+	                {
+	                	value:20, 
+	                	name:'红色事件',
+	                	itemStyle: {
+							normal: {
+								color: "#f75c53"
+							}
+				         },
+	                },{
+	                	value:25, 
+	                	name:'橙色事件',
+	                	itemStyle: {
+							normal: {
+								color: "#fea41e"
+							}
+				         },
+	                },{
+	                	value:27, 
+	                	name:'黄色事件',
+	                	itemStyle: {
+							normal: {
+								color: "#fada00"
+							}
+				         },
+	                },{
+	                	value:30, 
+	                	name:'蓝色事件',
+	                	itemStyle: {
+							normal: {
+								color: "#4579d8"
+							}
+				         },
+	                },{
+	                	value:33, 
+	                	name:'绿色事件',
+	                	itemStyle: {
+							normal: {
+								color: "#14ae8f"
+							}
+				         },
+	                },
+	            ].sort(function (a, b) { return a.value - b.value; }),
+	            roseType: 'radius',
+	            label: {
+	                normal: {
+	                    textStyle: {
+	                        color: '#7c8491'
+	                    }
+	                }
+	            },
+	            labelLine: {
+	                normal: {
+	                    lineStyle: {
+	                        color: '#d8d8d8'
+	                    },
+	                    smooth: 0.2,
+	                    length: 10,
+	                    length2: 20
+	                }
+	            },
+	            itemStyle: {
+		             normal: {
+		                shadowBlur: 15,
+		                shadowColor: 'rgba(0, 0, 0, 0.4)',
+		                label:{
+		                	formatter:'{d}%',
+				        },
+		             }
+		         },
+		        markLine:{
+		        	symbolSize:1000
+		        },
+	            animationType: 'scale',
+	            animationEasing: 'elasticOut',
+	            animationDelay: function (idx) {
+	                return Math.random() * 200;
+	            }
+	        }
+	    ]
+	};
+	incidentRankChart.setOption(incidentRankOption);
+
+	// 任务数量
+	var taskNumData = [
+		{
+    		value:20,
+        	itemStyle: {normal: {color: "#41cefb"}},
+    	},{
+    		value:50,
+        	itemStyle: {normal: {color: "#00aaff"}},
+    	},
+    	{
+    		value:40,
+        	itemStyle: {normal: {color: "#1ba5dd"}},
+    	},
+    	{
+    		value:150,
+        	itemStyle: {normal: {color: "#4579d8"}},
+    	}
+    ];
+	var yMax = 180;
+	var dataShadow = [];
+	for (var i = 0; i < taskNumData.length; i++) {
+	    dataShadow.push(yMax);
+	}
+	taskNumOption = {
+	    title: {
+	        text: '任务数量',
+	        bottom: '0',
+	        left:'center',
+	        textStyle: { 
+	            color: '#7c8491'
+	        }
+	    },
+	    tooltip : {
+	    	// formatter:"{b}<br />{c}个",
+	    	formatter: '<div class="gb-bar-formatter gb-screen-formatter-yellow">{b}<br /><em>{c}</em></div>',
+	    	position: function (point, params, dom, rect, size) {
+			    // 固定在顶部
+			    return {left: rect.x-($(dom).width()-rect.width)/1.5, top: rect.y-$(dom).height()-10};
+			},
+	        backgroundColor: 'rgba(255,255,255,0)',
+	        // borderColor:"#d8d8d8",
+	        // borderWidth:1,
+	        // textStyle:{
+	        // 	color:"#000"
+	        // },
+	    },
+	    grid: {
+	        left: '8%',
+	        containLabel: true
+	    },
+	    xAxis: {
+	        data: ['等待审核', '等待发布', '正在发布', '发布完成'],
+	        //刻度横线
+	        axisTick: {
+	            show: false
+	        },
+		    //刻度字样式
+	    	axisLabel: {
+	        	textStyle: {
+	                color: '#7c8491',
+	                fontSize:'14',
+	                align: 'center'
+	            },
+	            interval:0,
+         		// margin: 30,
+				// rotate:-20,
+	        },
+	        //刻度线
+	        axisLine: {
+	            lineStyle: {
+	                color:"#364154"
+	            }
+	        },
+	        z: 10
+	    },
+	    yAxis: [{
+	        //坐标轴名称
+        	name: '单位：个',
+	        nameGap: 40,
+	        // nameRotate:0,
+	        nameLocation: "middle",
+	        nameTextStyle:{
+	        	color:"#7c8491",
+	        },
+	        //刻度横线
+	        axisTick: {
+	            show: false
+	        },
+	        //刻度字样式
+	        axisLabel: {
+	            textStyle: {
+	                color: '#7c8491',
+	                fontSize:'14'
+	            }
+	        },
+	        //刻度线
+	        axisLine: {
+	            lineStyle: {
+	                color:"#364154"//刻度线颜色
+	            }
+	        },
+	        //网格线
+	        splitLine:{
+				lineStyle:{
+					color: '#364154'//网格线颜色
+				}
+			},
+	    },{
+            'type': 'value',
+            'max': 200,
+	        axisLine: {
+	            lineStyle: {
+	                color:"#2d3646"
+	            }
+	        }
+        }],
+	    dataZoom: [
+	        {
+	            type: 'inside'
+	        }
+	    ],
+	    series: [
+	        { // For shadow
+	            type: 'bar',
+	            itemStyle: {
+	                normal: {color: '#2d3646'}
+	            },
+        		silent: true,
+	            barGap:'-100%',
+	            barCategoryGap:'40%',
+	            data: dataShadow,
+	            animation: false
+	        },
+	        {
+	            type: 'bar',
+	            data: taskNumData
+	        }
+	    ]
+	};
+	taskNumChart.setOption(taskNumOption);
+
+	// 事件类型统计
+	// 事件类型统计数据
+	var incidentTypeData = [
+		{
+    		value:20,
+        	itemStyle: {normal: {color: "#949eff"}},
+    	},{
+    		value:230,
+        	itemStyle: {normal: {color: "#9b7fe2"}},
+    	},{
+    		value:90,
+        	itemStyle: {normal: {color: "#6b65df"}},
+    	},{
+    		value:20,
+        	itemStyle: {normal: {color: "#949eff"}},
+    	},{
+    		value:45,
+        	itemStyle: {normal: {color: "#9b7fe2"}},
+    	},{
+    		value:70,
+        	itemStyle: {normal: {color: "#6b65df"}},
+    	},{
+    		value:80,
+        	itemStyle: {normal: {color: "#949eff"}},
+    	},{
+    		value:90,
+        	itemStyle: {normal: {color: "#9b7fe2"}},
+    	},{
+    		value:90,
+        	itemStyle: {normal: {color: "#6b65df"}},
+    	},{
+    		value:80,
+        	itemStyle: {normal: {color: "#949eff"}},
+    	},{
+    		value:90,
+        	itemStyle: {normal: {color: "#9b7fe2"}},
+    	},{
+    		value:90,
+        	itemStyle: {normal: {color: "#6b65df"}},
+    	},{
+    		value:80,
+        	itemStyle: {normal: {color: "#949eff"}},
+    	},{
+    		value:90,
+        	itemStyle: {normal: {color: "#9b7fe2"}},
+    	},{
+    		value:90,
+        	itemStyle: {normal: {color: "#6b65df"}},
+    	},{
+    		value:80,
+        	itemStyle: {normal: {color: "#949eff"}},
+    	},{
+    		value:90,
+        	itemStyle: {normal: {color: "#9b7fe2"}},
+    	},{
+    		value:90,
+        	itemStyle: {normal: {color: "#6b65df"}},
+    	}
+    ];
+    // x轴数据
+    var incidentTypexAxis=[
+    	"金属与非金属矿金属与非金属矿1","金属与非金属矿金属与非金属矿2","金属与非金属矿金属与非金属矿3","金属与非金属矿金属与非金属矿4","金属与非金属矿金属与非金属矿5","金属与非金属矿金属与非金属矿6","金属与非金属矿金属与非金属矿7","金属与非金属矿金属与非金属矿8","金属与非金属矿金属与非金属矿9","金属与非金属矿金属与非金属矿10","金属与非金属矿金属与非金属矿11","金属与非金属矿金属与非金属矿12","金属与非金属矿金属与非金属矿13","金属与非金属矿金属与非金属矿14"
+    ];
+    // 对x轴数据换行处理，4个字换行
+	var incidentTypexAxisData=[]
+    for (var i = 0; i < incidentTypexAxis.length; i++) {
+    	var strs = incidentTypexAxis[i].split(''); //字符串数组
+        var str = ''
+        for (var j = 0, s; s = strs[j++];) { //遍历字符串数组
+            str += s;
+            if (!(j % 5)) str += '\n';
+        }
+        incidentTypexAxisData.push(str)
+    }
+	var yMaxTwo = 300;
+	var dataShadowTwo = [];
+	for (var i = 0; i < incidentTypeData.length; i++) {
+	    dataShadowTwo.push(yMaxTwo);
+	}
+	incidentTypeOption = {
+	    title: {
+	        text: '事件类型统计数据',
+	        bottom: '2%',
+	        left:'center',
+	        textStyle: { 
+	            color: '#7c8491'
+	        }
+	    },
+	    // 区域缩放
+	    dataZoom: [
+	        {
+	            start: 30,
+	            end: 70,
+	        	bottom: '10%',
+	            backgroundColor:"#425067",
+	            fillerColor:"#6e6fe6",
+	            borderColor:"none",
+	            handleIcon: handleIcon,
+        		handleSize: '60%',
+        		handleStyle: {
+		            color: '#b2b3ff',
+		        },
+		        textStyle:{
+		        	color:'#7c8491'
+		        },
+				showDataShadow:false,
+	        },
+	        {
+	            type: 'inside',
+	        }
+	    ],
+	    tooltip : {
+	    	formatter: '<div class="gb-bar-formatter gb-screen-formatter-yellow">{b}<br /><em>{c}</em></div>',
+	    	position: function (point, params, dom, rect, size) {
+			    // 固定在顶部
+			    return {left: rect.x-($(dom).width()/2)+(rect.width/2.2), top: rect.y-$(dom).height()-10};
+			},
+	        backgroundColor: 'rgba(255,255,255,0)',
+	        // borderColor:"#d8d8d8",
+	        // borderWidth:1,
+	        // textStyle:{
+	        // 	color:"#000"
+	        // },
+	    },
+	    grid: {
+	        containLabel: true,
+	        left:'5%',
+	        right:'3%',
+	        bottom: '20%',
+	        top:'7%'
+	    },
+	    xAxis: {
+	        // data: ['金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿','金属与非\n金属矿金\n属与非金\n属矿'],
+	        data:incidentTypexAxisData,
+	        //刻度横线
+	        axisTick: {
+	            show: false
+	        },
+	        //刻度字样式
+	        axisLabel: {
+	            textStyle: {
+	                color: '#7c8491',
+	                fontSize:'14',
+	                align: 'center'
+	            },
+	            // interval:0,//x轴是否自动调整显示数量
+	            // formatter:function(val){
+	            // 	var strs = val.split(''); //字符串数组
+             //        var str = ''
+             //        for (var i = 0, s; s = strs[i++];) { //遍历字符串数组
+             //            str += s;
+             //            if (!(i % 4)) str += '\n';
+             //        }
+             //        return str
+	            // }
+         		// margin: 30,
+				// rotate:-20,
+	        },
+	        //刻度线
+	        axisLine: {
+	            lineStyle: {
+	                color:"#364154"
+	            }
+	        },
+	        z: 10
+	    },
+	    yAxis: [{
+	        //坐标轴名称
+        	name: '单位：个',
+	        nameGap: 40,
+	        // nameRotate:0,
+	        nameLocation: "middle",
+	        nameTextStyle:{
+	        	color:"#7c8491",
+	        },
+	        //刻度横线
+	        axisTick: {
+	            show: false
+	        },
+	        //刻度字样式
+	        axisLabel: {
+	            textStyle: {
+	                color: '#7c8491',
+	                fontSize:'14'
+	            }
+	        },
+	        //刻度线
+	        axisLine: {
+	            lineStyle: {
+	                color:"#364154"//刻度线颜色
+	            }
+	        },
+	        //网格线
+	        splitLine:{
+				lineStyle:{
+					color: '#364154'//网格线颜色
+				}
+			},
+	    },{
+            'type': 'value',
+            'max': 200,
+	        axisLine: {
+	            lineStyle: {
+	                color:"#2d3646"
+	            }
+	        }
+        }],
+	    series: [
+	        { // For shadow
+	            type: 'bar',
+	            itemStyle: {
+	                normal: {color: '#2d3646'}
+	            },
+        		silent: true,
+	            barGap:'-100%',
+	            barCategoryGap:'40%',
+	            data: dataShadowTwo,
+	            animation: false
+	        },
+	        {
+	            type: 'bar',
+	            data: incidentTypeData
+	        }
+	    ]
+	};
+	incidentTypeChart.setOption(incidentTypeOption);
+
+
+	// 地图
+	// bmap.clearOverlays();
+	allMapChart = echarts.init(document.getElementById('all-map'));
+	var geoCoordMap = {
+		'杭州': [120.166085,30.279006],
+	    '宁波': [121.558386,29.884993],
+	    '嘉兴': [120.762703,30.750911],
+	    '湖州': [120.105,30.905714],
+	    '淳安': [119.022147,29.622863],
+	    '临安': [119.723544,30.245816],
+	    '余杭': [120.301046,30.4266],
+		'上海': [121.4648, 31.2891],
+	};//地点坐标
+	var BJData = [
+		[{
+	        name: '杭州'//出发点
+	    }, {
+	        name: '宁波',//到达点
+	        incident:'red',//事件颜色
+	        incident_data:[
+	        	{color:"red",incident_name:"宁波雷暴事件"},
+	        	{color:"orange",incident_name:"宁波雾霾事件"},
+	        	{color:"yellow",incident_name:"宁波暴雨事件"},
+	        	{color:"blue",incident_name:"宁波台风事件"},
+	        	{color:"green",incident_name:"宁波龙卷风事件"},
+	        ]//具体事件
+	    }],
+	    [{
+	        name: '杭州'
+	    }, {
+	        name: '嘉兴',
+	        incident:'orange',
+	        incident_data:[
+	        	{color:"red",incident_name:"雷暴事件"},
+	        	{color:"orange",incident_name:"雾霾事件"},
+	        	{color:"yellow",incident_name:"暴雨事件"},
+	        	{color:"blue",incident_name:"台风事件"},
+	        	{color:"green",incident_name:"龙卷风事件"},
+	        ]
+	    }],
+	    [{
+	        name: '杭州'
+	    }, {
+	        name: '湖州',
+	        incident:'yellow',
+	        incident_data:[
+	        	{color:"red",incident_name:"雷暴事件"},
+	        	{color:"orange",incident_name:"雾霾事件"},
+	        	{color:"yellow",incident_name:"暴雨事件"},
+	        	{color:"blue",incident_name:"台风事件"},
+	        	{color:"green",incident_name:"龙卷风事件"},
+	        ]
+	    }],
+	    [{
+	        name: '杭州'
+	    }, {
+	        name: '淳安',
+	        incident:'blue',
+	        incident_data:[
+	        	{color:"red",incident_name:"雷暴事件"},
+	        	{color:"orange",incident_name:"雾霾事件"},
+	        	{color:"yellow",incident_name:"暴雨事件"},
+	        	{color:"blue",incident_name:"台风事件"},
+	        	{color:"green",incident_name:"龙卷风事件"},
+	        ]
+	    }],
+	    [{
+	        name: ''
+	    }, {
+	        name: '余杭',
+	        incident:'green',
+	        incident_data:[
+	        	{color:"red",incident_name:"雷暴事件"},
+	        	{color:"orange",incident_name:"雾霾事件"},
+	        	{color:"yellow",incident_name:"暴雨事件"},
+	        	{color:"blue",incident_name:"台风事件"},
+	        	{color:"green",incident_name:"龙卷风事件"},
+	        ]
+	    }],
+	    [{
+	        name: ''
+	    }, {
+	        name: '临安',
+	        incident:'green',
+	        incident_data:[
+	        	{color:"red",incident_name:"雷暴事件"},
+	        	{color:"orange",incident_name:"雾霾事件"},
+	        	{color:"yellow",incident_name:"暴雨事件"},
+	        	{color:"blue",incident_name:"台风事件"},
+	        	{color:"green",incident_name:"龙卷风事件"},
+	        ]
+	    }],
+	    [{
+	        name: ''
+	    }, {
+	        name: '上海',
+	        incident:'orange',
+	        incident_data:[
+	        	{color:"red",incident_name:"雷暴事件"},
+	        	{color:"orange",incident_name:"雾霾事件"},
+	        	{color:"yellow",incident_name:"暴雨事件"},
+	        	{color:"blue",incident_name:"台风事件"},
+	        	{color:"green",incident_name:"龙卷风事件"},
+	        ]
+	    }]
+	];//迁徙数据
+	var startData=[
+    	{color:"red",incident_name:"雷暴事件"},
+    	{color:"orange",incident_name:"雾霾事件"},
+    	{color:"yellow",incident_name:"暴雨事件"},
+    	{color:"blue",incident_name:"台风事件"},
+    	{color:"green",incident_name:"龙卷风事件"},
+    ];//迁徙起点数据
+
+	var convertData = function(data) {
+	    var res = [];
+	    for (var i = 0; i < data.length; i++) {
+	        var dataItem = data[i];
+	        var fromCoord = geoCoordMap[dataItem[0].name];
+	        var toCoord = geoCoordMap[dataItem[1].name];
+	        if (fromCoord && toCoord) {
+	            res.push({
+	                fromName: dataItem[0].name,
+	                toName: dataItem[1].name,
+	                coords: [fromCoord, toCoord]
+	            });
+	        }
+	    }
+	    return res;
+	};
+	var mapSeries = [];
+	[
+	    ['杭州', BJData],
+	].forEach(function(item, i) {
+	    mapSeries.push(
+		    {//出发圆点
+		        type: 'effectScatter',
+		        coordinateSystem: 'bmap',
+		        zlevel: 2,
+		        symbolSize: 15,
+		        itemStyle: {
+		            normal: {
+		                color: "red",
+		                shadowColor: 'red',
+						shadowBlur: 40,
+						shadowOffsetX:5,
+						shadowOffsetY:5
+		            }
+		        },
+		        data: [{
+		            name: item[0],
+		            value: geoCoordMap[item[0]].concat([50]),
+			        incident_data:startData
+
+		        }]
+		    },{//线、飞机
+		        type: 'lines',
+		        coordinateSystem: 'bmap',
+		        zlevel: 2,
+	    		// symbol:"rect",
+		        effect: {
+		            show: true,
+		            period: 6,
+		            trailLength: 0,
+		            symbol: planePath,
+		            symbolSize: 15
+		        },
+		        lineStyle: {
+		            normal: {
+		                color: "red",
+		                width: 2,
+		                curveness: 0.2,
+                		type: 'dotted'
+		            }
+		        },
+		        data: convertData(item[1])
+		    }, {//省份圆点红色事件
+		    	name:"红色事件",
+		        type: 'effectScatter',
+		        coordinateSystem: 'bmap',
+		        zlevel: 2,
+		        symbolSize: 20,
+	    		// symbol:"rect",//正方形
+		        rippleEffect: {
+		            brushType: 'stroke'
+		        },
+		        itemStyle: {
+		            normal: {
+		                color: function(params) {//省份圆点颜色设置
+		     //    			console.log(params)
+							// var tmp = params.data.incident;
+							// if (tmp == 'orange') {
+							// 	return '#ff9700';//橙色事件
+							// } else if (tmp == 'green') {
+							// 	return '#00e1b4';//绿色事件
+							// } else if (tmp == 'blue') {
+							// 	return '#518fff';//蓝色事件
+							// } else if (tmp == 'red') {
+								return '#ff3833';//红色事件
+							// } else {
+							// 	return '#fada00';//黄色事件
+							// }
+						},
+		                shadowColor: '#ff3833',
+						shadowBlur: 25,
+						shadowOffsetX:5,
+						shadowOffsetY:5,
+		            }
+		        },
+		        data: item[1].map(function(dataItem) {
+		        	if(dataItem[1].incident=="red"){
+			            return {
+			                value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value]),
+			                incident:dataItem[1].incident,
+			                incident_data:dataItem[1].incident_data
+			            };
+			        }
+		        })
+		    }, {//省份圆点橙色事件
+		    	name:"橙色事件",
+		        type: 'effectScatter',
+		        coordinateSystem: 'bmap',
+		        zlevel: 2,
+		        symbolSize: 20,
+	    		// symbol:"rect",//正方形
+		        rippleEffect: {
+		            brushType: 'stroke'
+		        },
+		        itemStyle: {
+		            normal: {
+		                color: function(params) {//省份圆点颜色设置
+		     //    			console.log(params)
+							// var tmp = params.data.incident;
+							// if (tmp == 'orange') {
+								return '#ff9700';//橙色事件
+							// } else if (tmp == 'green') {
+							// 	return '#00e1b4';//绿色事件
+							// } else if (tmp == 'blue') {
+							// 	return '#518fff';//蓝色事件
+							// } else if (tmp == 'red') {
+								// return '#ff3833';//红色事件
+							// } else {
+							// 	return '#fada00';//黄色事件
+							// }
+						},
+		                shadowColor: '#ff9700',
+						shadowBlur: 40,
+						shadowOffsetX:5,
+						shadowOffsetY:5,
+		            }
+		        },
+		        data: item[1].map(function(dataItem) {
+		        	if(dataItem[1].incident=="orange"){
+			            return {
+			                value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value]),
+			                incident:dataItem[1].incident,
+			                incident_data:dataItem[1].incident_data
+			            };
+			        }
+		        })
+		    }, {//省份圆点黄色事件
+		    	name:"黄色事件",
+		        type: 'effectScatter',
+		        coordinateSystem: 'bmap',
+		        zlevel: 2,
+		        symbolSize: 20,
+	    		// symbol:"rect",//正方形
+		        rippleEffect: {
+		            brushType: 'stroke'
+		        },
+		        itemStyle: {
+		            normal: {
+		                color: function(params) {//省份圆点颜色设置
+		     //    			console.log(params)
+							// var tmp = params.data.incident;
+							// if (tmp == 'orange') {
+								// return '#ff9700';//橙色事件
+							// } else if (tmp == 'green') {
+							// 	return '#00e1b4';//绿色事件
+							// } else if (tmp == 'blue') {
+							// 	return '#518fff';//蓝色事件
+							// } else if (tmp == 'red') {
+								// return '#ff3833';//红色事件
+							// } else {
+								return '#fada00';//黄色事件
+							// }
+						},
+		                shadowColor: '#fada00',
+						shadowBlur: 40,
+						shadowOffsetX:5,
+						shadowOffsetY:5,
+		            }
+		        },
+		        data: item[1].map(function(dataItem) {
+		        	if(dataItem[1].incident=="yellow"){
+			            return {
+			                value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value]),
+			                incident:dataItem[1].incident,
+			                incident_data:dataItem[1].incident_data
+			            };
+			        }
+		        })
+		    }, {//省份圆点蓝色事件
+		    	name:"蓝色事件",
+		        type: 'effectScatter',
+		        coordinateSystem: 'bmap',
+		        zlevel: 2,
+		        symbolSize: 20,
+	    		// symbol:"rect",//正方形
+		        rippleEffect: {
+		            brushType: 'stroke'
+		        },
+		        itemStyle: {
+		            normal: {
+		                color: function(params) {//省份圆点颜色设置
+		     //    			console.log(params)
+							// var tmp = params.data.incident;
+							// if (tmp == 'orange') {
+								// return '#ff9700';//橙色事件
+							// } else if (tmp == 'green') {
+							// 	return '#00e1b4';//绿色事件
+							// } else if (tmp == 'blue') {
+								return '#518fff';//蓝色事件
+							// } else if (tmp == 'red') {
+								// return '#ff3833';//红色事件
+							// } else {
+								// return '#fada00';//黄色事件
+							// }
+						},
+		                shadowColor: '#518fff',
+						shadowBlur: 40,
+						shadowOffsetX:5,
+						shadowOffsetY:5,
+		            }
+		        },
+		        data: item[1].map(function(dataItem) {
+		        	if(dataItem[1].incident=="blue"){
+			            return {
+			                value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value]),
+			                incident:dataItem[1].incident,
+			                incident_data:dataItem[1].incident_data
+			            };
+			        }
+		        })
+		    }, {//省份圆点绿色事件
+		    	name:"绿色事件",
+		        type: 'effectScatter',
+		        coordinateSystem: 'bmap',
+		        zlevel: 2,
+		        symbolSize: 20,
+	    		// symbol:"rect",//正方形
+		        rippleEffect: {
+		            brushType: 'stroke'
+		        },
+		        itemStyle: {
+		            normal: {
+		                color: function(params) {//省份圆点颜色设置
+		     //    			console.log(params)
+							// var tmp = params.data.incident;
+							// if (tmp == 'orange') {
+								// return '#ff9700';//橙色事件
+							// } else if (tmp == 'green') {
+								return '#00e1b4';//绿色事件
+							// } else if (tmp == 'blue') {
+								// return '#518fff';//蓝色事件
+							// } else if (tmp == 'red') {
+								// return '#ff3833';//红色事件
+							// } else {
+								// return '#fada00';//黄色事件
+							// }
+						},
+		                shadowColor: '#00e1b4',
+						shadowBlur: 40,
+						shadowOffsetX:5,
+						shadowOffsetY:5,
+		            }
+		        },
+		        data: item[1].map(function(dataItem) {
+		        	if(dataItem[1].incident=="green"){
+			            return {
+			                value: geoCoordMap[dataItem[1].name].concat([dataItem[1].value]),
+			                incident:dataItem[1].incident,
+			                incident_data:dataItem[1].incident_data
+			            };
+			        }
+		        })
+		    });
+	});
+
+	mapOption = {
+	    bmap: {
+		    center: [120.166085,30.279006],//地图中心
+		    zoom: 8,
+		    roam: true,
+		    mapStyle:{
+		    	styleJson: [{
+					"featureType": "water",
+					"elementType": "all",
+					"stylers": {
+						"color": "#021019"
+					}
+				}, {
+					"featureType": "highway",
+					"elementType": "geometry.fill",
+					"stylers": {
+						"color": "#000000"
+					}
+				}, {
+					"featureType": "highway",
+					"elementType": "geometry.stroke",
+					"stylers": {
+						"color": "#147a92"
+					}
+				}, {
+					"featureType": "arterial",
+					"elementType": "geometry.fill",
+					"stylers": {
+						"color": "#000000"
+					}
+				}, {
+					"featureType": "arterial",
+					"elementType": "geometry.stroke",
+					"stylers": {
+						"color": "#0b3d51"
+					}
+				}, {
+					"featureType": "local",
+					"elementType": "geometry",
+					"stylers": {
+						"color": "#000000"
+					}
+				}, {
+					"featureType": "land",
+					"elementType": "all",
+					"stylers": {
+						"color": "#08304b"
+					}
+				}, {
+					"featureType": "railway",
+					"elementType": "geometry.fill",
+					"stylers": {
+						"color": "#000000"
+					}
+				}, {
+					"featureType": "railway",
+					"elementType": "geometry.stroke",
+					"stylers": {
+						"color": "#08304b"
+					}
+				}, {
+					"featureType": "subway",
+					"elementType": "geometry",
+					"stylers": {
+						"lightness": -70
+					}
+				}, {
+					"featureType": "building",
+					"elementType": "geometry.fill",
+					"stylers": {
+						"color": "#000000"
+					}
+				}, {
+					"featureType": "all",
+					"elementType": "labels.text.fill",
+					"stylers": {
+						"color": "#857f7f"
+					}
+				}, {
+					"featureType": "all",
+					"elementType": "labels.text.stroke",
+					"stylers": {
+						"color": "#000000"
+					}
+				}, {
+					"featureType": "building",
+					"elementType": "geometry",
+					"stylers": {
+						"color": "#022338"
+					}
+				}, {
+					"featureType": "green",
+					"elementType": "geometry",
+					"stylers": {
+						"color": "#062032"
+					}
+				}, {
+					"featureType": "boundary",
+					"elementType": "all",
+					"stylers": {
+						"color": "#1e1c1c"
+					}
+				}, {
+					"featureType": "manmade",
+					"elementType": "all",
+					"stylers": {
+						"color": "#022338"
+					}
+				}]
+		    }
+		},
+	    tooltip : {
+	    	formatter: function (params, ticket, callback) {
+			    var incident_data=params.data.incident_data;
+			    var li="";
+			    if(incident_data!=undefined){
+				    for (var i = 0; i < incident_data.length; i++) {
+				    	li=li+'<li><em>'+(i+1)+'</em><i class='+incident_data[i].color+'></i><span>'+incident_data[i].incident_name+'</span></li>'
+				    }
+				    var html='<div class="gb-incident-list screen-incident-list scroll">'+
+						    	'<ul>'+
+						    		li+
+						    	'</ul>'+
+						    '</div>'
+				    return html;
+			    }else{
+			    	var html='<div class="gb-incident-list screen-incident-list scroll">'+
+						    	'<ul>'+
+						    		'<li><span>无</span></li>'
+						    	'</ul>'+
+						    '</div>'
+				    return html;
+			    }
+			},
+			enterable:true,
+	    	position: function (point, params, dom, rect, size) {
+			    // 固定在顶部
+			    return {left: rect.x-($(dom).width()/2)+(rect.width/2.2), top: rect.y-$(dom).height()-10};
+			},
+	        backgroundColor: 'rgba(255,255,255,0)',
+	    },
+	    legend: {
+	        orient: 'vertical',
+	    	backgroundColor:'rgba(26,34,44,1)',
+	        top: '30',
+	        right: '30',
+	        data: ['红色事件','橙色事件','黄色事件','蓝色事件','绿色事件'],
+	        textStyle: {
+	            color: '#7c8491',
+	        	padding:[5,0]
+	        },
+	        align:"left",
+	        padding:[10,25]
+	    },
+	    series: mapSeries
+	};
+	allMapChart.setOption(mapOption);
+    // 获取百度地图对象
+    allbmap = allMapChart.getModel().getComponent('bmap').getBMap();
+	// allbmap.centerAndZoom(new BMap.Point(120.166085,30.279006), 8);
+	allbmap.disableDoubleClickZoom();//禁止双击缩放
+	allbmap.enableScrollWheelZoom();//启用滚轮放大缩小
+    blist = [];
+    districtLoading = 0;
+	setTimeout(function () {
+		// 地图划分区域地点
+	    addDistrict("杭州",allbmap);
+	    addDistrict("宁波",allbmap);
+	    addDistrict("嘉兴",allbmap);
+	    addDistrict("绍兴",allbmap);
+	    addDistrict("台州",allbmap);
+	    addDistrict("温州",allbmap);
+	},100)
+
+
+
+var table = $('#table-main table').DataTable({
+	"scrollY": "calc(100% - 50px)",
+    "scrollX": true,
+    "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+	"dom": 'tiprl', //自定义显示项
+	"lengthMenu": [20,30,40,50], //每页显示条数设置
+	"lengthChange": true, //是否允许用户自定义显示数量
+	"bPaginate": true, //翻页功能
+	"bFilter": true, //列筛序功能
+	"searching": true, //本地搜索
+	//"ordering": true, //排序功能
+	"order": [4, "asc"], //desc降序
+	"Info": true, //页脚信息
+	"oLanguage": oLanguage, //国际语言转化
+	"columnDefs": [
+		{
+			orderable: false,
+			targets: [0,1,2,5,6]//设置某列禁止排序
+		}, {
+			"sType": "html-percent",
+			"aTargets": [1] //指定列号使用自定义排序
+		}
+	], 
+	initComplete: function() { //列筛选
+		var api = this.api();
+		api.columns().indexes().flatten().each(function(i) {
+			var column = api.column(i);
+            if (i == 0 || i==5 || i==6) { //对第i列进行筛选
+				rowScreen(column);
+            }else if (i==1) { //对第i列进行筛选
+				rowLevScreen(column);
+            }
+		});
+	},
+	fnDrawCallback: function(table) {
+		jumpPage($("#table-main"))
+    }
+});
+//自定义显示数量
+$('.gb-ctab').each(function(){
+	tabot($(this))
+});
+$("body").on("click",".j-table-chart-tab em",function(event) {
+	table.draw();
+});
+
+</script>
+</body>
+</html>

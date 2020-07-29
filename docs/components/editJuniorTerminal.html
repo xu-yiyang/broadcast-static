@@ -1,0 +1,129 @@
+<div class="gb-form">
+	<form class="layui-form" action="">
+		<div class="newform">
+			<p class="newform-tit"><i class="iconfont icon-bianji1"></i>编辑下级终端</p>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit">编辑下级终端</p>
+				</div>
+				<div class="oneitem-cont">
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>资源编码</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" />
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>物理地址</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" />
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>IP地址</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" />
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>设备类型</p>
+						<div class="layui-input-inline">
+							<select name="dispatch" lay-search="">
+								<option value="">请选择设备类型</option>
+								<option value="1">类型一</option>
+								<option value="2">类型二</option>
+								<option value="3">类型三</option>
+							</select>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>型号</p>
+						<div class="layui-input-inline">
+							<select name="dispatch" lay-search="">
+								<option value="">请选择型号</option>
+								<option value="1">型号一</option>
+								<option value="2">型号二</option>
+								<option value="1">型号三</option>
+								<option value="2">型号四</option>
+							</select>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>制造商名称</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" />
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>硬件版本号</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" />
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>软件版本号</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" />
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>电源</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" />
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>功放</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" />
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit">标准电平</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" />
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>所属地区</p>
+						<div class="layui-input-inline">
+							<select name="dispatch" lay-search="">
+								<option value="">请选择所属地区</option>
+								<option value="1">地区一</option>
+								<option value="2">地区二</option>
+								<option value="3">地区三</option>
+								<option value="4">地区四</option>
+								<option value="5">地区五</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tocreat">
+				<div class="progcreat">
+					<input type="button" value="清空" class="toemptybtn" />
+					<input type="button" value="确定" class="tocreatbtn" />
+				</div>
+			</div>
+			<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+		</div>
+	</form>
+</div>
+
+	
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		layui.use('form', function(){
+			var form = layui.form;
+			form.render();
+
+			var itbtn = $('<span class="itbtn"></span>');
+			$('.layui-select-title').append(itbtn);
+			$('.gb-form .layui-form-radio').remove();
+			
+		});
+	})
+</script>

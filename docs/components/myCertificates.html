@@ -1,0 +1,142 @@
+<div class="gb-table">
+	<div class="taskmsg" id="table-mainfou">
+		<div class="tkrange">
+			<div class="tklay">
+		    	<a href="#/certInstaller" class="add_tab newtk-btn" url="components/certInstaller.html" name="安装证书">安装证书</a>
+			</div>
+		</div>
+		<div class="thetab">
+			<div class="tablecont">
+			    <table class="table-main display" cellspacing="0" width="100%">
+			        <thead>
+				        <tr>
+				        	<th></th>
+				            <th>序号</th>
+				            <th>安装设备IP</th>
+				            <th>设备类型</th>
+				            <th>安装时间</th>
+				            <th>有效期</th>
+				            <th>操作</th>
+				        </tr>
+			        </thead>
+			        <tfoot>
+				        <tr>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				        </tr>
+			        </tfoot>
+			         <tbody>
+			        	<tr>
+			        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_1' /><label for='check_1'></label></div></td>
+			        		<td><span class='tabnumb'>1</span></td>
+			        		<td>125.119.98.6</td>
+			        		<td>PC端</td>
+			        		<td>2017-09-08  18:10:20</td>
+			        		<td>2017-09-08  18:10:20</td>
+			        		<td><span class="logout"><i class='iconfont icon-zhuxiao_logout'></i>注销</span></td>
+			        	</tr>
+			        	<tr>
+			        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_2' /><label for='check_2'></label></div></td>
+			        		<td><span class='tabnumb'>2</span></td>
+			        		<td>125.119.98.6</td>
+			        		<td>PC端</td>
+			        		<td>2017-09-08  18:10:20</td>
+			        		<td>2017-09-08  18:10:20</td>
+			        		<td><span class="logout"><i class='iconfont icon-zhuxiao_logout'></i>注销</span></td>
+			        	</tr>
+			        	<tr>
+			        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_3' /><label for='check_3'></label></div></td>
+			        		<td><span class='tabnumb'>3</span></td>
+			        		<td>125.119.98.6</td>
+			        		<td>笔记本</td>
+			        		<td>2017-09-08  18:10:20</td>
+			        		<td>2017-09-08  18:10:20</td>
+			        		<td><span class="logout"><i class='iconfont icon-zhuxiao_logout'></i>注销</span></td>
+			        	</tr>
+			        	<tr>
+			        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_4' /><label for='check_4'></label></div></td>
+			        		<td><span class='tabnumb'>4</span></td>
+			        		<td>125.119.98.6</td>
+			        		<td>笔记本</td>
+			        		<td>2017-09-08  18:10:20</td>
+			        		<td>2017-09-08  18:10:20</td>
+			        		<td><span class="logout"><i class='iconfont icon-zhuxiao_logout'></i>注销</span></td>
+			        	</tr>
+			        	<tr>
+			        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_5' /><label for='check_5'></label></div></td>
+			        		<td><span class='tabnumb'>5</span></td>
+			        		<td>125.119.98.6</td>
+			        		<td>PC端</td>
+			        		<td>2017-09-08  18:10:20</td>
+			        		<td>2017-09-08  18:10:20</td>
+			        		<td><span class="logout"><i class='iconfont icon-zhuxiao_logout'></i>注销</span></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="theche">
+				<div class="tocheck">
+					<input type="checkbox" name="checkall" id="checkAll" />
+					<label for="checkAll">全选</label>
+				</div>
+				<span class="chedel"><i class="iconfont icon-shanchu"></i>删除</span>
+			</div>
+		</div>
+		<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+	</div>
+	<div class="choose">
+		<p class="choword">确定注销吗？</p>
+		<div class="chobtn">
+			<input type="button" value="注销" class="chopri cho-logout" />
+			<input type="button" value="取消" class="cho-cancel" />
+		</div>
+		<span class="triangle"><em></em></span>
+	</div>
+</div>
+	
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*table*/
+		$(function () {
+           var table = $('#table-mainfou table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainfou"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3) {//对第i列进行筛选
+                            var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			userDef(table);//table配置--显示数量 搜索 全选 删除 
+       })
+	})
+</script>

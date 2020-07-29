@@ -1,0 +1,173 @@
+<div class="gb-table">
+	<div class="taskmsg" id="table-mainfou">
+		<div class="tkrange">
+			<div class="tksearch">
+				<input type="text" value="请输入角色，角色说明" onfocus="if(this.value==defaultValue){this.value = '';this.style.color='#333'}" onblur="if(!value){this.value = defaultValue;this.style.color='#ccc';}" class="dsearch" aria-controls="table-main"/>
+				<span class="tksrh-btn"><i class="iconfont icon-sousuo"></i></span>
+			</div>
+		</div>
+		<div class="thetab gb-role-list">
+			<div class="fortit reladd">
+				<span class="oneitem-tit">用户列表</span>
+				<span class="reldelbtn" id="toadd">
+					<a href="#/addUser" url="components/addUser.html" class="editbtn add_tab" name="新建用户"> 
+						<i class="iconfont icon-xinjian"></i>
+						新建用户
+					</a>
+				</span>
+			</div>
+			<div class="tablecont">
+			    <table class="table-main display" cellspacing="0" width="100%">
+			        <thead>
+				        <tr>
+				        	<th></th>
+				            <th>序号</th>
+				            <th>角色</th>
+				            <th>姓名</th>
+				            <th>密码</th>
+				            <th>权限</th>
+				            <th>创建人</th>
+				            <th>创建时间</th>
+				            <th>操作</th>
+				            <th></th>
+				            <th></th>
+				        </tr>
+			        </thead>
+			        <tfoot>
+				        <tr>
+				        	<th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				            <th></th>
+				        </tr>
+			        </tfoot>
+			         <tbody>
+			        	<tr>
+			        		<td>
+			        			<div class='checkone'>
+			        				<input type='checkbox' name='checkone' id='check_1' />			        		
+			        				<label for='check_1'></label>
+			        			</div>
+			        		</td>
+			        		<td><span class='tabnumb'>1</span></td>
+			        		<td>审核员</td>
+			        		<td>
+								<a href="#/viewUser" url="components/viewUser.html" class="view-cont add_tab" name="查看用户">姓名</a>
+			        		</td>
+			        		<td>密码</td>
+			        		<td>新建任务消息</td>
+			        		<td>橙子</td>
+			        		<td>2016-09-08  18:10:20</td>
+			        		<td>
+								<a href="#/editUser" url="components/editUser.html" class="editbtn add_tab" name="编辑用户"> 
+									<i class="iconfont icon-bianji"></i>
+									编辑
+								</a>
+			        		</td>
+			        		<td><a href="javascript:void(0);" class="issue isstop"><i class="iconfont icon-zanting"></i>停用</a></td>
+			        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+			        	</tr>
+			        	<tr>
+			        		<td>
+			        			<div class='checkone'>
+			        				<input type='checkbox' name='checkone' id='check_2' />			        		
+			        				<label for='check_2'></label>
+			        			</div>
+			        		</td>
+			        		<td><span class='tabnumb'>2</span></td>
+			        		<td>审核员</td>
+			        		<td>
+								<a href="#/viewUser" url="components/viewUser.html" class="view-cont add_tab" name="查看用户">姓名</a>
+			        		</td>
+			        		<td>密码</td>
+			        		<td>新建任务消息2</td>
+			        		<td>橙子2</td>
+			        		<td>2016-09-08  18:10:20</td>
+			        		<td>
+								<a href="#/editUser" url="components/editUser.html" class="editbtn add_tab" name="编辑用户"> 
+									<i class="iconfont icon-bianji"></i>
+									编辑
+								</a>
+			        		</td>
+			        		<td><a href="javascript:void(0);" class="issue isstop"><i class="iconfont icon-zanting"></i>停用</a></td>
+			        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+			        	</tr>
+			        </tbody>
+			    </table>
+			</div>
+			<div class="theche">
+				<div class="tocheck">
+					<input type="checkbox" name="checkall" id="checkAll" />
+					<label for="checkAll">全选</label>
+				</div>
+				<span class="chedel"><i class="iconfont icon-shanchu"></i>删除</span>
+			</div>
+		</div>
+		<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+	</div>
+	<div class="choose">
+		<p class="choword">确定删除此任务消息吗？</p>
+		<div class="chobtn">
+			<input type="button" value="删除" class="chopri cho-delete" />
+			<input type="button" value="取消" class="cho-cancel" />
+		</div>
+		<span class="triangle"><em></em></span>
+	</div>
+</div>
+	
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+	/*table*/
+	$(function () {
+
+       var table = $('#table-mainfou table').DataTable({
+            "scrollY": "calc(100% - 50px)",
+		   "scrollX": true,
+           "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+           "dom": 'tiprl',//自定义显示项
+           "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+           "lengthChange": true,//是否允许用户自定义显示数量
+           "bPaginate": true, //翻页功能
+           "bFilter": true, //列筛序功能
+           "searching": true,//本地搜索
+           "order": [ 1, "asc" ],//desc降序
+           "Info": true,//页脚信息
+           "oLanguage": oLanguage,
+           "columnDefs": [
+           		{
+				  orderable: false,
+				  targets: [0,2,3,4,5,6,7,8,9,10] //禁止排序
+				}
+           ],
+           fnDrawCallback: function(table) {  
+           		jumpPage($("#table-mainfou"))
+           },
+           initComplete: function () {//列筛选
+               var api = this.api();
+               api.columns().indexes().flatten().each(function (i) {
+                   if (i == 2 || i==5 || i==6) { //对第i列进行筛选
+                       var column = api.column(i);
+						rowScreen(column);
+                   }
+               });
+           }
+		})
+		userDef(table);//table配置--显示数量 搜索 全选 删除  
+   })
+	$(document).on('click','.isstop',function(event) {
+		$('.choword').html('确定停用此任务消息吗？');
+		$('.chopri').val('停用');
+    });
+});
+	
+</script>

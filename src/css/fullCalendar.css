@@ -1,0 +1,55 @@
+.gb-watch-body{height: 100%;padding: 40px 0;}
+.gb-watch{margin: 0px 2%;height:100%; background: #fff;border: 1px solid #d8d8d8;border-radius: 5px;overflow: hidden;}
+.gb-watch-list .tksearch{width: 100%;float: none;}
+.gb-watch-list .tksearch input{color: #000;} 
+.gb-calendar-body{width: 80%;float: left;position: relative;/*height: 100%;overflow-x: auto;*/}
+.gb-calendar{width:100%;/*height: 100%;*/}
+.gb-watch .fc-toolbar h2{display: inline-block;vertical-align: middle;margin: 0 20px;color: #585d66;font-size: 14px;font-weight: bold;}
+.gb-watch .fc-toolbar.fc-header-toolbar{background: linear-gradient(#fefefe, #f1f1f1);margin-bottom: 0;padding:10px;}
+/*.gb-calendar td span,.gb-calendar div{color: #fff;}*/
+.gb-watch .fc-center .fc-state-default{background: none;border: none;box-shadow: none;}
+.gb-watch .fc-ltr .fc-axis{text-align: center;}
+.gb-watch .fc-time-grid .fc-slats td{height: 4rem;}
+.gb-watch .fc-event{background: #1bc6fd;text-align: center;}
+.gb-watch .fc-event .fc-content{height: 100%;padding-top: 30px;}
+.gb-watch .fc-event .fc-time{background: #3ab8e0;line-height: 30px;position: absolute;width: 100%;left: 0px;top: 0px;}
+.gb-watch .fc-day-grid-event .fc-time{display: none;}
+.gb-watch .fc-title { position: absolute; top: 50%; transform: translateY(-50%);width: 100%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;left: 0; }
+
+.gb-watch .fc-event:nth-child(3n-1){background: #4041e6;}
+.gb-watch .fc-event:nth-child(3n-1) .fc-time{background: #6262cc;}
+
+.gb-watch .fc-event:nth-child(3n){background: #009a7c;}
+.gb-watch .fc-event:nth-child(3n) .fc-time{background: #11957b;}
+
+
+.gb-calendar-fun{position: absolute;right: 0px;top:17px;color: #7c8491;font-size: 14px;}
+.gb-calendar-fun i{font-size: 14px;}
+.gb-calendar-fun a{margin-right: 18px;}
+
+
+.gb-watch-list-ul{margin-top: 15%;height: 80%;overflow-x: auto;}
+.gb-watch-list{width: 20%;float: left;border-right: 1px solid #d8d8d8;height: 100%;padding: 20px;position: relative;}
+.gb-watch-logo{width: 30px;height: 30px;border-radius: 50%;margin-right: 5%;background-position: center;}
+.gb-watch-list-ul li,.gb-watch-list-ul .all{margin-bottom: 16px;}
+.gb-watch-list .matcheck{margin:8px 0; }
+
+.gb-watch-list-btn-box{text-align: center;position: absolute;bottom: 20px;width: 100%;left: 0px}
+.add-watch-btn{width: 60%;}
+
+.layui-btn.bg4579d8{background: #4579d8;}
+.gb-watch-dialog .layui-layer-btn { position: absolute; bottom: 7px; left: 203px; }
+.gb-watch-dialog .layui-layer-btn .layui-layer-btn0,.gb-watch-dialog .layui-layer-btn .layui-layer-btn1{background-color: #4579d8;height: 38px;line-height: 38px;color: #fff;}
+
+
+
+/*角色权限*/
+.gb-permission-list{overflow: hidden;height: 500px;border: 1px solid #d8d8d8;border-radius: 5px;display: table;width: 100%;}
+.gb-permission-list .gb-watch-list{display: table-cell;float: none;vertical-align: top;}
+.gb-permission-list .gb-user-permission{display: table-cell;}
+.gb-permission-list .gb-tree{border: none;}
+.gb-user-permission h3{border-bottom: 1px solid #d8d8d8;line-height: 52px;padding: 0 15px;}
+
+
+
+

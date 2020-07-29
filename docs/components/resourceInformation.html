@@ -1,0 +1,3989 @@
+<div class="gb-table">
+	<div class="taskmsg" id="tablemore"> 
+		<div class="tkrange">
+			<div class="tklay">
+				<span class="talay-word"><i class="iconfont icon-rili"></i>发布时间</span>
+				<div class="layui-input-inline">
+			        <input type="text" class="layui-input" id="daterg" placeholder="选择时间范围">
+			        <span class="tocho iconfont icon-shijian" id="tochobtn"></span> 
+		    	</div>
+		    	<div class="newtk-btn" id="tochocase">
+		    		<span class="catonew">新建资源<i class="iconfont icon-arrow-bottom"></i></span>
+		    		<ul class="tonewlist">
+		    			<li>
+		    				<a href="#/newPlatResoInfo" class="newtk-btn add_tab" url="components/newPlatResoInfo.html" name="新建平台资源信息">新建平台资源信息</a>
+		    			</li>
+		    			<li>
+		    				<a href="#/newJuniorTerminal" class="newtk-btn add_tab" url="components/newJuniorTerminal.html" name="新建下级终端">新建下级终端</a>
+		    			</li>
+		    			<li>
+		    				<a href="#/newStationResoInfo" class="newtk-btn add_tab" url="components/newStationResoInfo.html" name="新建台站">新建台站</a>
+		    			</li>
+		    			<li>
+		    				<input type="file" class="leadin" accept="xls,xlsx"  data-type="loading"/>
+		    				<a href="javascript:void(0);" class="newtk-btn">快速导入（excel）</a>
+		    			</li>
+		    		</ul>
+		    	</div>
+			</div>
+			<div class="tksearch">
+				<input type="text" value="请输入资源编码 ，资源名称，所属地区" onfocus="if(this.value==defaultValue){this.value = '';this.style.color='#333'}" onblur="if(!value){this.value = defaultValue;this.style.color='#ccc';}" class="dsearch" aria-controls="table-main"/>
+				<span class="tksrh-btn"><i class="iconfont icon-sousuo"></i></span>
+			</div>
+		</div>
+		<div class="restable">
+			<div class="resochos">
+				<div class="resodiv">
+					<ul class="resolist">
+						<li class="resact" resval="0">已确认资源</li>
+						<li resval="1">待确认资源</li>
+					</ul>
+				</div>
+				<div class="resodiv">
+					<ul class="resolist">
+						<li class="resact" resval="2">平台资源信息</li>
+						<li resval="3">下级终端</li>
+						<li resval="4">发射台资源信息</li>
+					</ul>
+					<span class="resnav"><i class="iconfont icon-chuangjianzuanqumulu"></i></span>
+				</div>
+				<div class="resodiv">
+					<ul class="resolist">
+						<li class="resact" resval="5">全部</li>
+						<li resval="6">新增状态异常<span class="resmsg">11</span></li>
+						<li resval="7">新增状态正常</li>
+					</ul>
+				</div>
+			</div>
+			<div class="thetab" id="table-maina">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>平台类别</th>
+					            <th>系统类别</th>
+					            <th>平台名称</th>
+					            <th>服务器地址</th>
+					            <th>所属地区</th>
+					            <th>创建时间</th>
+					            <th>操作</th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+								<th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checka' id='checka_1' /><label for='checka_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checka' id='checka_2' /><label for='checka_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>下级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区</td>
+				        		<td>2017-09-18  18:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checka' id='checka_3' /><label for='checka_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.254</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  18:16:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checka' id='checka_4' /><label for='checka_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checka' id='checka_5' /><label for='checka_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>下级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checka' id='checka_6' /><label for='checka_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  21:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAlla" class="checkAll" />
+						<label for="checkAlla">全选</label>
+					</div>
+					<span class="chedel" id="dela"><i class="iconfont icon-shanchu"></i>删除</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-mainb">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>平台类别</th>
+					            <th>系统类别</th>
+					            <th>平台名称</th>
+					            <th>服务器地址</th>
+					            <th>所属地区</th>
+					            <th>创建时间</th>
+					            <th>操作</th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+								<th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkb' id='checkb_1' /><label for='checkb_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkb' id='checkb_2' /><label for='checkb_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>下级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区</td>
+				        		<td>2017-09-18  18:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkb' id='checkb_3' /><label for='checkb_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.254</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  18:16:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkb' id='checkb_4' /><label for='checkb_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkb' id='checkb_5' /><label for='checkb_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>下级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkb' id='checkb_6' /><label for='checkb_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区</td>
+				        		<td>2016-09-08  21:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAllb" class="checkAll" />
+						<label for="checkAllb">全选</label>
+					</div>
+					<span class="chedel" id="delb"><i class="iconfont icon-shanchu"></i>删除</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-mainc">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>平台类别</th>
+					            <th>系统类别</th>
+					            <th>平台名称</th>
+					            <th>服务器地址</th>
+					            <th>所属地区</th>
+					            <th>创建时间</th>
+					            <th>操作</th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+								<th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkc' id='checkc_1' /><label for='checkc_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkc' id='checkc_2' /><label for='checkc_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>下级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区</td>
+				        		<td>2017-09-18  18:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkc' id='checkc_3' /><label for='checkc_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.254</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  18:16:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkc' id='checkc_4' /><label for='checkc_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkc' id='checkc_5' /><label for='checkc_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>下级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAllc" class="checkAll" />
+						<label for="checkAllc">全选</label>
+					</div>
+					<span class="chedel" id="delc"><i class="iconfont icon-shanchu"></i>删除</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-maind">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>设备类型名称</th>
+					            <th>型号</th>
+					            <th>终端物理地址</th>
+					            <th>IP地址</th>
+					            <th>所属地区</th>
+					            <th>在线信息</th>
+					            <th>操作</th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+								<th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkd' id='checkd_1' /><label for='checkd_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkd' id='checkd_2' /><label for='checkd_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型设备类型</a></td>
+				        		<td>型号型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.68.45.255</td>
+				        		<td>地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkd' id='checkd_3' /><label for='checkd_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.252</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkd' id='checkd_4' /><label for='checkd_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkd' id='checkd_5' /><label for='checkd_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkd' id='checkd_6' /><label for='checkd_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAlld" class="checkAll" />
+						<label for="checkAlld">全选</label>
+					</div>
+					<span class="chedel" id="deld"><i class="iconfont icon-shanchu"></i>删除</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-maine">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>设备类型名称</th>
+					            <th>型号</th>
+					            <th>终端物理地址</th>
+					            <th>IP地址</th>
+					            <th>所属地区</th>
+					            <th>在线信息</th>
+					            <th>操作</th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+								<th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checke' id='checke_1' /><label for='checke_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checke' id='checke_2' /><label for='checke_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型设备类型</a></td>
+				        		<td>型号型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.68.45.255</td>
+				        		<td>地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checke' id='checke_3' /><label for='checke_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.252</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checke' id='checke_4' /><label for='checke_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checke' id='checke_5' /><label for='checke_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checke' id='checke_6' /><label for='checke_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAlle" class="checkAll" />
+						<label for="checkAlle">全选</label>
+					</div>
+					<span class="chedel" id="dele"><i class="iconfont icon-shanchu"></i>删除</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-mainf">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>设备类型名称</th>
+					            <th>型号</th>
+					            <th>终端物理地址</th>
+					            <th>IP地址</th>
+					            <th>所属地区</th>
+					            <th>在线信息</th>
+					            <th>操作</th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+								<th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkf' id='checkf_1' /><label for='checkf_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkf' id='checkf_2' /><label for='checkf_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型设备类型</a></td>
+				        		<td>型号型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.68.45.255</td>
+				        		<td>地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkf' id='checkf_3' /><label for='checkf_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.252</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkf' id='checkf_4' /><label for='checkf_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkf' id='checkf_5' /><label for='checkf_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkf' id='checkf_6' /><label for='checkf_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAllf" class="checkAll" />
+						<label for="checkAllf">全选</label>
+					</div>
+					<span class="chedel" id="delf"><i class="iconfont icon-shanchu"></i>删除</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-maing">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>发射台名称</th>
+					            <th>物理地址</th>
+					            <th>IP地址</th>
+					            <th>所属地区</th>
+					            <th>在线信息</th>
+					            <th>操作</th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkg' id='checkg_1' /><label for='checkg_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkg' id='checkg_2' /><label for='checkg_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.68.45.255</td>
+				        		<td>地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkg' id='checkg_3' /><label for='checkg_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.252</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkg' id='checkg_4' /><label for='checkg_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkg' id='checkg_5' /><label for='checkg_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkg' id='checkg_6' /><label for='checkg_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkg' id='checkg_7' /><label for='checkg_7'></label></div></td>
+				        		<td><span class='tabnumb'>7</span></td>
+				        		<td>000G</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAllg" class="checkAll" />
+						<label for="checkAllg">全选</label>
+					</div>
+					<span class="chedel" id="delg"><i class="iconfont icon-shanchu"></i>删除</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-mainh">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>发射台名称</th>
+					            <th>物理地址</th>
+					            <th>IP地址</th>
+					            <th>所属地区</th>
+					            <th>在线信息</th>
+					            <th>操作</th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkh' id='checkh_1' /><label for='checkh_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkh' id='checkh_2' /><label for='checkh_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.68.45.255</td>
+				        		<td>地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkh' id='checkh_3' /><label for='checkh_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.252</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkh' id='checkh_4' /><label for='checkh_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkh' id='checkh_5' /><label for='checkh_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkh' id='checkh_6' /><label for='checkh_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkh' id='checkh_7' /><label for='checkh_7'></label></div></td>
+				        		<td><span class='tabnumb'>7</span></td>
+				        		<td>000G</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAllh" class="checkAll" />
+						<label for="checkAllh">全选</label>
+					</div>
+					<span class="chedel" id="delh"><i class="iconfont icon-shanchu"></i>删除</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-maini">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>发射台名称</th>
+					            <th>物理地址</th>
+					            <th>IP地址</th>
+					            <th>所属地区</th>
+					            <th>在线信息</th>
+					            <th>操作</th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checki' id='checki_1' /><label for='checki_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checki' id='checki_2' /><label for='checki_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.68.45.255</td>
+				        		<td>地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checki' id='checki_3' /><label for='checki_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.252</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checki' id='checki_4' /><label for='checki_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checki' id='checki_5' /><label for='checki_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checki' id='checki_6' /><label for='checki_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAlli" class="checkAll" />
+						<label for="checkAlli">全选</label>
+					</div>
+					<span class="chedel" id="deli"><i class="iconfont icon-shanchu"></i>删除</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-mainj">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>平台类别</th>
+					            <th>系统类别</th>
+					            <th>平台名称</th>
+					            <th>服务器地址</th>
+					            <th>所属地区</th>
+					            <th>创建时间</th>
+					            <th>操作</th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+								<th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkj' id='checkj_1' /><label for='checkj_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkj' id='checkj_2' /><label for='checkj_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td>下级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区</td>
+				        		<td>2017-09-18  18:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkj' id='checkj_3' /><label for='checkj_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.254</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  18:16:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkj' id='checkj_4' /><label for='checkj_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkj' id='checkj_5' /><label for='checkj_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>下级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkj' id='checkj_6' /><label for='checkj_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  21:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAllj" class="checkAll" />
+						<label for="checkAllj">全选</label>
+					</div>
+					<span class="chedel" id="delj"><i class="iconfont icon-shanchu"></i>删除</span>
+					<span class="syncall"><i class="iconfont icon-zhuanhuan"></i>同步</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-maink">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>平台类别</th>
+					            <th>系统类别</th>
+					            <th>平台名称</th>
+					            <th>服务器地址</th>
+					            <th>所属地区</th>
+					            <th>创建时间</th>
+					            <th>操作</th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+								<th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkk' id='checkk_1' /><label for='checkk_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkk' id='checkk_2' /><label for='checkk_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>下级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区</td>
+				        		<td>2017-09-18  18:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkk' id='checkk_3' /><label for='checkk_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.254</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  18:16:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkk' id='checkk_4' /><label for='checkk_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkk' id='checkk_5' /><label for='checkk_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td>下级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkk' id='checkk_6' /><label for='checkk_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区</td>
+				        		<td>2016-09-08  21:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAllk" class="checkAll" />
+						<label for="checkAllk">全选</label>
+					</div>
+					<span class="chedel" id="delk"><i class="iconfont icon-shanchu"></i>删除</span>
+					<span class="syncall"><i class="iconfont icon-zhuanhuan"></i>同步</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-mainl">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>平台类别</th>
+					            <th>系统类别</th>
+					            <th>平台名称</th>
+					            <th>服务器地址</th>
+					            <th>所属地区</th>
+					            <th>创建时间</th>
+					            <th>操作</th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+								<th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkl' id='checkl_1' /><label for='checkl_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkl' id='checkl_2' /><label for='checkl_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>下级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区</td>
+				        		<td>2017-09-18  18:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkl' id='checkl_3' /><label for='checkl_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.254</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  18:16:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkl' id='checkl_4' /><label for='checkl_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>上级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkl' id='checkl_5' /><label for='checkl_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>下级平台</td>
+				        		<td>系统类别</td>
+				        		<td><a href='#/viewPlatResoInfo' url='components/viewPlatResoInfo.html' class='view-cont add_tab' name='查看平台资源信息'>平台名称</a></td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区</td>
+				        		<td>2017-09-08  18:10:20</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editPlatResoInfo' url='components/editPlatResoInfo.html' class='editbtn add_tab' name='编辑平台资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAlll" class="checkAll" />
+						<label for="checkAlll">全选</label>
+					</div>
+					<span class="chedel" id="dell"><i class="iconfont icon-shanchu"></i>删除</span>
+					<span class="syncall"><i class="iconfont icon-zhuanhuan"></i>同步</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-mainm">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>设备类型名称</th>
+					            <th>型号</th>
+					            <th>终端物理地址</th>
+					            <th>IP地址</th>
+					            <th>所属地区</th>
+					            <th>在线信息</th>
+					            <th>操作</th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+								<th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkm' id='checkm_1' /><label for='checkm_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkm' id='checkm_2' /><label for='checkm_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型设备类型</a></td>
+				        		<td>型号型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.68.45.255</td>
+				        		<td>地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkm' id='checkm_3' /><label for='checkm_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.252</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkm' id='checkm_4' /><label for='checkm_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkm' id='checkm_5' /><label for='checkm_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkm' id='checkm_6' /><label for='checkm_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkm' id='checkm_7' /><label for='checkm_7'></label></div></td>
+				        		<td><span class='tabnumb'>7</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAllm" class="checkAll" />
+						<label for="checkAllm">全选</label>
+					</div>
+					<span class="chedel" id="delm"><i class="iconfont icon-shanchu"></i>删除</span>
+					<span class="syncall"><i class="iconfont icon-zhuanhuan"></i>同步</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-mainn">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>设备类型名称</th>
+					            <th>型号</th>
+					            <th>终端物理地址</th>
+					            <th>IP地址</th>
+					            <th>所属地区</th>
+					            <th>在线信息</th>
+					            <th>操作</th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+								<th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkn' id='checkn_1' /><label for='checkn_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkn' id='checkn_2' /><label for='checkn_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型设备类型</a></td>
+				        		<td>型号型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.68.45.255</td>
+				        		<td>地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkn' id='checkn_3' /><label for='checkn_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.252</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkn' id='checkn_4' /><label for='checkn_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkn' id='checkn_5' /><label for='checkn_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkn' id='checkn_6' /><label for='checkn_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAlln" class="checkAll" />
+						<label for="checkAlln">全选</label>
+					</div>
+					<span class="chedel" id="deln"><i class="iconfont icon-shanchu"></i>删除</span>
+					<span class="syncall"><i class="iconfont icon-zhuanhuan"></i>同步</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-maino">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>设备类型名称</th>
+					            <th>型号</th>
+					            <th>终端物理地址</th>
+					            <th>IP地址</th>
+					            <th>所属地区</th>
+					            <th>在线信息</th>
+					            <th>操作</th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+								<th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checko' id='checko_1' /><label for='checko_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checko' id='checko_2' /><label for='checko_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型设备类型</a></td>
+				        		<td>型号型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.68.45.255</td>
+				        		<td>地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checko' id='checko_3' /><label for='checko_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.252</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checko' id='checko_4' /><label for='checko_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checko' id='checko_5' /><label for='checko_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checko' id='checko_6' /><label for='checko_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td><a href='#/viewJuniorTerminal' url='components/viewJuniorTerminal.html' class='view-cont add_tab' name='查看下级终端'>设备类型</a></td>
+				        		<td>型号</td>
+				        		<td>终端物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editJuniorTerminal' url='components/editJuniorTerminal.html' class='editbtn add_tab' name='编辑下级终端'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAllo" class="checkAll" />
+						<label for="checkAllo">全选</label>
+					</div>
+					<span class="chedel" id="delo"><i class="iconfont icon-shanchu"></i>删除</span>
+					<span class="syncall"><i class="iconfont icon-zhuanhuan"></i>同步</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-mainp">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>发射台名称</th>
+					            <th>物理地址</th>
+					            <th>IP地址</th>
+					            <th>所属地区</th>
+					            <th>在线信息</th>
+					            <th>操作</th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkp' id='checkp_1' /><label for='checkp_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkp' id='checkp_2' /><label for='checkp_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.68.45.255</td>
+				        		<td>地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkp' id='checkp_3' /><label for='checkp_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.252</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkp' id='checkp_4' /><label for='checkp_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkp' id='checkp_5' /><label for='checkp_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkp' id='checkp_6' /><label for='checkp_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkp' id='checkp_7' /><label for='checkp_7'></label></div></td>
+				        		<td><span class='tabnumb'>7</span></td>
+				        		<td>000G</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAllp" class="checkAll" />
+						<label for="checkAllp">全选</label>
+					</div>
+					<span class="chedel" id="delp"><i class="iconfont icon-shanchu"></i>删除</span>
+					<span class="syncall"><i class="iconfont icon-zhuanhuan"></i>同步</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-mainq">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>发射台名称</th>
+					            <th>物理地址</th>
+					            <th>IP地址</th>
+					            <th>所属地区</th>
+					            <th>在线信息</th>
+					            <th>操作</th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkq' id='checkq_1' /><label for='checkq_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkq' id='checkq_2' /><label for='checkq_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.68.45.255</td>
+				        		<td>地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkq' id='checkq_3' /><label for='checkq_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.252</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkq' id='checkq_4' /><label for='checkq_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkq' id='checkq_5' /><label for='checkq_5'></label></div></td>
+				        		<td><span class='tabnumb'>5</span></td>
+				        		<td>000E</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkq' id='checkq_6' /><label for='checkq_6'></label></div></td>
+				        		<td><span class='tabnumb'>6</span></td>
+				        		<td>000F</td>
+				        		<td><span class="statecol red">不在线</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkq' id='checkq_7' /><label for='checkq_7'></label></div></td>
+				        		<td><span class='tabnumb'>7</span></td>
+				        		<td>000G</td>
+				        		<td><span class="statecol deepred">异常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAllq" class="checkAll" />
+						<label for="checkAllq">全选</label>
+					</div>
+					<span class="chedel" id="delq"><i class="iconfont icon-shanchu"></i>删除</span>
+					<span class="syncall"><i class="iconfont icon-zhuanhuan"></i>同步</span>
+				</div>
+			</div>
+			<div class="thetab" id="table-mainr">
+				<div class="tablecont">
+				    <table class="table-main display" cellspacing="0" width="100%">
+				        <thead>
+					        <tr>
+					        	<th></th>
+					            <th>序号</th>
+					            <th>编码</th>
+					            <th>工作状态</th>
+					            <th>发射台名称</th>
+					            <th>物理地址</th>
+					            <th>IP地址</th>
+					            <th>所属地区</th>
+					            <th>在线信息</th>
+					            <th>操作</th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </thead>
+				        <tfoot>
+					        <tr>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					            <th></th>
+					        </tr>
+				        </tfoot>
+				         <tbody>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkr' id='checkr_1' /><label for='checkr_1'></label></div></td>
+				        		<td><span class='tabnumb'>1</span></td>
+				        		<td>000A</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.255</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkr' id='checkr_2' /><label for='checkr_2'></label></div></td>
+				        		<td><span class='tabnumb'>2</span></td>
+				        		<td>000B</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.68.45.255</td>
+				        		<td>地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkr' id='checkr_3' /><label for='checkr_3'></label></div></td>
+				        		<td><span class='tabnumb'>3</span></td>
+				        		<td>000C</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.252</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        	<tr>
+				        		<td><div class='checkone'><input type='checkbox' name='checkr' id='checkr_4' /><label for='checkr_4'></label></div></td>
+				        		<td><span class='tabnumb'>4</span></td>
+				        		<td>000D</td>
+				        		<td><span class="statecol">正常</span></td>
+				        		<td>名称</td>
+				        		<td>物理地址</td>
+				        		<td>211.98.45.245</td>
+				        		<td>地区地区</td>
+				        		<td>在线信息</td>
+				        		<td><a href='javascript:void(0);' class='syncbtn'><i class='iconfont icon-zhuanhuan'></i>同步</a></td>
+				        		<td><a href='#/editStationResoInfo' url='components/editStationResoInfo.html' class='editbtn add_tab' name='编辑台站资源信息'><i class='iconfont icon-bianji'></i>编辑</a></td>
+				        		<td><span class='del delete'><i class='iconfont icon-shanchu'></i>删除</span></td>
+				        	</tr>
+				        </tbody>
+				    </table>
+				</div>
+				<div class="theche">
+					<div class="tocheck">
+						<input type="checkbox" name="checkall" id="checkAllr" class="checkAll" />
+						<label for="checkAllr">全选</label>
+					</div>
+					<span class="chedel" id="delr"><i class="iconfont icon-shanchu"></i>删除</span>
+					<span class="syncall"><i class="iconfont icon-zhuanhuan"></i>同步</span>
+				</div>
+			</div>
+			<div class="treediv">
+				<div class="gb-tree scroll" id="treea">
+					<ul id="gb_tree_resource1" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treeb">
+					<ul id="gb_tree_resource2" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treec">
+					<ul id="gb_tree_resource3" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treed">
+					<ul id="gb_tree_resource4" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treee">
+					<ul id="gb_tree_resource5" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treef">
+					<ul id="gb_tree_resource6" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treeg">
+					<ul id="gb_tree_resource7" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treeh">
+					<ul id="gb_tree_resource8" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treei">
+					<ul id="gb_tree_resource9" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treej">
+					<ul id="gb_tree_resource10" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treek">
+					<ul id="gb_tree_resource11" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treel">
+					<ul id="gb_tree_resource12" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treem">
+					<ul id="gb_tree_resource13" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treen">
+					<ul id="gb_tree_resource14" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treeo">
+					<ul id="gb_tree_resource15" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treep">
+					<ul id="gb_tree_resource16" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treeq">
+					<ul id="gb_tree_resource17" class="ztree ztree-resource"></ul>
+				</div>
+				<div class="gb-tree scroll" id="treer">
+					<ul id="gb_tree_resource18" class="ztree ztree-resource"></ul>
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+	</div>
+	
+	<div class="popwindow popnone"></div>
+	<div class="tolead">
+		<p class="poptit">导入excel</p>
+		<span class="popclose"><i class="iconfont icon-guanbi"></i></span>
+		<div class="leadiv">
+			<div class="layui-progress layui-progress-big" lay-filter="demo" lay-showpercent="true">
+				<div class="layui-progress-bar" lay-percent="0%"></div>
+			</div>
+			<p class="leadhint">正在导入<span class="lefile">xxx.xls</span></p>
+			<p class="succmat"><i class="iconfont icon-11"></i>转换成功！</p>
+		</div>
+	</div>
+	<div class="choose">
+		<p class="choword">确定删除此任务消息吗？</p>
+		<div class="chobtn">
+			<input type="button" value="删除" class="chopri cho-delete" />
+			<input type="button" value="取消" class="cho-cancel" />
+		</div>
+		<span class="triangle"><em></em></span>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		layui.use('element', function(){
+			var element = layui.element;
+
+			//触发事件
+			var active = {
+			    loading: function(othis){
+			      var DISABLED = 'layui-btn-disabled';
+			      if(othis.hasClass(DISABLED)) return;
+			      
+			      //模拟loading
+			      var n = 0,timer = setInterval(function(){
+			        n = n + Math.random()*10|0;  
+			        if(n>100){
+			          n = 100;
+			          clearInterval(timer);
+			          othis.removeClass(DISABLED);
+			          $('.leadiv .layui-progress').hide();
+			          $('.leadhint').hide();
+			          $('.leadiv .succmat').show();
+			        }
+			        element.progress('demo', n+'%');
+			      }, 300+Math.random()*1000);
+			      
+			      othis.addClass(DISABLED);
+			    }
+			};
+		  
+			$('.leadin').change(function(){
+				$('.leadiv .succmat').hide();
+				$('.leadiv .layui-progress').show();
+			    $('.leadhint').show();
+				$('.popnone').show();
+				$('.tolead').show();
+
+				var othis = $(this), type = $(this).data('type');
+				active[type] ? active[type].call(this, othis) : '';
+			})
+		})
+		
+
+		//菜单栏
+		$('.resolist li').click(function(){
+			$(this).parent().find('li').removeClass('resact');
+			$(this).addClass('resact');
+
+			var thisone = $(this).attr('resval');
+			if(thisone < 5){
+				$('.resolist').eq(2).find('li').removeClass('resact');
+				$('.resolist').eq(2).find('li:first-child').addClass('resact');
+			}
+
+			if($('.resnav').hasClass('navtree')){
+				//目录树切换
+				toChangeNav();
+			}else{
+				//表格切换
+				toChangeTab();
+			}
+		})
+		$('.resnav').click(function(){
+			if($(this).hasClass('navtree')){
+				$(this).removeClass('navtree');
+				//表格切换
+				toChangeTab();
+			}else{
+				$(this).addClass('navtree');
+				//目录树切换
+				toChangeNav();
+			}
+		})
+		//$(function () {
+			var tabone,tabtwo,tabthr,newstr;
+			function toChangeTab(){
+				tabone = $('.resolist').eq(0).find('li.resact').attr('resval');
+				tabtwo = $('.resolist').eq(1).find('li.resact').attr('resval');
+				tabthr = $('.resolist').eq(2).find('li.resact').attr('resval');
+				newstr = tabone + tabtwo + tabthr;
+				//console.log(newstr);
+				$('.thetab').hide();
+				$('.treediv').hide();
+				if(newstr == '025'){
+					$('#table-maina').show();
+				}else if(newstr == '026'){
+					$('#table-mainb').show();
+				}else if(newstr == '027'){
+					$('#table-mainc').show();
+				}else if(newstr == '035'){
+					$('#table-maind').show();
+				}else if(newstr == '036'){
+					$('#table-maine').show();
+				}else if(newstr == '037'){
+					$('#table-mainf').show();
+				}else if(newstr == '045'){
+					$('#table-maing').show();
+				}else if(newstr == '046'){
+					$('#table-mainh').show();
+				}else if(newstr == '047'){
+					$('#table-maini').show();
+				}else if(newstr == '125'){
+					$('#table-mainj').show();
+				}else if(newstr == '126'){
+					$('#table-maink').show();
+				}else if(newstr == '127'){
+					$('#table-mainl').show();
+				}else if(newstr == '135'){
+					$('#table-mainm').show();
+				}else if(newstr == '136'){
+					$('#table-mainn').show();
+				}else if(newstr == '137'){
+					$('#table-maino').show();
+				}else if(newstr == '145'){
+					$('#table-mainp').show();
+				}else if(newstr == '146'){
+					$('#table-mainq').show();
+				}else if(newstr == '147'){
+					$('#table-mainr').show();
+				}
+				setTimeout(function(){
+					tablea.draw();
+					tableb.draw();
+					tablec.draw();
+					tabled.draw();
+					tablee.draw();
+					tablef.draw();
+					tableg.draw();
+					tableh.draw();
+					tablei.draw();
+					tablej.draw();
+					tablek.draw();
+					tablel.draw();
+					tablem.draw();
+					tablen.draw();
+					tableo.draw();
+					tablep.draw();
+					tableq.draw();
+					tabler.draw();
+			    },10)
+			}
+			function toChangeNav(){
+				tabone = $('.resolist').eq(0).find('li.resact').attr('resval');
+				tabtwo = $('.resolist').eq(1).find('li.resact').attr('resval');
+				tabthr = $('.resolist').eq(2).find('li.resact').attr('resval');
+				newstr = tabone + tabtwo + tabthr;
+				//console.log(newstr);
+				$('.thetab').hide();
+				$('.treediv').show();
+				$('.gb-tree').hide();
+				if(newstr == '025'){
+					$('#treea').show();
+					treeadd = 'newPlatResoInfo';
+					treedit = 'editPlatResoInfo';
+					creatTree(treeadd);
+				}else if(newstr == '026'){
+					$('#treeb').show();
+					treeadd = 'newPlatResoInfo';
+					treedit = 'editPlatResoInfo';
+					creatTree(treeadd);
+				}else if(newstr == '027'){
+					treeadd = 'newPlatResoInfo';
+					treedit = 'editPlatResoInfo';
+					creatTree(treeadd);
+					$('#treec').show();
+				}else if(newstr == '035'){
+					$('#treed').show();
+					treeadd = 'newJuniorTerminal';
+					treedit = 'editJuniorTerminal';
+					creatTree(treeadd);
+				}else if(newstr == '036'){
+					treeadd = 'newJuniorTerminal';
+					treedit = 'editJuniorTerminal';
+					creatTree(treeadd);
+					$('#treee').show();
+				}else if(newstr == '037'){
+					$('#treef').show();
+					treeadd = 'newJuniorTerminal';
+					treedit = 'editJuniorTerminal';
+					creatTree(treeadd);
+				}else if(newstr == '045'){
+					$('#treeg').show();
+					treeadd = 'newStationResoInfo';
+					treedit = 'editStationResoInfo';
+					creatTree(treeadd);
+				}else if(newstr == '046'){
+					$('#treeh').show();
+					treeadd = 'newStationResoInfo';
+					treedit = 'editStationResoInfo';
+					creatTree(treeadd);
+				}else if(newstr == '047'){
+					$('#treei').show();
+					treeadd = 'newStationResoInfo';
+					treedit = 'editStationResoInfo';
+					creatTree(treeadd);
+				}else if(newstr == '125'){
+					$('#treej').show();
+					treeadd = 'newPlatResoInfo';
+					treedit = 'editPlatResoInfo';
+					creatTree(treeadd);
+				}else if(newstr == '126'){
+					$('#treek').show();
+					treeadd = 'newPlatResoInfo';
+					treedit = 'editPlatResoInfo';
+					creatTree(treeadd);
+				}else if(newstr == '127'){
+					$('#treel').show();
+					treeadd = 'newPlatResoInfo';
+					treedit = 'editPlatResoInfo';
+					creatTree(treeadd);
+				}else if(newstr == '135'){
+					$('#treem').show();
+					treeadd = 'newJuniorTerminal';
+					treedit = 'editJuniorTerminal';
+					creatTree(treeadd);
+				}else if(newstr == '136'){
+					$('#treen').show();
+					treeadd = 'newJuniorTerminal';
+					treedit = 'editJuniorTerminal';
+					creatTree(treeadd);
+				}else if(newstr == '137'){
+					$('#treeo').show();
+					treeadd = 'newJuniorTerminal';
+					treedit = 'editJuniorTerminal';
+					creatTree(treeadd);
+				}else if(newstr == '145'){
+					$('#treep').show();
+					treeadd = 'newStationResoInfo';
+					treedit = 'editStationResoInfo';
+					creatTree(treeadd);
+				}else if(newstr == '146'){
+					$('#treeq').show();
+					treeadd = 'newStationResoInfo';
+					treedit = 'editStationResoInfo';
+					creatTree(treeadd);
+				}else if(newstr == '147'){
+					$('#treer').show();
+					treeadd = 'newStationResoInfo';
+					treedit = 'editStationResoInfo';
+					creatTree(treeadd);
+				}
+				setTimeout(function(){
+					tablea.draw();
+					tableb.draw();
+					tablec.draw();
+					tabled.draw();
+					tablee.draw();
+					tablef.draw();
+					tableg.draw();
+					tableh.draw();
+					tablei.draw();
+					tablej.draw();
+					tablek.draw();
+					tablel.draw();
+					tablem.draw();
+					tablen.draw();
+					tableo.draw();
+					tablep.draw();
+					tableq.draw();
+					tabler.draw();
+			    },10)
+			}
+		/*table start*/
+		
+           var tablea = $('#table-maina table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,10,11] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-maina"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 4 || i == 5 || i == 8) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-miana
+           $("#checkAlla").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checka']").prop("checked", $(this).prop("checked"));
+                   $('#table-maina .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checka']").prop("checked", false);
+                   $('#table-maina .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#dela').click(function () {
+               tablea.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checka"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checka]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tableb = $('#table-mainb table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,10,11] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainb"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 4 || i == 5 || i == 8) { //对第i列进行筛选
+                            var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+ 
+               }
+			})
+			//checkbox全选——table-mianb
+           $("#checkAllb").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkb']").prop("checked", $(this).prop("checked"));
+                   $('#table-mainb .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkb']").prop("checked", false);
+                   $('#table-mainb .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#delb').click(function () {
+               tableb.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkb"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkb]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+			
+			var tablec = $('#table-mainc table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,10,11] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-maina"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 4 || i == 5 || i == 8) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-mianc
+           $("#checkAllc").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkc']").prop("checked", $(this).prop("checked"));
+                   $('#table-mainc .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkc']").prop("checked", false);
+                   $('#table-mainc .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#delc').click(function () {
+               tablec.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkc"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkc]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tabled = $('#table-maind table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,9,10,11] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-maind"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 4 || i == 8) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-miand
+           $("#checkAlld").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkd']").prop("checked", $(this).prop("checked"));
+                   $('#table-maind .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkd']").prop("checked", false);
+                   $('#table-maind .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#deld').click(function () {
+               tabled.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkd"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkd]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tablee = $('#table-maine table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,9,10,11] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-maine"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 4 || i == 8) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-miane
+           $("#checkAlle").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checke']").prop("checked", $(this).prop("checked"));
+                   $('#table-maine .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checke']").prop("checked", false);
+                   $('#table-maine .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#dele').click(function () {
+               tablee.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checke"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checke]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tablef = $('#table-mainf table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,9,10,11] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainf"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 4 || i == 8) { //对第i列进行筛选
+                            var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-mianf
+           $("#checkAllf").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkf']").prop("checked", $(this).prop("checked"));
+                   $('#table-mainf .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkf']").prop("checked", false);
+                   $('#table-mainf .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#delf').click(function () {
+               tablef.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkf"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkf]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tableg = $('#table-maing table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,9,10] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-maing"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 7) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-miang
+           $("#checkAllg").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkg']").prop("checked", $(this).prop("checked"));
+                   $('#table-maing .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkg']").prop("checked", false);
+                   $('#table-maing .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#delg').click(function () {
+               tableg.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkg"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkg]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tableh = $('#table-mainh table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,9,10] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainh"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 7) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-mianh
+           $("#checkAllh").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkh']").prop("checked", $(this).prop("checked"));
+                   $('#table-mainh .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkh']").prop("checked", false);
+                   $('#table-mainh .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#delh').click(function () {
+               tableh.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkh"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkh]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tablei = $('#table-maini table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,9,10] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-maini"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 7) { //对第i列进行筛选
+                          var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-miani
+           $("#checkAlli").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checki']").prop("checked", $(this).prop("checked"));
+                   $('#table-maini .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checki']").prop("checked", false);
+                   $('#table-maini .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#deli').click(function () {
+               tablei.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checki"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checki]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+
+           //待确认
+           var tablej = $('#table-mainj table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,10,11,12] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainj"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 4 || i == 5 || i == 8) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-mianj
+           $("#checkAllj").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkj']").prop("checked", $(this).prop("checked"));
+                   $('#table-mainj .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkj']").prop("checked", false);
+                   $('#table-mainj .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#delj').click(function () {
+               tablej.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkj"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkj]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tablek = $('#table-maink table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,10,11,12] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-maink"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 4 || i == 5 || i == 8) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-miank
+           $("#checkAllk").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkk']").prop("checked", $(this).prop("checked"));
+                   $('#table-maink .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkk']").prop("checked", false);
+                   $('#table-maink .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#delk').click(function () {
+               tablek.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkk"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkk]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+			
+			var tablel = $('#table-mainl table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,10,11,12] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainl"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 4 || i == 5 || i == 8) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-mianl
+           $("#checkAlll").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkl']").prop("checked", $(this).prop("checked"));
+                   $('#table-mainl .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkl']").prop("checked", false);
+                   $('#table-mainl .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#dell').click(function () {
+               tablel.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkl"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkl]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tablem = $('#table-mainm table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,9,10,11,12] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainm"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 4 || i == 8) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-mianm
+           $("#checkAllm").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkm']").prop("checked", $(this).prop("checked"));
+                   $('#table-mainm .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkm']").prop("checked", false);
+                   $('#table-mainm .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#delm').click(function () {
+               tablem.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkm"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkm]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tablen = $('#table-mainn table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,9,10,11,12] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainn"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 4 || i == 8) { //对第i列进行筛选
+                            var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-miann
+           $("#checkAlln").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkn']").prop("checked", $(this).prop("checked"));
+                   $('#table-mainn .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkn']").prop("checked", false);
+                   $('#table-mainn .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#deln').click(function () {
+               tablen.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkn"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkn]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tableo = $('#table-maino table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,9,10,11,12] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-maino"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 4 || i == 8) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-miano
+           $("#checkAllo").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checko']").prop("checked", $(this).prop("checked"));
+                   $('#table-maino .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checko']").prop("checked", false);
+                   $('#table-maino .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#delo').click(function () {
+               tableo.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checko"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checko]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tablep = $('#table-mainp table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,9,10,11] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainp"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 7) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-mianp
+           $("#checkAllp").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkp']").prop("checked", $(this).prop("checked"));
+                   $('#table-mainp .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkp']").prop("checked", false);
+                   $('#table-mainp .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#delp').click(function () {
+               tablep.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkp"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkp]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tableq = $('#table-mainq table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,9,10,11] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainq"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 7) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-mianq
+           $("#checkAllq").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkq']").prop("checked", $(this).prop("checked"));
+                   $('#table-mainq .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkq']").prop("checked", false);
+                   $('#table-mainq .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#delq').click(function () {
+               tableq.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkq"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkq]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+           var tabler = $('#table-mainr table').DataTable({
+               "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,6,7,8,9,10,11] //禁止排序
+	               }
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainr"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       if (i == 3 || i == 7) { //对第i列进行筛选
+                           var column = api.column(i);
+ 							rowScreen(column);
+                       }
+                   });
+               }
+			})
+			//checkbox全选——table-mianr
+           $("#checkAllr").on("click", function () {
+               if ($(this).prop("checked") === true) {
+                   $("input[name='checkr']").prop("checked", $(this).prop("checked"));
+                   $('#table-mainr .dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $("input[name='checkr']").prop("checked", false);
+                   $('#table-mainr .dataTables_wrapper tbody tr').removeClass('selected');
+               }
+           });
+           $('#delr').click(function () {
+               tabler.rows('tr.selected').remove().draw(false);
+               $('.checkAll').attr('checked',false);
+           });
+            //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkr"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkr]:checkbox');
+               $('.checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+ 
+           });
+
+			/*共用*/
+			
+			//自定义显示数量
+			$('.thetab').each(function(){
+		    	tabot($(this))
+		    })
+ 			
+ 			//自定义搜索
+           $('.dsearch').on('keyup click', function () {
+               var tsval = $(".dsearch").val()
+               tablea.search(tsval, false, false).draw();
+               tableb.search(tsval, false, false).draw();
+               tablec.search(tsval, false, false).draw();
+               tabled.search(tsval, false, false).draw();
+               tablee.search(tsval, false, false).draw();
+               tablef.search(tsval, false, false).draw();
+               tableg.search(tsval, false, false).draw();
+               tableh.search(tsval, false, false).draw();
+               tablei.search(tsval, false, false).draw();
+
+               tablej.search(tsval, false, false).draw();
+               tablek.search(tsval, false, false).draw();
+               tablel.search(tsval, false, false).draw();
+               tablem.search(tsval, false, false).draw();
+               tablen.search(tsval, false, false).draw();
+               tableo.search(tsval, false, false).draw();
+               tablep.search(tsval, false, false).draw();
+               tableq.search(tsval, false, false).draw();
+               tabler.search(tsval, false, false).draw();
+           });
+ 			
+           
+           $('.cho-delete').click(function(){
+				tablea.row('.trdel').remove().draw(false);
+				tableb.row('.trdel').remove().draw(false);
+				tablec.row('.trdel').remove().draw(false);
+				tabled.row('.trdel').remove().draw(false);
+				tablee.row('.trdel').remove().draw(false);
+				tablef.row('.trdel').remove().draw(false);
+				tableg.row('.trdel').remove().draw(false);
+				tableh.row('.trdel').remove().draw(false);
+				tablei.row('.trdel').remove().draw(false);
+
+				tablej.row('.trdel').remove().draw(false);
+				tablek.row('.trdel').remove().draw(false);
+				tablel.row('.trdel').remove().draw(false);
+				tablem.row('.trdel').remove().draw(false);
+				tablen.row('.trdel').remove().draw(false);
+				tableo.row('.trdel').remove().draw(false);
+				tablep.row('.trdel').remove().draw(false);
+				tableq.row('.trdel').remove().draw(false);
+				tabler.row('.trdel').remove().draw(false);
+				$(this).parents('.choose').hide();
+		   })
+ 			
+		
+			$('.dataTables_wrapper').on('scroll',function(){
+				if($('.choose').is(':visible')){
+					$(myDiv).hide();
+					$('table.dataTable tbody tr').removeClass('trdel');//trstop trcont traga 
+				}
+			})
+			$(window).resize(function(){
+				if($('.choose').is(':visible')){
+					$(myDiv).hide();
+					$('table.dataTable tbody tr').removeClass('trdel');
+				}
+			})
+
+			$(".gb-packUp-leftNav").click(function(){
+		        setTimeout(function(){
+		            tablea.draw();
+					tableb.draw();
+					tablec.draw();
+					tabled.draw();
+					tablee.draw();
+					tablef.draw();
+					tableg.draw();
+					tableh.draw();
+					tablei.draw();
+
+					tablej.draw();
+					tablek.draw();
+					tablel.draw();
+					tablem.draw();
+					tablen.draw();
+					tableo.draw();
+					tablep.draw();
+					tableq.draw();
+					tabler.draw();
+		        },500)
+		    });//重绘
+			/*共用*/
+       //})
+		/*table end*/
+
+
+
+
+        // 树配置
+		var resourceSetting = {
+			view:{
+				showLine:false,//去掉连接线
+				addDiyDom:resourceDom
+			}/*,
+			callback: {
+				onCheck: zTreeOnCheck
+			}*/
+		};
+		var treeadd = 'newPlatResoInfo',treedit = 'editPlatResoInfo',resourceData;
+		creatTree(treeadd);
+		function creatTree(treeadd){
+			// 树数据
+			resourceData=[{
+			    name: "浙江省",
+			    open: true,
+			    addIcon:true,
+			    children: [{
+			        name: "杭州市",
+			    	addIcon:true,
+			    	treeadd:treeadd,
+			    	treedit:treedit,
+			        children: [{
+				        name: "上城区",
+			    		addIcon:true,
+			    		removeIcon:true,
+			    		editIcon:true,
+			    		treeadd:treeadd,
+			    		treedit:treedit,
+				        children: [{
+			    			addIcon:true,
+					        name: "湖滨街道",
+					        treeadd:treeadd,
+					        treedit:treedit
+					    }]
+				    }]
+			    },{
+			        name: "宁波市",
+			        treeadd:treeadd,
+			        treedit:treedit,
+			    	addIcon:true,
+			        children: [{
+				        name: "上城区",
+				        treeadd:treeadd,
+				        treedit:treedit,
+			    		addIcon:true,
+				        children: [{
+			    			addIcon:true,
+			    			treeadd:treeadd,
+			    			treedit:treedit,
+					        name: "湖滨街道"
+					    }]
+				    }]
+			    },{
+			        name: "温州市",
+			        treeadd:treeadd,
+			        treedit:treedit,
+			    	addIcon:true,
+			        children: [{
+				        name: "上城区",
+				        treeadd:treeadd,
+				        treedit:treedit,
+			    		addIcon:true,
+				        children: [{
+				        	addIcon:true,
+				        	treeadd:treeadd,
+				        	treedit:treedit,
+					        name: "湖滨街道"
+					    }]
+				    }]
+			    }]
+			}];
+
+			//初始化的树
+			$(".ztree-resource").each(function() {
+				$.fn.zTree.init($(this), resourceSetting, resourceData);
+			});
+		}
+		
+
+		//初始化的树
+		$(".ztree-resource").each(function() {
+			$.fn.zTree.init($(this), resourceSetting, resourceData);
+		});
+
+	})
+</script>

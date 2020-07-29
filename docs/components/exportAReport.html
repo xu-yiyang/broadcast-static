@@ -1,0 +1,349 @@
+<div class="gb-form">
+	<div class="newform">
+		<p class="newform-tit"><i class="iconfont icon-daochuexcelbaobiao"></i>报表导出</p>
+		<div class="form-oneitem">
+			<div class="fortit">
+				<span class="oneitem-tit">报表导出</span>
+				<span class="reldelbtn" id="reltodel"> <i class="iconfont icon-download"></i>下载</span>
+			</div>
+			<div class="oneitem-cont">
+				<p class="oneitem-tit">全局数据</p>
+				<div class="tklay tkclear">
+					<span class="talay-word"><i class="iconfont icon-rili"></i>操作时间</span>
+					<div class="layui-input-inline">
+				        <input type="text" class="layui-input" id="daterg" placeholder="选择时间范围">
+				        <span class="tocho iconfont icon-shijian" id="tochobtn"></span> 
+			    	</div>
+				</div>
+				<ul class="msgrank">
+					<li>
+						<input type="checkbox" name="checkmsg" id="radone" />
+						<label for="radone">事件总数</label>
+					</li>
+					<li>
+						<input type="checkbox" name="checkmsg" id="radtwo" />
+						<label for="radtwo">播放总数</label>
+					</li>
+					<li>
+						<input type="checkbox" name="checkmsg" id="radthr" />
+						<label for="radthr">事件分布</label>
+					</li>
+					<li>
+						<input type="checkbox" name="checkmsg" id="radfou" />
+						<label for="radfou">事件类型分布</label>
+					</li>
+				</ul>
+				<p class="gb-line"></p>
+				<p class="oneitem-tit">单一事件数据</p>
+				<div class="gb-table">
+					<div class="taskmsg" id="table-mainfiv">
+						<div class="tkrange">
+							<div class="tklay">
+								<span class="talay-word"><i class="iconfont icon-rili"></i>操作时间</span>
+								<div class="layui-input-inline">
+							        <input type="text" class="layui-input" id="soledate" placeholder="选择时间范围">
+							        <span class="tocho iconfont icon-shijian" id="solebtn"></span> 
+						    	</div>
+							</div>
+							<div class="tksearch">
+								<input type="text" value="请输入任务消息名称，发布部门，负责人" onfocus="if(this.value==defaultValue){this.value = '';this.style.color='#333'}" onblur="if(!value){this.value = defaultValue;this.style.color='#ccc';}" class="dsearch" aria-controls="table-main"/>
+								<span class="tksrh-btn"><i class="iconfont icon-sousuo"></i></span>
+							</div>
+						</div>
+						<div class="thetab">
+							<div class="tablecont">
+							    <table class="table-main display" cellspacing="0" width="100%">
+							        <thead>
+								        <tr>
+								        	<th></th>
+								            <th>序号</th>
+								            <th>消息等级</th>
+								            <th>任务消息名称</th>
+								            <th>发布部门</th>
+								            <th>负责人</th>
+								            <th>发布时间</th>
+								            <th>数据</th>
+								            <th></th>
+								            <th></th>
+								        </tr>
+							        </thead>
+							        <tfoot>
+								        <tr>
+											<th></th>
+								            <th></th>
+								            <th></th>
+								            <th></th>
+								            <th></th>
+								            <th></th>
+								            <th></th>
+								            <th></th>
+								            <th></th>
+								            <th></th>
+								        </tr>
+							        </tfoot>
+							         <tbody>
+							        	<tr>
+							        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_1' /><label for='check_1'></label></div></td>
+							        		<td><span class='tabnumb'>1</span></td>
+							        		<td><span class='rankimg' vel='红色'><img src='src/images/rank-red.png'/></span></td>
+							        		<td><a class='view-cont'>杭州西湖区2017年09月09日晚台...</a></td>
+							        		<td>杭州市西湖区应急广播中心</td>
+							        		<td>橙子</td>
+							        		<td>2017-09-08  18:10:20</td>
+							        		<td><div class='checkone'><input type='checkbox' name='coverpop' id='cover_1' /><label for='cover_1'>覆盖人口</label></div></td>
+							        		<td><div class='checkone'><input type='checkbox' name='areacrea' id='arcrea_1' /><label for='arcrea_1'>覆盖区域面积</label></div></td>
+							        		<td><div class='checkone'><input type='checkbox' name='areaname' id='arname_1' /><label for='arname_1'>覆盖区域名称</label></div></td>
+							        	</tr>
+							        	<tr>
+							        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_2' /><label for='check_2'></label></div></td>
+							        		<td><span class='tabnumb'>2</span></td>
+							        		<td><span class='rankimg' vel='黄色'><img src='src/images/rank-yellow.png'/></span></td>
+							        		<td><a class='view-cont'>杭州西湖区2017年09月09日晚台...</a></td>
+							        		<td>杭州市西湖区应急广播中心</td>
+							        		<td>橙子</td>
+							        		<td>2017-09-08  18:16:20</td>
+							        		<td><div class='checkone'><input type='checkbox' name='coverpop' id='cover_2' /><label for='cover_2'>覆盖人口</label></div></td>
+							        		<td><div class='checkone'><input type='checkbox' name='areacrea' id='arcrea_2' /><label for='arcrea_2'>覆盖区域面积</label></div></td>
+							        		<td><div class='checkone'><input type='checkbox' name='areaname' id='arname_2' /><label for='arname_2'>覆盖区域名称</label></div></td>
+							        	</tr>
+							        	<tr>
+							        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_3' /><label for='check_3'></label></div></td>
+							        		<td><span class='tabnumb'>3</span></td>
+							        		<td><span class='rankimg' vel='绿色'><img src='src/images/rank-green.png'/></span></td>
+							        		<td><a class='view-cont'>杭州西湖区2017年09月09日晚台...</a></td>
+							        		<td>浙江省应急办</td>
+							        		<td>橙子</td>
+							        		<td>2016-09-08  18:16:20</td>
+							        		<td><div class='checkone'><input type='checkbox' name='coverpop' id='cover_3' /><label for='cover_3'>覆盖人口</label></div></td>
+							        		<td><div class='checkone'><input type='checkbox' name='areacrea' id='arcrea_3' /><label for='arcrea_3'>覆盖区域面积</label></div></td>
+							        		<td><div class='checkone'><input type='checkbox' name='areaname' id='arname_3' /><label for='arname_3'>覆盖区域名称</label></div></td>
+							        	</tr>
+							        	<tr>
+							        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_4' /><label for='check_4'></label></div></td>
+							        		<td><span class='tabnumb'>4</span></td>
+							        		<td><span class='rankimg' vel='绿色'><img src='src/images/rank-green.png'/></span></td>
+							        		<td><a class='view-cont'>杭州西湖区2017年09月09日晚台...</a></td>
+							        		<td>浙江省应急办</td>
+							        		<td>橙子</td>
+							        		<td>2016-09-08  18:16:20</td>
+							        		<td><div class='checkone'><input type='checkbox' name='coverpop' id='cover_4' /><label for='cover_4'>覆盖人口</label></div></td>
+							        		<td><div class='checkone'><input type='checkbox' name='areacrea' id='arcrea_4' /><label for='arcrea_4'>覆盖区域面积</label></div></td>
+							        		<td><div class='checkone'><input type='checkbox' name='areaname' id='arname_4' /><label for='arname_4'>覆盖区域名称</label></div></td>
+							        	</tr>
+							        	<tr>
+							        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_5' /><label for='check_5'></label></div></td>
+							        		<td><span class='tabnumb'>5</span></td>
+							        		<td><span class='rankimg' vel='橙色'><img src='src/images/rank-orange.png'/></span></td>
+							        		<td><a class='view-cont'>杭州西湖区2017年09月09日晚台...</a></td>
+							        		<td>浙江省应急办</td>
+							        		<td>橙子</td>
+							        		<td>2016-09-08  18:16:20</td>
+							        		<td><div class='checkone'><input type='checkbox' name='coverpop' id='cover_5' /><label for='cover_5'>覆盖人口</label></div></td>
+							        		<td><div class='checkone'><input type='checkbox' name='areacrea' id='arcrea_5' /><label for='arcrea_5'>覆盖区域面积</label></div></td>
+							        		<td><div class='checkone'><input type='checkbox' name='areaname' id='arname_5' /><label for='arname_5'>覆盖区域名称</label></div></td>
+							        	</tr>
+							        	<tr>
+							        		<td><div class='checkone'><input type='checkbox' name='checkone' id='check_6' /><label for='check_6'></label></div></td>
+							        		<td><span class='tabnumb'>6</span></td>
+							        		<td><span class='rankimg' vel='蓝色'><img src='src/images/rank-blue.png'/></span></td>
+							        		<td><a class='view-cont'>杭州西湖区2017年09月09日晚台...</a></td>
+							        		<td>杭州市西湖区应急广播中心</td>
+							        		<td>橙子</td>
+							        		<td>2016-09-10  18:16:20</td>
+							        		<td><div class='checkone'><input type='checkbox' name='coverpop' id='cover_6' /><label for='cover_6'>覆盖人口</label></div></td>
+							        		<td><div class='checkone'><input type='checkbox' name='areacrea' id='arcrea_6' /><label for='arcrea_6'>覆盖区域面积</label></div></td>
+							        		<td><div class='checkone'><input type='checkbox' name='areaname' id='arname_6' /><label for='arname_6'>覆盖区域名称</label></div></td>
+							        	</tr>
+							        </tbody>
+							    </table>
+							</div>
+							<div class="theche">
+								<div class="tocheck">
+									<input type="checkbox" name="checkall" id="checkAll" />
+									<label for="checkAll">全选</label>
+								</div>
+								<div class="tocheck secheck">
+									<input type="checkbox" name="checkall" id="invert" />
+									<label for="invert">反选</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+	</div>
+</div>
+<div class="viewdetail">
+	<div class="detadiv">
+		<p class="poptit">任务消息详情</p>
+		<span class="viewclose"><i class="iconfont icon-guanbi"></i></span>
+		<div class="uncont">
+			<p class="oneitem-tit">消息等级</p>
+			<p class="unword">红色</p>
+			<p class="oneitem-tit">任务消息名称</p>
+			<p class="unword">杭州西湖区2017年09月09日晚台...</p>
+			<p class="oneitem-tit">发布部门</p>
+			<p class="unword">杭州市西湖区应急广播中心</p>
+			<p class="oneitem-tit">负责人</p>
+			<p class="unword">橙子</p>
+			<p class="oneitem-tit">创建时间</p>
+			<p class="unword">2017-11-09 12:00</p>
+		</div>
+	</div>
+</div>
+	
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*calendar*/
+		layui.use('laydate', function(){
+			var laydate = layui.laydate;
+			laydate.render({
+			    elem: '#soledate',
+			    eventElem: '#solebtn',
+			    trigger: 'click',
+			    type:'datetime',
+			    range: true
+			});
+		})
+
+
+		/*table*/
+		$(function () {
+           var table = $('#table-mainfiv table').DataTable({
+           	   "scrollY": "calc(100% - 50px)",
+			   "scrollX": true,
+               "dom": '<"top"f >rt<"bottom"ilp><"clear">',//dom定位
+               "dom": 'tiprl',//自定义显示项
+               "lengthMenu":[10, 20, 30, 40, 50],//每页显示条数设置
+               "lengthChange": true,//是否允许用户自定义显示数量
+               "bPaginate": true, //翻页功能
+               "bFilter": true, //列筛序功能
+               "searching": true,//本地搜索
+               "order": [ 1, "asc" ],//desc降序
+               "Info": true,//页脚信息
+               "oLanguage": oLanguage,
+               "columnDefs": [
+               		{
+	                   orderable: false,
+	                   targets: [0,2,3,4,5,7,8,9] //禁止排序
+	               },{ 
+	                	"sType": "html-percent", 
+                       "aTargets": [2]  //指定列号使用自定义排序
+                   	}  
+               ],
+               fnDrawCallback: function(table) {  
+               		jumpPage($("#table-mainfiv"))
+	           },
+               initComplete: function () {//列筛选
+                   var api = this.api();
+                   api.columns().indexes().flatten().each(function (i) {
+                       var column = api.column(i);
+                        if (i == 4 || i == 5) { //对第i列进行筛选
+ 							rowScreen(column);
+                        }else if (i == 2) { //对第i列进行筛选
+ 							rowLevScreen(column);
+                        }
+                   });
+               }
+			})
+			
+			
+			$(".gb-packUp-leftNav").click(function(){
+		        setTimeout(function(){
+		            table.draw();
+		        },500)
+		    });//重绘
+
+			//自定义显示数量
+			$('.taskmsg').each(function(){
+		    	tabot($(this))
+		    })
+ 
+			//自定义搜索
+           $('.dsearch').on('keyup click', function () {
+               var tsval = $(".dsearch").val()
+               table.search(tsval, false, false).draw();
+           });
+
+ 			//checkbox全选
+           $("#checkAll").on("click", function () {
+               if ($(this).prop("checked") === true) {
+               		$('#invert').attr('checked',false);
+                   $('.dataTables_wrapper tbody tr').find("input").prop("checked", $(this).prop("checked"));
+                   $('.dataTables_wrapper tbody tr').addClass('selected');
+               } else {
+                   $('.dataTables_wrapper tbody tr').find("input").prop("checked", false);
+                   $('.dataTables_wrapper tbody tr').removeClass('selected');
+               }    
+           });
+
+           //反选
+           $('#invert').on("click", function () {
+           	   var $tmp = $('[name=checkone]:checkbox');
+           	   /*$('#checkAll').prop('checked', );*/
+           	   //console.log($tmp.length);
+           	   //console.log($tmp.filter(':checked').length);
+           	   if($tmp.filter(':checked').length == 0){
+           	   	$('#checkAll').prop('checked', true);
+           	   }else{
+           	   	$('#checkAll').prop('checked', false);
+           	   }
+           	   $('.dataTables_wrapper tbody tr').each(function(){
+           	   		if($(this).hasClass('selected')){
+           	   			if($(this).find("input[name='coverpop']").prop("checked") === true && $(this).find("input[name='areacrea']").prop("checked") === true && $(this).find("input[name='areaname']").prop("checked") === true){
+							$(this).removeClass('selected');
+               	   			$(this).find("input").prop("checked", false);
+           	   			}else{
+           	   				$(this).find("input").not("input[name='checkone']").each(function(){
+           	   					if($(this).prop("checked") === true){
+           	   						$(this).prop("checked", false);
+           	   					}else{
+           	   						$(this).prop("checked", true);
+           	   					}
+           	   				})
+           	   			}
+           	   		}else{
+           	   			$(this).addClass('selected');
+           	   			$(this).find("input").prop("checked", true);
+           	   		}
+           	   })
+           });
+ 
+           //删除选中行
+           $('.dataTables_wrapper tbody').on('click', 'tr input[name="checkone"]', function () {
+               var $tr = $(this).parents('tr');
+               $tr.toggleClass('selected');
+               var $tmp = $('[name=checkone]:checkbox');
+               $('#checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+               if($tr.hasClass('selected')){
+               		$tr.find("input").prop("checked", $(this).prop("checked"));
+               }else{
+               		$tr.find("input").prop("checked", false);
+               }
+ 				$('#invert').attr('checked',false);
+           });
+ 			
+ 			//选择数据
+ 		  $('.dataTables_wrapper tbody').find("input").not("input[name='checkone']"). on('click', function () {
+               var $tr = $(this).parents('tr');
+	           if($tr.find("input[name='coverpop']").prop("checked") === false && $tr.find("input[name='areacrea']").prop("checked") === false && $tr.find("input[name='areaname']").prop("checked") === false){
+					$tr.removeClass('selected');
+       	   			$tr.find("input[name='checkone']").prop("checked", false);
+   	   			}else{
+   	   				$tr.addClass('selected');
+       	   			$tr.find("input[name='checkone']").prop("checked", true);
+   	   			}
+               var $tmp = $('.dataTables_wrapper tbody').find("input:checkbox").not("input[name='checkone']");
+               $('#checkAll').prop('checked', $tmp.length == $tmp.filter(':checked').length);
+               //console.log($tmp);
+ 			   $('#invert').attr('checked',false);
+           });
+       })
+	})
+
+</script>

@@ -1,0 +1,53 @@
+.gb-screen{width: 3840px;height: 1080px;background: #202836;}
+.gb-screen-tit {background: url(../images/gb-screen-tit-bg.png);background-size: 100% 100%;}
+.gb-screen-tit h1{text-align: center;color: #fff;font-size: 22px;line-height: 60px;background: url(../images/gb-screen-tit-bg.png);background-size: 100% 100%;}
+.gb-screen .gb-marquee{background: rgba(0,0,0,0.4);color: #fff;margin: 0;}
+.gb-screen .gb-marquee a{width: auto;margin-right: 500px;}
+
+.gb-screen-main{overflow: hidden;height: calc(100% - 105px)}
+.gb-screen-chart,.gb-screen-map{float: left;width: 50%;padding: 20px;height: 100%;text-align: center;}
+.gb-screen-chart .chart-body,.gb-screen-map .map-body{background: #252d3a;height: 100%;border: 1px solid #313c4d;border-radius: 5px;padding: 30px 0;position: relative;}
+.gb-screen-lab{position: absolute;left: 0px;top: 30px;height: 50px;line-height: 50px;background: #4579d8;color: #fff;width: 160px;border-radius: 0 5px 5px 0;}
+.gb-screen-chart .block{width: 85%;margin: auto;}
+.gb-screen-chart h4{position: relative;margin: 20px 0 0px;}
+.gb-screen-chart h4 span{color: #fff;}
+.gb-screen-chart h4 span em{border: 1px solid #3f495a;}
+.gb-screen-chart h4 .layui-btn{height: 50px;line-height: 50px;}
+.gb-screen-chart .gb-chart-item{margin-bottom: 20px;height: 400px;padding-bottom: 10px;}
+.gb-all-screen .gb-chart-item{height: 350px;}
+.gb-screen-chart .border-bottom{border-bottom: 1px solid #3d495f;}
+
+
+.gb-screen-map .map-body{position: relative;padding: 0;text-align: left;}
+.gb-screen-map .gb-map-legend{background: #1a222c;}
+.gb-screen-map .gb-map-zoom{background: #313c4d;}
+
+
+.gb-screen-chart .gb-incident-count{margin: 0;}
+.gb-screen-chart .gb-incident-count .layui-btn{height: 50px;line-height: 50px;}
+.gb-screen-chart .gb-incident-count .layui-btn-danger{background: #54cd7f;}
+.gb-screen-chart .gb-incident-count .layui-btn-warm{background: #1ba5dd;}
+
+.gb-screen-chart .gb-charts-table{height: 490px;}
+.gb-screen-chart .gb-table-chart-tab{height: calc(100% - 55px)}
+.gb-screen-chart .gb-ctab{height: 90%;margin-bottom: 0;}
+.gb-screen-chart .gb-chart-incident-bar,.gb-screen-chart .gb-all-charts-table .gb-ctab .tablecont{height:100%;}
+.gb-screen-chart .gb-chart-incident-bar .gb-chart-item{height:100%;}
+
+.gb-incident-list.screen-incident-list{background: #202836;border-color: #364255;}
+
+
+.gb-screen-chart #table-main thead tr,.gb-screen-chart .table-main thead tr{box-shadow: 0 -20px 10px #272f3c inset;background: #303b4c;}
+.gb-screen-chart #table-main thead th,.gb-screen-chart .table-main thead th{border-color: #354052;}
+.gb-screen-chart .table-main{color: #7c8491;}
+.gb-screen-chart .table-main tbody tr{background: none!important;}
+.gb-screen-chart .table-main tbody tr:hover{color: #fff;background-color: #364154!important;}
+.gb-screen-chart .table-main tr td{border-bottom: 1px solid #354052;}
+.gb-screen-chart .gb-ctab .tablecont{background: #252d3a;border-color: #354052;height: 780px;}
+.gb-screen-chart .dataTables_length select{background: #252d3a;border:1px solid #354052;}
+.gb-screen-chart .dataTables_paginate .paginate_button{background: #252d3a;border-color:#354052!important;}
+.gb-screen-chart .jump-page input{background: #252d3a;border:1px solid #354052;color: #fff;}
+.gb-screen-chart div.dataTables_wrapper{height: 92%;overflow-x: auto;margin-bottom: 10px;}
+.gb-screen-chart div.dataTables_wrapper::-webkit-scrollbar{width: 6px;background: #f0f0f0;border-radius: 50px;}
+.gb-screen-chart div.dataTables_wrapper::-webkit-scrollbar-thumb{width: 100%;background: #7c8491;border-radius: 50px;}
+.gb-screen-chart .gb-ctab .botdiv{margin-top: 0px;}

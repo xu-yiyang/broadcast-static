@@ -1,0 +1,618 @@
+<div class="gb-monitoring gb-watch-body">
+	<div class="gb-watch">
+		<div class="gb-watch-list">
+			<div class="tksearch">
+				<input type="text" class="dsearch" placeholder="搜索">
+				<span class="tksrh-btn"><i class="iconfont icon-sousuo"></i></span>
+			</div>
+			<ul class="gb-watch-list-ul scroll">
+				<li class="all">
+					<i class="gb-watch-logo i" style="background-image: url(./src/images/watch-logo-all.png);"></i>
+					<em class="i">所有人员</em>
+					<div class="matcheck">
+						<input type="checkbox" name="所有人员" id="matone1" class="j-check-all">
+						<label for="matone1"></label>
+					</div>
+				</li>
+				<li>
+					<i class="gb-watch-logo i" style="background-image: url(./src/images/watch-logo.png);"></i>
+					<em class="i">橙子</em>
+					<div class="matcheck">
+						<input type="checkbox" name="橙子" id="matone2" checked="checked">
+						<label for="matone2"></label>
+					</div>
+				</li>
+				<li>
+					<i class="gb-watch-logo i" style="background-image: url(./src/images/watch-logo.png);"></i>
+					<em class="i">橙子</em>
+					<div class="matcheck">
+						<input type="checkbox" name="橙子" id="matone3">
+						<label for="matone3"></label>
+					</div>
+				</li>
+			</ul>
+			<div class="gb-watch-list-btn-box">
+				<div class="add-watch">
+					<button class="layui-btn add-watch-btn bg4579d8">添加值班人员</button>
+				</div>
+				<div class="add-watch-ok-no" style="display: none;">
+					<button class="layui-btn add-watch-no layui-btn-sm layui-btn-primary">取消</button>
+					<button class="layui-btn add-watch-ok layui-btn-sm bg4579d8">确认</button>
+				</div>
+			</div>
+		</div>
+		<div class="gb-calendar-body">
+			<div class="gb-calendar"></div>
+			<div class="gb-calendar-fun">
+				<a href="#/recordOfSuccession" url="components/recordOfSuccession.html" class="add_tab" name="交接班记录">
+					<i class="iconfont icon-rili"></i>
+					<em>交接班表</em>
+				</a>
+				<a href="#/onDuty" url="components/onDuty.html" class="add_tab" name="值班日志">
+					<i class="iconfont icon-rizhi1"></i>
+					<em>值班日志</em>
+				</a>
+			</div>
+		</div>
+		<!-- <div class="gb-dialog">
+			<form class="layui-form" action="">
+				<div class="gb-dialog-main i">
+					<h3 class="gb-dialog-title">
+						<i class="iconfont icon-guanbi j-close-dialog"></i>
+					</h3>
+					<div class="gb-dialog-edit-watch">
+						<div class="item">
+							<h4>
+								值班人员
+								<a href="javascript:;" class="gb-dialog-add"> 
+									<i class="iconfont icon-xinjian"></i>
+									添加
+								</a>
+							</h4>
+							<ul class="gb-people-list">
+							</ul>
+						</div>
+						<div class="item">
+							<h4>
+								值班时间
+							</h4>
+				    		<div class="matcheck gb-dialog-day i">
+								<input type="checkbox" id="day" lay-ignore>
+								<label for="day">全天</label>
+							</div>
+							<div class="gb-dialog-laydate i">
+								<i class="iconfont icon-rili i"></i>
+						        <input type="text" class="layui-input i" id="daterg" placeholder="选择时间范围">
+					    	</div>
+					    	<div class="gb-dialog-checkbox i">
+					    		<div class="matcheck i">
+									<input type="radio" name="circulation" id="weeks" checked="checked" lay-ignore>
+									<label for="weeks">周循环</label>
+								</div>
+					    		<div class="matcheck i">
+									<input type="radio" name="circulation" id="month" lay-ignore>
+									<label for="month">月循环</label>
+								</div>
+					    	</div>
+						</div>
+						<div class="item">
+							<h4>确认超时时间</h4>
+							<label class="gb-dialog-sel i">
+								<select name="dispatch">
+									<option value="">选择小时</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+								</select>
+								小时
+							</label>
+							<label class="gb-dialog-sel i">
+								<select name="dispatch">
+									<option value="">选择分钟</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+								</select>
+								分钟
+							</label>
+						</div>
+						<div class="item">
+							<h4>备注</h4>
+							<div class="layui-input-block">
+								<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+							</div>
+						</div>
+						<div class="gb-dialog-edit-watch-btn">
+							<button class="layui-btn bg4579d8 add-fullCalendar-ok">确定创建</button>
+						</div>
+					</div>
+					<div class="gb-dialog-watch-list" style="display: none;">
+						<div class="gb-watch-list">
+							<div class="tksearch">
+								<input type="text" class="dsearch" placeholder="搜索">
+								<span class="tksrh-btn"><i class="iconfont icon-sousuo"></i></span>
+							</div>
+							<ul class="gb-watch-list-ul scroll">
+								<div class="all">
+									<em class="i">所有人员</em>
+									<div class="matcheck">
+										<input type="checkbox" name="pop" id="matone10" class="j-check-all" lay-ignore>
+										<label for="matone10"></label>
+									</div>
+								</div>
+								<li>
+									<em class="i">橙子</em>
+									<div class="matcheck">
+										<input type="checkbox" name="pop" id="matone20" lay-ignore>
+										<label for="matone20"></label>
+									</div>
+								</li>
+								<li>
+									<em class="i">苹果</em>
+									<div class="matcheck">
+										<input type="checkbox" name="pop" id="matone21" lay-ignore>
+										<label for="matone21"></label>
+									</div>
+								</li>
+							</ul>
+							<div class="gb-watch-list-btn-box">
+								<div class="add-watch-ok-no">
+									<button class="layui-btn add-watch-no layui-btn-sm layui-btn-primary">取消</button>
+									<button class="layui-btn add-watch-ok layui-btn-sm bg4579d8">确认</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+			<div class="gb-dialog-shade"></div>
+		</div> -->
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	var date = new Date(),d = date.getDate(),m = date.getMonth(),y = date.getFullYear();
+	var eventsData=[
+		{
+			title: '橙子、苹果',
+			start: new Date(y, m, 9,1),//(a,b,c,d,e) a年，b月，c日，d时，e分
+			end: new Date(y, m, 9,2)
+		},
+		{
+			title: '橙子、苹果',
+			start: new Date(y, m, 9,2),
+			end: new Date(y, m, 9,3)
+		},
+		{
+			title: '橙子、苹果',
+			start: new Date(y, m, 9,3),
+			end: new Date(y, m, 9,4)
+		},
+		{
+			title: '橙子、苹果',
+			start: new Date(y, m, 9,4),
+			end: new Date(y, m, 9,5)
+		},
+		{
+			title: '橙子、苹果',
+			start: new Date(y, m, 9,5),
+			end: new Date(y, m, 9,6)
+		},
+		{
+			title: '橙子、苹果',
+			start: new Date(y, m, 9,7),
+			end: new Date(y, m, 9,8)
+		},
+		{
+			title: '橙子、苹果',
+			start: new Date(y, m, 9,9),
+			end: new Date(y, m, 9,10)
+		},
+		{
+			allDay:true,
+			title: '橙子、苹果',
+			start: "2018/01/10"
+		},
+		{
+			title: '橙子、苹果',
+			start: "2018/01/11 3:00",
+			end: "2018/01/11 4:00"
+		},
+	];//初始日历数据
+	var startDate ="";//起始日期
+	var endDate ="";//结束日期
+	var allDay=false;//全天
+    layui.use(['layer','laydate','form'], function() {
+		var layer = layui.layer,laydate = layui.laydate,form = layui.form;
+	    // 页面加载完毕，初始化Canlendar
+	    $('.gb-calendar').fullCalendar({
+			header: {
+				left: 'agendaWeek,month, today',
+				center: 'prev,title,next',
+				right:false
+			},
+			buttonText:{
+				today:'今天'
+			},
+			editable: true,
+			defaultView:'agendaWeek',
+			scrollTime : "06:00:00",
+			slotLabelFormat : "aH(:mm)点", //日期视图左边那一列显示的每一格日期时间格式  
+			slotDuration : "00:30:00",//一格时间槽代表多长时间，默认00:30:00（30分钟）
+			slotLabelInterval : "00:30:00",//日期视图左边那一列多长间隔显示一条日期文字(默认跟着slotDuration走的，可自定义)  
+			events: eventsData,
+			height :$(".gb-watch").innerHeight(),  
+		    windowResize: function(view) {  
+		        $('#calendar').fullCalendar('option', 'height',$(".gb-watch").innerHeight());  
+		    },
+		    locale:"zh-cn",
+			selectable: true,
+			select: function(start, end) {//点击日期空白格子弹出框
+				startDate =start;
+				endDate =end;
+				fun_dialog_html();
+				allDay=false;
+				// 弹出框
+				layer.open({
+					type: 1, 
+					title:false,
+					shadeClose:true,
+					closeBtn: 0,
+					content: dialog_html,
+					btn: ['确定创建'],
+					skin: 'gb-watch-dialog',
+					yes: function(index, layero){
+						var eventData,people="";
+						$(".gb-dialog-edit-watch .gb-people-list li").each(function() {
+							people=people+$(this).text()+"、";
+						})
+						//去掉最后一个、(如果不需要去掉，就不用写)
+						if (people.length > 0) {
+					        people = people.substr(0, people.length - 1);
+					    }else if(people==""){
+					    	people="无";
+					    }
+						if(allDay){//点击全天设置全天
+							endDate=null;
+						}
+						eventData = {
+							allDay:allDay,
+							title: people,
+							start:startDate,
+							end: endDate
+						};
+						$('.gb-calendar').fullCalendar('renderEvent', eventData, true); // 渲染一个新的日程到日程表上
+						layer.closeAll();
+					},
+					success: function(layero, index){
+						// 时间范围选择
+						laydate.render({
+						    elem: '#daterg',
+						    eventElem: '#tochobtn',
+						    trigger: 'click',
+						    type:'datetime',
+						    range: true,
+						    format:"M月d日 HH:mm",
+						    value:$.fullCalendar.formatDate(start,'M月D日 HH:mm')+' - '+$.fullCalendar.formatDate(end,'M月D日 HH:mm'),
+						    done: function(value, startD, endD){
+						    	startDate=new Date(startD.year,startD.month-1, startD.date, startD.hours,startD.minutes);
+						    	endDate=new Date(endD.year,endD.month-1, endD.date, endD.hours,endD.minutes);
+							}
+						});
+						form.render('select');
+					}
+				});
+				$(".gb-people-list li").remove();
+				// $(".gb-dialog").show();
+			},
+			eventClick: function(calEvent, jsEvent, view) {//日程区块，单击时触发
+				// event 是 Event Object 对象，包含了日程的信息（例如日期，标题等）
+				// jsEvent 是原生的 javascript 事件，包含“点击坐标”之类的信息。
+				// view 是当前的 View Object 。
+				// calEvent.source.rawEventDefs=[]
+				console.log(calEvent)
+				var html="";
+				fun_dialog_html();
+				// 弹出框
+				layer.open({
+					type: 1, 
+					title:false,
+					shadeClose:true,
+					closeBtn: 0,
+					content: dialog_html,
+					skin: 'gb-watch-dialog',
+					success: function(layero, index){
+						if(calEvent.title!=""){
+							var name=calEvent.title.split('、');
+							$(".gb-people-list li").remove();
+							for (var i = 0; i < name.length; i++) {
+								if(name[i]!="无"){
+									html="<li name='"+name[i]+"'>"+name[i]+"</li>";
+								}
+								$(".gb-people-list").append(html);
+								$(".gb-dialog-watch-list li input").each(function(index, el) {
+									if($(this).attr("name")==name[i]){
+										$(this).attr('checked', true);
+									}
+								});
+							}
+						}
+						if(!calEvent.allDay){
+							$('#daterg').prop('disabled', false);
+							$(".gb-dialog-laydate").css("opacity","1");
+							// 时间范围选择
+							laydate.render({
+							    elem: '#daterg',
+							    eventElem: '#tochobtn',
+							    trigger: 'click',
+							    type:'datetime',
+							    range: true,
+							    format:"M月d日 HH:mm",
+							    value:$.fullCalendar.formatDate(calEvent.start,'M月D日 HH:mm')+' - '+$.fullCalendar.formatDate(calEvent.end,'M月D日 HH:mm'),
+							    done: function(value, startD, endD){
+							    	startDate=new Date(startD.year,startD.month-1, startD.date, startD.hours,startD.minutes);
+							    	endDate=new Date(endD.year,endD.month-1, endD.date, endD.hours,endD.minutes);
+							    	calEvent.start=startDate;
+							    	calEvent.end=endDate;
+								}
+							});
+						}else{// 全天
+							$("#day").attr('checked', true)
+							$('#daterg').prop('disabled', true);
+							$(".gb-dialog-laydate").css("opacity","0.4");
+							// 时间范围选择
+							laydate.render({
+							    elem: '#daterg',
+							    eventElem: '#tochobtn',
+							    trigger: 'click',
+							    type:'datetime',
+							    range: true,
+							    format:"M月d日 HH:mm",
+							    value:$.fullCalendar.formatDate(calEvent.start,'M月D日 HH:mm')+' - '+$.fullCalendar.formatDate(calEvent.start,'M月D日 23:59'),
+							    done: function(value, startD, endD){
+							    	startDate=new Date(startD.year,startD.month-1, startD.date, startD.hours,startD.minutes);
+							    	endDate=new Date(endD.year,endD.month-1, endD.date, endD.hours,endD.minutes);
+								}
+							});
+						}
+						form.render('select');
+					},
+					btn: ['保存','删除'],
+					yes: function(index, layero){
+						var eventData,people="";
+						$(".gb-dialog-edit-watch .gb-people-list li").each(function() {
+							people=people+$(this).text()+"、";
+						})
+						//去掉最后一个、(如果不需要去掉，就不用写)
+						if (people.length > 0) {
+					        people = people.substr(0, people.length - 1);
+					    }else if(people==""){
+					    	people="无";
+					    }
+					    calEvent.title=people;
+					    if(allDay){//点击全天设置全天
+							calEvent.allDay=true;
+							calEvent.end=null;
+						}else{
+							calEvent.allDay=false;
+							calEvent.start=startDate;
+							calEvent.end=endDate;
+						}
+						$('.gb-calendar').fullCalendar('updateEvent',calEvent); // 重新渲染编辑过的日程
+						layer.closeAll();
+					},
+					btn2: function(index, layero){
+						$('.gb-calendar').fullCalendar('removeEvents',calEvent._id); // 重新渲染编辑过的日程
+						layer.closeAll();
+					}
+
+				});
+                return false;  //return false可以阻止点击后续事件发生（比如event中的url跳转事件）  
+            }
+			// 必须遵循下述格式：
+			// M月d日 HH:mm - M月d日 HH:mm
+		});
+	    // 弹出框关闭
+		$("body").on('click','.j-close-dialog',function() {
+			layer.closeAll();
+		});
+	});
+
+
+	// 点击添加值班人员按钮切换按钮
+	$(".add-watch-btn").click(function(argument) {
+		$(".add-watch").hide();
+		$(".add-watch-ok-no").show();
+	});
+	// 点击取消按钮切换按钮
+	$(".add-watch-no").click(function(argument) {
+		$(".add-watch").show();
+		$(".add-watch-ok-no").hide();
+	});
+	// 点击全天禁用时间范围选择
+	$("body").on('change','#day',function(argument) {
+		if($("#day").is(':checked')==true){
+			allDay=true;
+			$('#daterg').prop('disabled', true);
+			$(".gb-dialog-laydate").css("opacity","0.4");
+		}else{
+			allDay=false;
+			$('#daterg').prop('disabled', false);
+			$(".gb-dialog-laydate").css("opacity","1");
+		}
+	});
+	//添加人员
+	$("body").on('click','.gb-dialog-add',function(argument) {
+		$(this).toggleClass("cur");
+		$(".gb-dialog-watch-list").toggle()
+	});
+	$("body").on('change','.gb-dialog-watch-list li input',function() {
+		var text=$(this).parents(".matcheck").siblings("em").text();
+		var html="<li name='"+text+"'>"+text+"</li>";
+		if(this.checked){
+			$(".gb-people-list").append(html)
+        }else{ 
+        	$(".gb-people-list").find("li").each(function() {
+        		if($(this).attr("name")==text){
+        			$(this).remove()
+        		}
+        	})
+        }
+	});
+	$("body").on('change','.gb-dialog-watch-list .all input',function() {
+		var html="";
+		if(this.checked){
+			$(".gb-people-list li").remove();
+			$(this).parents(".gb-watch-list-ul").find("li").each(function() {
+				var text=$(this).find("em").text();
+				html=html+"<li name='"+text+"'>"+text+"</li>";
+			});
+			$(".gb-people-list").append(html)
+        }else{ 
+			$(".gb-people-list li").remove();
+        }
+	});
+	// 全选
+	$("body").on('change','.j-check-all',function(){ 
+        if(this.checked){
+        	$(this).parents(".all").siblings("li").find('input').each(function(){
+        		this.checked=true;
+        	}); 
+        }else{ 
+        	$(this).parents(".all").siblings("li").find('input').each(function(){
+        		this.checked=false;
+        	}); 
+        } 
+    });
+
+
+
+	function fun_dialog_html(people_list) {
+		// body...
+		dialog_html='<div class="gb-dialog">'+
+			'			<form class="layui-form" action="">'+
+			'				<div class="gb-dialog-main i">'+
+			'					<h3 class="gb-dialog-title">'+
+			'						<i class="iconfont icon-guanbi j-close-dialog"></i>'+
+			'					</h3>'+
+			'					<div class="gb-dialog-edit-watch">'+
+			'						<div class="item">'+
+			'							<h4>'+
+			'								值班人员'+
+			'								<a href="javascript:;" class="gb-dialog-add"> '+
+			'									<i class="iconfont icon-xinjian"></i>'+
+			'									添加'+
+			'								</a>'+
+			'							</h4>'+
+			'							<ul class="gb-people-list">'+
+			'							</ul>'+
+			'						</div>'+
+			'						<div class="item">'+
+			'							<h4>'+
+			'								值班时间'+
+			'							</h4>'+
+			'				    		<div class="matcheck gb-dialog-day i">'+
+			'								<input type="checkbox" id="day" lay-ignore>'+
+			'								<label for="day">全天</label>'+
+			'							</div>'+
+			'							<div class="gb-dialog-laydate i">'+
+			'								<i class="iconfont icon-rili i"></i>'+
+			'						        <input type="text" class="layui-input i" id="daterg" placeholder="选择时间范围">'+
+			'					    	</div>'+
+			'					    	<div class="gb-dialog-checkbox i">'+
+			'					    		<div class="matcheck i">'+
+			'									<input type="radio" name="circulation" id="weeks" checked="checked" lay-ignore>'+
+			'									<label for="weeks">周循环</label>'+
+			'								</div>'+
+			'					    		<div class="matcheck i">'+
+			'									<input type="radio" name="circulation" id="month" lay-ignore>'+
+			'									<label for="month">月循环</label>'+
+			'								</div>'+
+			'					    	</div>'+
+			'						</div>'+
+			'						<div class="item">'+
+			'							<h4>确认超时时间</h4>'+
+			'							<label class="gb-dialog-sel i">'+
+			'								<select name="">'+
+			'									<option value="">选择小时</option>'+
+			'									<option value="1">1</option>'+
+			'									<option value="2">2</option>'+
+			'									<option value="3">3</option>'+
+			'									<option value="4">4</option>'+
+			'									<option value="5">5</option>'+
+			'									<option value="6">6</option>'+
+			'								</select>'+
+			'								小时'+
+			'							</label>'+
+			'							<label class="gb-dialog-sel i">'+
+			'								<select name="">'+
+			'									<option value="">选择分钟</option>'+
+			'									<option value="1">1</option>'+
+			'									<option value="2">2</option>'+
+			'									<option value="3">3</option>'+
+			'									<option value="4">4</option>'+
+			'									<option value="5">5</option>'+
+			'									<option value="6">6</option>'+
+			'								</select>'+
+			'								分钟'+
+			'							</label>'+
+			'						</div>'+
+			'						<div class="item">'+
+			'							<h4>备注</h4>'+
+			'							<div class="layui-input-block">'+
+			'								<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>'+
+			'							</div>'+
+			'						</div>'+
+			'					</div>'+
+			'					<div class="gb-dialog-watch-list" style="display: none;">'+
+			'						<div class="gb-watch-list">'+
+			'							<div class="tksearch">'+
+			'								<input type="text" placeholder="搜索">'+
+			'								<span class="tksrh-btn"><i class="iconfont icon-sousuo"></i></span>'+
+			'							</div>'+
+			'							<ul class="gb-watch-list-ul scroll">'+
+			'								<div class="all">'+
+			'									<em class="i">所有人员</em>'+
+			'									<div class="matcheck">'+
+			'										<input type="checkbox" name="所有人员" id="matone10" class="j-check-all" lay-ignore>'+
+			'										<label for="matone10"></label>'+
+			'									</div>'+
+			'								</div>'+
+			'								<li>'+
+			'									<em class="i">橙子</em>'+
+			'									<div class="matcheck">'+
+			'										<input type="checkbox" name="橙子" id="matone20" lay-ignore>'+
+			'										<label for="matone20"></label>'+
+			'									</div>'+
+			'								</li>'+
+			'								<li>'+
+			'									<em class="i">苹果</em>'+
+			'									<div class="matcheck">'+
+			'										<input type="checkbox" name="苹果" id="matone21" lay-ignore>'+
+			'										<label for="matone21"></label>'+
+			'									</div>'+
+			'								</li>'+
+			'							</ul>'+
+			'							<div class="gb-watch-list-btn-box">'+
+			'								<div class="add-watch-ok-no">'+
+			'									<button class="layui-btn add-watch-no layui-btn-sm layui-btn-primary">取消</button>'+
+			'									<button class="layui-btn add-watch-ok layui-btn-sm bg4579d8">确认</button>'+
+			'								</div>'+
+			'							</div>'+
+			'						</div>'+
+			'					</div>'+
+			'				</div>'+
+			'			</form>'+
+			'		</div>';
+		return dialog_html;
+	}
+	
+});
+	
+</script>

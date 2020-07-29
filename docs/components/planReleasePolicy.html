@@ -1,0 +1,600 @@
+<div class="gb-form">
+	<form class="layui-form" action="">
+		<div class="newform">
+			<p class="newform-tit"><i class="iconfont icon-celvebianjiqi"></i>0123演练计划发布策略设置</p>
+			<div class="form-oneitem-box">
+				<div class="form-oneitem">
+					<div class="fortit">
+						<span class="oneitem-tit">策略一</span>
+						<span class="reldelbtn" id="reltodel"> <i class="iconfont icon-shanchu"></i>
+							删除
+						</span>
+					</div>
+					<div class="oneitem-cont">
+						<p class="oneitem-tit">
+							<small>*</small>
+							选择消息内容
+						</p>
+						<div class="layui-input-inline">
+							<select name="dispatch" lay-search="">
+								<!-- lay-verify="required" lay-search="" -->		
+								<option value="">请选择内容</option>
+								<option value="1">文本一</option>
+								<option value="2">文本二</option>
+								<option value="3">音频一</option>
+								<option value="4">音频二</option>
+								<option value="5">视频一</option>
+							</select>
+						</div>
+						<p class="itemexp"> <i class="iconfont icon-iconfontjinggao"></i>
+							根据选择的内容自动筛选下方的系统资源
+						</p>
+						<p class="gb-line"></p>
+						<p class="oneitem-tit">
+							<small>*</small>
+							调用系统资源
+						</p>
+						<div class="sysreso-box">
+							<div class="sysreso-sel gb-tree-box left">
+								<span class="systit">
+									<i class="iconfont icon-xuanze"></i>
+									已选择资源
+								</span>
+								<div class="gb-tree scroll">
+									<ul id="gb_tree_sel" class="ztree ztree-close"></ul>
+								</div>
+							</div>
+							<div class="sysreso-all gb-tree-box right">
+								<span class="systit">
+									<i class="iconfont icon-quanbu"></i>
+									全部资源
+								</span>
+								<div class="gb-tree scroll">
+									<ul id="gb_tree_all" class="ztree ztree-check"></ul>
+								</div>
+							</div>
+						</div>
+						<p class="gb-line"></p>
+						<div class="predictone">
+							<p class="oneitem-tit">
+								<small>*</small>
+								发布时间
+							</p>
+							<div class="layui-input-inline">
+								<select name="dispatch" lay-search="">
+									<!-- lay-verify="required" lay-search="" -->		
+									<option value="">请选择发布时间</option>
+									<option value="1">time one</option>
+									<option value="2">time two</option>
+									<option value="3">time three</option>
+									<option value="4">time four</option>
+									<option value="5">time five</option>
+									<option value="6">time six</option>
+									<option value="7">time seven</option>
+									<option value="8">time eight</option>
+									<option value="9">time nine</option>
+									<option value="10">time ten</option>
+								</select>
+							</div>
+						</div>
+						<div class="predictwo">
+							<p class="oneitem-tit">
+								<small>*</small>
+								终止条件
+							</p>
+							<div class="layui-input-inline">
+								<select name="dispatch" lay-search="">
+									<!-- lay-verify="required" lay-search="" -->		
+									<option value="">请选择终止条件</option>
+									<option value="1">条件一</option>
+									<option value="2">条件二</option>
+									<option value="3">条件三</option>
+									<option value="4">条件四</option>
+									<option value="5">条件五</option>
+								</select>
+							</div>
+						</div>
+						<div class="predictone">
+							<p class="oneitem-tit">
+								<small>*</small>
+								播出模式
+							</p>
+							<div class="layui-input-inline">
+								<select name="dispatch" lay-search="">
+									<!-- lay-verify="required" lay-search="" -->		
+									<option value="">请选择播出模式</option>
+									<option value="1">模式一</option>
+									<option value="2">模式二</option>
+									<option value="3">模式三</option>
+								</select>
+							</div>
+						</div>
+						<div class="predictwo">
+							<p class="oneitem-tit">
+								<small>*</small>
+								播出时长
+							</p>
+							<div class="layui-input-inline">
+								<select name="dispatch" lay-search="">
+									<!-- lay-verify="required" lay-search="" -->		
+									<option value="">请选择播出时长</option>
+									<option value="1">1分钟</option>
+									<option value="2">2分钟</option>
+									<option value="3">3分钟</option>
+									<option value="4">4分钟</option>
+									<option value="5">5分钟</option>
+									<option value="6">6分钟</option>
+									<option value="7">7分钟</option>
+								</select>
+							</div>
+						</div>
+						<div class="predictone">
+							<p class="oneitem-tit">
+								<small>*</small>
+								发布间隔
+							</p>
+							<div class="layui-input-inline">
+								<select name="dispatch" lay-search="">
+									<!-- lay-verify="required" lay-search="" -->		
+									<option value="">请选择发布间隔</option>
+									<option value="1">1分钟</option>
+									<option value="2">2分钟</option>
+									<option value="3">3分钟</option>
+									<option value="4">4分钟</option>
+								</select>
+							</div>
+						</div>
+						<div class="predictwo">
+							<p class="oneitem-tit">
+								<small>*</small>
+								重复次数
+							</p>
+							<div class="layui-input-inline">
+								<select name="dispatch" lay-search="">
+									<!-- lay-verify="required" lay-search="" -->		
+									<option value="">请选择重复次数</option>
+									<option value="1">不重复</option>
+									<option value="2">一次</option>
+									<option value="3">两次</option>
+									<option value="4">三次</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="fortit reladd">
+				<span class="oneitem-tit">新建策略</span>
+				<span class="reldelbtn" id="toadd">
+					<i class="iconfont icon-xinjian"></i>
+					添加
+				</span>
+			</div>
+			<p class="gb-line"></p>
+			<div class="oneitem-cont relcont">
+				<div class="predictone">
+					<p class="oneitem-tit">预覆盖人数</p>
+					<p class="precount">1000万人</p>
+				</div>
+				<div class="predictwo">
+					<p class="oneitem-tit">预覆盖面积</p>
+					<p class="precount">120万平方公里</p>
+				</div>
+			</div>
+
+			<div class="tocreat">
+				<input type="button" value="确认创建" class="tocreatbtn" />		
+				<p class="warnword relwarn">
+					<i class="iconfont icon-11"></i>
+					0123演练计划的发布策略已经创建，请等待审核！
+				</p>
+			</div>
+			<p class="botword">
+				© 2017-2018 浙江省应急广播平台
+			</p>
+		</div>
+		<div class="choose">
+			<p class="choword">确定删除此任务消息吗？</p>
+			<div class="chobtn">
+				<input type="button" value="删除" class="chopri cho-delete" />		
+				<input type="button" value="取消" class="cho-cancel" />		
+			</div>
+			<span class="triangle"> <em></em>
+			</span>
+		</div>
+	</form>
+</div>
+
+	
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var poltit = ['策略一','策略二','策略三','策略四','策略五','策略六','策略七','策略八','策略九','策略十'];
+		var gb_tree_id=0;
+		layui.use('form', function(){
+			var form = layui.form;
+			form.render();
+
+
+			var itbtn = $('<span class="itbtn"></span>');
+			$('.layui-select-title').append(itbtn);
+			$('.gb-form .layui-form-radio').remove();
+			
+			
+			$('#toadd').click(toadd);
+			function toadd(){
+				gb_tree_id++;
+				var thePolicy = '<div class="form-oneitem">' +
+				    '                   <div class="fortit">' +
+				    '                       <span class="oneitem-tit">策略一</span>' +
+				    '                       <span class="reldelbtn" id="reltodel"> <i class="iconfont icon-shanchu"></i>' +
+				    '                           删除' +
+				    '                       </span>' +
+				    '                   </div>' +
+				    '                   <div class="oneitem-cont">' +
+				    '                       <p class="oneitem-tit">' +
+				    '                           <small>*</small>' +
+				    '                           选择消息内容' +
+				    '                       </p>' +
+				    '                       <div class="layui-input-inline">' +
+				    '                           <select name="dispatch" lay-search="">' +
+				    '                               <!-- lay-verify="required" lay-search="" -->        ' +
+				    '                               <option value="">请选择内容</option>' +
+				    '                               <option value="1">文本一</option>' +
+				    '                               <option value="2">文本二</option>' +
+				    '                               <option value="3">音频一</option>' +
+				    '                               <option value="4">音频二</option>' +
+				    '                               <option value="5">视频一</option>' +
+				    '                           </select>' +
+				    '                       </div>' +
+				    '                       <p class="itemexp"> <i class="iconfont icon-iconfontjinggao"></i>' +
+				    '                           根据选择的内容自动筛选下方的系统资源' +
+				    '                       </p>' +
+				    '                       <p class="gb-line"></p>' +
+				    '                       <p class="oneitem-tit">' +
+				    '                           <small>*</small>' +
+				    '                           调用系统资源' +
+				    '                       </p>' +
+				    '                       <div class="sysreso-box">' +
+				    '                           <div class="sysreso-sel gb-tree-box left">' +
+				    '                               <span class="systit">' +
+				    '                                   <i class="iconfont icon-xuanze"></i>' +
+				    '                                   已选择资源' +
+				    '                               </span>' +
+				    '                               <div class="gb-tree scroll">' +
+				    '                                   <ul id="gb_tree_sel'+gb_tree_id+'" class="ztree ztree-close"></ul>' +
+				    '                               </div>' +
+				    '                           </div>' +
+				    '                           <div class="sysreso-all gb-tree-box right">' +
+				    '                               <span class="systit">' +
+				    '                                   <i class="iconfont icon-quanbu"></i>' +
+				    '                                   全部资源' +
+				    '                               </span>' +
+				    '                               <div class="gb-tree scroll">' +
+				    '                                   <ul id="gb_tree_all'+gb_tree_id+'" class="ztree ztree-check"></ul>' +
+				    '                               </div>' +
+				    '                           </div>' +
+				    '                       </div>' +
+				    '                       <p class="gb-line"></p>' +
+				    '                       <div class="predictone">' +
+				    '                           <p class="oneitem-tit">' +
+				    '                               <small>*</small>' +
+				    '                               发布时间' +
+				    '                           </p>' +
+				    '                           <div class="layui-input-inline">' +
+				    '                               <select name="dispatch" lay-search="">' +
+				    '                                   <!-- lay-verify="required" lay-search="" -->        ' +
+				    '                                   <option value="">请选择发布时间</option>' +
+				    '                                   <option value="1">time one</option>' +
+				    '                                   <option value="2">time two</option>' +
+				    '                                   <option value="3">time three</option>' +
+				    '                                   <option value="4">time four</option>' +
+				    '                                   <option value="5">time five</option>' +
+				    '                                   <option value="6">time six</option>' +
+				    '                                   <option value="7">time seven</option>' +
+				    '                                   <option value="8">time eight</option>' +
+				    '                                   <option value="9">time nine</option>' +
+				    '                                   <option value="10">time ten</option>' +
+				    '                               </select>' +
+				    '                           </div>' +
+				    '                       </div>' +
+				    '                       <div class="predictwo">' +
+				    '                           <p class="oneitem-tit">' +
+				    '                               <small>*</small>' +
+				    '                               终止条件' +
+				    '                           </p>' +
+				    '                           <div class="layui-input-inline">' +
+				    '                               <select name="dispatch" lay-search="">' +
+				    '                                   <!-- lay-verify="required" lay-search="" -->        ' +
+				    '                                   <option value="">请选择终止条件</option>' +
+				    '                                   <option value="1">条件一</option>' +
+				    '                                   <option value="2">条件二</option>' +
+				    '                                   <option value="3">条件三</option>' +
+				    '                                   <option value="4">条件四</option>' +
+				    '                                   <option value="5">条件五</option>' +
+				    '                               </select>' +
+				    '                           </div>' +
+				    '                       </div>' +
+				    '                       <div class="predictone">' +
+				    '                           <p class="oneitem-tit">' +
+				    '                               <small>*</small>' +
+				    '                               播出模式' +
+				    '                           </p>' +
+				    '                           <div class="layui-input-inline">' +
+				    '                               <select name="dispatch" lay-search="">' +
+				    '                                   <!-- lay-verify="required" lay-search="" -->        ' +
+				    '                                   <option value="">请选择播出模式</option>' +
+				    '                                   <option value="1">模式一</option>' +
+				    '                                   <option value="2">模式二</option>' +
+				    '                                   <option value="3">模式三</option>' +
+				    '                               </select>' +
+				    '                           </div>' +
+				    '                       </div>' +
+				    '                       <div class="predictwo">' +
+				    '                           <p class="oneitem-tit">' +
+				    '                               <small>*</small>' +
+				    '                               播出时长' +
+				    '                           </p>' +
+				    '                           <div class="layui-input-inline">' +
+				    '                               <select name="dispatch" lay-search="">' +
+				    '                                   <!-- lay-verify="required" lay-search="" -->        ' +
+				    '                                   <option value="">请选择播出时长</option>' +
+				    '                                   <option value="1">1分钟</option>' +
+				    '                                   <option value="2">2分钟</option>' +
+				    '                                   <option value="3">3分钟</option>' +
+				    '                                   <option value="4">4分钟</option>' +
+				    '                                   <option value="5">5分钟</option>' +
+				    '                                   <option value="6">6分钟</option>' +
+				    '                                   <option value="7">7分钟</option>' +
+				    '                               </select>' +
+				    '                           </div>' +
+				    '                       </div>' +
+				    '                       <div class="predictone">' +
+				    '                           <p class="oneitem-tit">' +
+				    '                               <small>*</small>' +
+				    '                               发布间隔' +
+				    '                           </p>' +
+				    '                           <div class="layui-input-inline">' +
+				    '                               <select name="dispatch" lay-search="">' +
+				    '                                   <!-- lay-verify="required" lay-search="" -->        ' +
+				    '                                   <option value="">请选择发布间隔</option>' +
+				    '                                   <option value="1">1分钟</option>' +
+				    '                                   <option value="2">2分钟</option>' +
+				    '                                   <option value="3">3分钟</option>' +
+				    '                                   <option value="4">4分钟</option>' +
+				    '                               </select>' +
+				    '                           </div>' +
+				    '                       </div>' +
+				    '                       <div class="predictwo">' +
+				    '                           <p class="oneitem-tit">' +
+				    '                               <small>*</small>' +
+				    '                               重复次数' +
+				    '                           </p>' +
+				    '                           <div class="layui-input-inline">' +
+				    '                               <select name="dispatch" lay-search="">' +
+				    '                                   <!-- lay-verify="required" lay-search="" -->        ' +
+				    '                                   <option value="">请选择重复次数</option>' +
+				    '                                   <option value="1">不重复</option>' +
+				    '                                   <option value="2">一次</option>' +
+				    '                                   <option value="3">两次</option>' +
+				    '                                   <option value="4">三次</option>' +
+				    '                               </select>' +
+				    '                           </div>' +
+				    '                       </div>' +
+				    '                   </div>' +
+				    '               </div>';
+				$('.form-oneitem-box').append(thePolicy);
+				// thePolicy = $('.form-oneitem').eq(0).clone(true);
+				var thecount = $('.form-oneitem').length;
+				//console.log(thecount);
+				for(var i=0;i<thecount;i++){
+					$('.form-oneitem').eq(i).find('.fortit .oneitem-tit').html(poltit[i]);
+				}
+				layui.use('form', function(){
+					var form = layui.form;//高版本建议把括号去掉，有的低版本，需要加()
+					form.render();
+
+					var itbtn = $('<span class="itbtn"></span>');
+					$('.layui-select-title').append(itbtn);
+					$('.gb-form .layui-form-radio').remove();
+				});
+				// 初始化树
+				ztree_Initialize();
+			}
+		});
+
+		
+
+		$(function() {
+			$(document).on('click','#reltodel',function(event) {
+		        showDiv();
+		        $(this).parents('.form-oneitem').addClass('waitdel');
+		        //$(myDiv).toggle();
+		        $(document).one("click",
+		        function() { 
+		            $('.choose').hide();
+		            $('.form-oneitem').removeClass('waitdel');
+		        });
+		        event.stopPropagation(); 
+		    });
+		    
+		    $('.choose').click(function(event) {
+		        event.stopPropagation(); 
+		    });
+		});
+		function showDiv() {
+			var x = event.clientX - event.offsetX;
+			var y = event.clientY - event.offsetY;
+			$('.choose').css({'display':'block','top':y-80,'left':x-112});
+		}
+
+		$('.cho-delete').click(function(){
+			$('.choose').hide();
+			$('.form-oneitem.waitdel').remove();
+			var thecount = $('.form-oneitem').length;
+			for(var i=0;i<thecount;i++){
+				$('.form-oneitem').eq(i).find('.fortit .oneitem-tit').html(poltit[i]);
+			}
+		})
+		$('.cho-cancel').click(function(){
+			$('.choose').hide();
+			$('.form-oneitem').removeClass('waitdel');
+		})
+
+		$('.gb-main-item').scroll(function(){
+			if($('.choose').is(':visible')){
+				$('.choose').hide();
+				$('.form-oneitem').removeClass('waitdel');
+			}
+		})
+
+
+		$(document).on('click','.fileconv-btn',function(){
+			$('.popwindow').show();
+			$('.toshift').show();
+			$('.matlist li ').eq(0).find('input').prop('checked',true);
+		})
+	})
+
+
+
+	// zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+	var selSetting = {
+		view:{
+			showLine:false,//去掉连接线
+			addDiyDom:addDiyDom
+		}
+	};
+	var allSetting = {
+		view:{
+			showLine:false,//去掉连接线
+		},
+		check:{//添加复选框
+			enable:true,
+		},
+		callback: {
+			onCheck: zTreeOnCheck
+		}
+	};
+	function zTreeOnCheck(event, treeId, treeNode) {
+		// 勾选复选框将触发这个方法，在这里调用ajax获取已选数据
+	    console.log(treeNode)
+		// 	selData=treeNode;//ajax获取的数据赋值给已选数据
+	 //    if(treeNode.checked){
+		//  //    var treeObj = $.fn.zTree.getZTreeObj("gb_tree_all1");//获取全部数据的树的对象
+		// 	// var nodes = treeObj.getChangeCheckedNodes();//获取勾选的数据
+	 //    }
+		// 	$.fn.zTree.init($(this), selSetting, selData);//初始化已选数据的树
+	};
+	// zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+	// 全部数据
+	var allData = [{
+	    name: "浙江省",
+	    open: true,
+	    checked:true,
+	    children: [{
+	        name: "杭州市",
+	    	checked:true,
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "宁波市",
+	    	checked:true,
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "温州市",
+	    	checked:true,
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    }]
+	},{
+	    name: "浙江省1",
+	    open: true,
+	    children: [{
+	        name: "杭州市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "宁波市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "温州市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    }]
+	}];
+	// 已选数据
+	var selData=[{
+	    name: "浙江省",
+	    open: true,
+	    children: [{
+	        name: "杭州市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "宁波市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "温州市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    }]
+	}];
+	$(document).ready(function() {
+		// 初始化树
+		ztree_Initialize();
+		// $.fn.zTree.init($("#gb_tree_all1"), allSetting, zNodes);
+		// $.fn.zTree.init($("#gb_tree_all2"), allSetting, zNodes);
+	});
+	function ztree_Initialize(argument) {
+		//带关闭按钮的树
+		$(".ztree-close").each(function() {
+			$.fn.zTree.init($(this), selSetting, selData);
+		});
+		//带复选框的树
+		$(".ztree-check").each(function() {
+			$.fn.zTree.init($(this), allSetting, allData);
+		});
+	}
+</script>

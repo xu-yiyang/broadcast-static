@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="renderer" content="webkit">
+	<meta name="format-detection" content="telephone=no, email=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1,maximum-scale=2,minimum-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="src/css/main.min.css">
+	<!-- 图标本地链接 -->
+	<!-- <link rel="stylesheet" href="./iconfont/iconfont.css"> -->
+	<!-- 图标在线链接 -->
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_484596_a2p660v43h9z4cxr.css">
+</head>
+<body>
+<div class="gb-wrap">
+	<div class="loginout gb-sign">
+		<div class="titbg">
+			<span class="titbef"></span>
+			<span class="titaft"></span>
+		</div>
+		<div class="logcent">
+			
+			<img src="src/images/log-tit.png" class="logtit">
+			<div class="logframe">
+				<div class="fratop">
+					<span class="fratit">登录</span>
+				</div>
+				<div class="fracent">
+					<div class="fraone">
+						<span class="icone"><i class="iconfont icon-yonghu"></i></span>
+						<input type="text" value="用户名" onfocus="if(this.value==defaultValue){this.value = '';this.style.borderColor='#999';this.style.color='#333'}" onblur="if(!value){this.value = defaultValue;this.style.color='#ccc';}this.style.borderColor='#d8d8d8';"/>
+						<span class="iconfont icon-11 itok "></span>
+						<span class=" iconfont icon-iconfontjinggao itwarn"></span>
+					</div>
+					<div class="fratwo">
+						<span class="ictwo"><i class="iconfont icon-mima"></i></span>
+						<input type="text" value="密码" onfocus="if(this.value==defaultValue){this.value = '';this.type='password';this.style.color='#333';this.style.borderColor='#999';}" onblur="if(!value){this.value = defaultValue;this.style.color='#ccc';this.type='text';}this.style.borderColor='#d8d8d8';"/>
+						<span class="iconfont icon-11 itok "></span>
+						<span class=" iconfont icon-iconfontjinggao itwarn"></span>
+					</div>
+					<div class="frathr">
+						<div class="fracode">
+							<span class="icthr"><i class="iconfont icon-yanzheng"></i></span>
+							<input type="text" value="验证码" onfocus="if(this.value==defaultValue){this.value = '';this.style.color='#333';this.style.borderColor='#999';}" onblur="if(!value){this.value = defaultValue;this.style.color='#ccc';}this.style.borderColor='#d8d8d8';"/>
+						</div>
+						<span class="codeimg"><img src="src/images/authcode.png" alt="" /></span>
+					</div>
+					<input type="button" value="登录" class="disablebtn " disabled="disabled" /><!-- loginbtn -->
+					<a href="forget.html" class=" forget"><i class="iconfont icon-wenhao"></i>忘记密码</a>
+				</div>
+			</div>
+		</div>
+		<p class="copyright">© 2017-2018 浙江省应急广播平台</p>
+	</div>
+</div>
+
+<script src="plugins/DataTables-1.10.12/media/js/jquery.js"></script>
+<!--<script src="plugins/jquery.roundabout2.js"></script>
+<script src="plugins/layui/layui.js"></script>
+<script src="src/js/main.min.js"></script>  -->
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+
+		$('.fracode input').bind('input propertychange',function(){
+			if($('.fracode input').val() != '' && $('.fracode input').val() != '验证码' && $('.fraone input').val() != '' && $('.fraone input').val() != '用户名' && $('.fratwo input').val() != '' && $('.fratwo input').val() != '密码'){
+				$('.disablebtn').addClass('loginbtn');
+				$('.disablebtn').attr('disabled',false);
+			}else{
+				$('.disablebtn').removeClass('loginbtn');
+				$('.disablebtn').attr('disabled',true);
+			}
+		})
+		$('.fraone input').bind('input propertychange',function(){
+			if($('.fracode input').val() != '' && $('.fracode input').val() != '验证码' && $('.fraone input').val() != '' && $('.fraone input').val() != '用户名' && $('.fratwo input').val() != '' && $('.fratwo input').val() != '密码'){
+				$('.disablebtn').addClass('loginbtn');
+				$('.disablebtn').attr('disabled',false);
+			}else{
+				$('.disablebtn').removeClass('loginbtn');
+				$('.disablebtn').attr('disabled',true);
+			}
+		})
+		$('.fratwo input').bind('input propertychange',function(){
+			if($('.fracode input').val() != '' && $('.fracode input').val() != '验证码' && $('.fraone input').val() != '' && $('.fraone input').val() != '用户名' && $('.fratwo input').val() != '' && $('.fratwo input').val() != '密码'){
+				$('.disablebtn').addClass('loginbtn');
+				$('.disablebtn').attr('disabled',false);
+			}else{
+				$('.disablebtn').removeClass('loginbtn');
+				$('.disablebtn').attr('disabled',true);
+			}
+		})
+		$(document).on('click','.loginbtn',function(){
+			//console.log(1);
+		})
+	})
+</script>
+</body>
+</html>

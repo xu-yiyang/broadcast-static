@@ -1,0 +1,67 @@
+<div class="gb-form">
+	<form class="layui-form" action="">
+		<div class="newform newprog">
+			<p class="newform-tit"><i class="iconfont icon-yunwei"></i>新建运维日志</p>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<span class="oneitem-tit">新建运维日志</span>
+				</div>
+				<div class="oneitem-cont">
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>运维日志名称</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt"/>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>运维操作时间</p>
+						<div class="layui-input-inline">
+					        <input type="text" class="layui-input" id="daterg" placeholder="选择时间范围">
+					        <span class="tocho iconfont icon-shijian" id="tochobtn"></span> 
+				    	</div>
+					</div>
+					<p class="oneitem-tit"><small>*</small>运维内容</p>
+					<div class="theditor">
+						<script type="text/plain" id="myEditor" style="width:100%;height:210px;"></script>
+					</div>
+				</div>
+			</div>
+			<div class="tocreat">
+				<div class="progcreat">
+					<input type="button" value="清空" class="toemptybtn" />
+					<input type="button" value="确定" class="tocreatbtn" />
+				</div>
+			</div>
+			<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+		</div>
+	</form>
+</div>
+
+	
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*layui.use('form', function(){
+			var form = layui.form;
+			form.render();
+
+			var itbtn = $('<span class="itbtn"></span>');
+			$('.layui-select-title').append(itbtn);
+			$('.gb-form .layui-form-radio').remove();
+			
+		});*/
+
+		var editorOption = {
+	        scaleEnabled:true
+	    };
+	    var editor_a = new baidu.editor.ui.Editor(editorOption);
+	    editor_a.render('myEditor');
+		
+
+		$(document).on('click','.toemptybtn',function(){
+			UE.getEditor('myEditor').execCommand('cleardoc');
+		})
+	})
+</script>

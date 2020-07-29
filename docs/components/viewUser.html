@@ -1,0 +1,145 @@
+<div class="gb-form gb-viewfile">
+	<form class="layui-form" action="">
+		<div class="newform">
+			<p class="newform-tit"><i class="iconfont icon-chakan"></i>查看用户</p>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit">查看用户</p>
+				</div>
+				<div class="oneitem-cont">
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>用户姓名</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" value="用户姓名" readonly="readonly"/>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>密码</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" value="密码" readonly="readonly"/>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>手机号</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" value="手机号" readonly="readonly"/>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>用户所属部分</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" value="部门1" readonly="readonly"/>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit"><small>*</small>数字证书可下载次数</p>
+						<div class="tnoneimp">
+							<input type="text" class="imptxt" value="3" readonly="readonly"/>
+						</div>
+					</div>
+					<div class="settingone">
+						<p class="oneitem-tit">选择角色或者权限</p>
+						<div class="tnoneimp gb-permission-list">
+							<div class="gb-tree scroll gb-tree-noHeight">
+								<ul id="gb_tree_all1" class="ztree ztree-check"></ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+		</div>
+	</form>
+</div>
+
+	
+
+
+
+<script type="text/javascript">
+	// zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+	var allSetting = {
+		view:{
+			showLine:false,//去掉连接线
+		},
+		/*check:{//添加复选框
+			enable:true,
+		},*/
+		callback: {
+			onCheck: zTreeOnCheck
+		}
+	};
+	function zTreeOnCheck(event, treeId, treeNode) {
+		// 勾选复选框将触发这个方法，在这里调用ajax获取已选数据
+	    console.log(treeNode)
+		// 	selData=treeNode;//ajax获取的数据赋值给已选数据
+	 //    if(treeNode.checked){
+		//  //    var treeObj = $.fn.zTree.getZTreeObj("gb_tree_all1");//获取全部数据的树的对象
+		// 	// var nodes = treeObj.getChangeCheckedNodes();//获取勾选的数据
+	 //    }
+		// 	$.fn.zTree.init($(this), selSetting, selData);//初始化已选数据的树
+	};
+	// zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+	// 全部数据
+	var allData = [{
+	    name: "任务消息管理",
+	    open: true,
+	    //checked:true,
+	    children: [{
+	        name: "新建任务消息",
+	    },{
+	        name: "编辑任务消息",
+	    },{
+	        name: "停播任务消息",
+	    },{
+	        name: "取消播放任务消息",
+	    },{
+	        name: "审核任务消息",
+	    },{
+	        name: "查看任务消息",
+	    	//checked:true,
+	    },{
+	        name: "重播任务消息",
+	    	//checked:true,
+	    },{
+	        name: "删除任务消息",
+	    	//checked:true,
+	    }]
+	},{
+	    name: "用户管理",
+	    open: true,
+	    //checked:true,
+	    children: [{
+	        name: "新建用户",
+	    },{
+	        name: "停用/启用用户",
+	    },{
+	        name: "编辑用户",
+	    },{
+	        name: "删除用户",
+	    }]
+	},{
+	    name: "资源管理",
+	    open: true,
+	    //checked:true,
+	    children: [{
+	        name: "查看资源",
+	    },{
+	        name: "编辑资源",
+	    },{
+	        name: "删除资源",
+	    },{
+	        name: "新增资源",
+	    },{
+	        name: "下载音频资源",
+	    }]
+	}];
+	//带复选框的树
+	$(".ztree-check").each(function() {
+		$.fn.zTree.init($(this), allSetting, allData);
+	});
+
+	/*$("body").on('change','.gb-permission-list input',function() {
+		$(".gb-user-permission h3").html($(this).parents("li").find("em").html())
+	});*/
+</script>

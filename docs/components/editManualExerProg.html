@@ -1,0 +1,539 @@
+<div class="gb-form">
+	<form class="layui-form" action="">
+		<div class="newform">
+			<p class="newform-tit"><i class="iconfont icon-iconfontxinjianwenjian"></i>新建手动演练计划</p>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">01</span><small>*</small>演练计划名称</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit"><small>*</small>演练计划名称</p>
+					<div class="oneimp">
+						<input type="text"  id="impcontent" class="imptxt" maxlength="20"/>
+						<span class="oneimp-count"><span class="countnew">0</span>/20</span>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">02</span><small>*</small>调度方案</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit">选择调度方案</p>
+					
+						<div class="layui-input-inline">
+							<select name="dispatch" lay-search="">
+								<option value="">请选择调度方案</option>
+								<option value="1">Scheme one</option>
+								<option value="2">Scheme two</option>
+								<option value="3">Scheme three</option>
+								<option value="4">Scheme four</option>
+								<option value="5">Scheme five</option>
+								<option value="6">Scheme six</option>
+							</select>
+						</div>
+			    	<!-- </form> -->
+			    	<p class="itemexp"><i class="iconfont icon-iconfontjinggao"></i>选择调度方案后，后面的信息将自动匹配为预设的事件信息并且不能修改</p>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">03</span><small>*</small>消息内容</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit"><small>*</small>消息内容</p>
+					<div class="msgcont">
+						<div class="txtimp">
+							<textarea id="imparea" class="imparea" maxlength="200" onfocus="if(this.value == defaultValue){this.value = '';this.style.color = '#333'}" onblur="if(!value){this.value = defaultValue;this.style.color = '#ccc'}">请输入消息文本</textarea>
+							<span class="area-count"><span class="countnew">0</span>/200</span>
+						</div>
+						<p class="itemexp"><i class="iconfont icon-iconfontjinggao"></i>文本内容可以直接转换成音频</p>
+						<input type="button" value="转成音频" class="toswitch" />
+					</div>
+					<div class="filecont">
+						<div class="filetit">
+							<div class="filetit-one">
+								<input type="file" accept="audio/*,video/*" />
+								<i class="iconfont icon-wushanguanwangziti-"></i>本地上传
+							</div>
+							<span class="filetit-two"><i class="iconfont icon-kucun"></i>在应急音频资源库中选择</span>
+						</div>
+						<ul class="filelist">
+							<li>
+								<div class="filename"><i class="iconfont icon-1"></i><span class="thename">视频.mp4</span></div>
+								<div class="filebtn">
+									<input type="button" value="删除" class="filedel-btn"/>
+									<input type="button" value="转换" class="fileconv-btn"/>
+								</div>
+							</li>
+							<li>
+								<div class="filename"><i class="iconfont icon-1"></i><span class="thename">文本.txt</span></div>
+								<div class="filebtn">
+									<input type="button" value="删除" class="filedel-btn"/>
+									<input type="button" value="转换" class="fileconv-btn"/>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">04</span><small>*</small>消息级别</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit"><small>*</small>选择消息级别</p>
+					<div class="layui-input-inline">
+						<select name="dispatch" lay-search=""> 
+							<option value="">请选择消息级别</option>
+							<option value="1">红色</option>
+							<option value="2">橙色</option>
+							<option value="3">黄色</option>
+							<option value="4">蓝色</option>
+							<option value="5">绿色</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">05</span><small>*</small>覆盖范围</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit"><small>*</small>覆盖范围</p>
+					<div class="covarea-sel gb-tree-box left">
+						<span class="systit"><i class="iconfont icon-xuanze"></i>已选择地区</span>
+						<div class="gb-tree scroll">
+							<ul id="gb_tree_sel1" class="ztree ztree-close"></ul>
+						</div>
+					</div>
+					<div class="covarea-all gb-tree-box right">
+						<span class="systit"><i class="iconfont icon-quanbu"></i>全部地区</span>
+						<div class="gb-tree scroll">
+							<ul id="gb_tree_all1" class="ztree ztree-check"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">06</span><small>*</small>调用系统资源</p>
+				</div>
+				<div class="oneitem-cont">
+					<p class="oneitem-tit"><small>*</small>调用系统资源</p>
+					<div class="sysreso-sel gb-tree-box left">
+						<span class="systit"><i class="iconfont icon-xuanze"></i>已选择资源</span>
+						<div class="gb-tree scroll">
+							<ul id="gb_tree_sel2" class="ztree ztree-close"></ul>
+						</div>
+					</div>
+					<div class="sysreso-all gb-tree-box right">
+						<span class="systit"><i class="iconfont icon-quanbu"></i>全部资源</span>
+						<div class="gb-tree scroll">
+							<ul id="gb_tree_all2" class="ztree ztree-check"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">07</span>预覆盖人数/预覆盖面积</p>
+				</div>
+				<div class="oneitem-cont">
+					<div class="predictone">
+						<p class="oneitem-tit">预覆盖人数</p>
+						<p class="precount">1000万人</p>
+					</div>
+					<div class="predictwo">
+						<p class="oneitem-tit">预覆盖面积</p>
+						<p class="precount">120万平方公里</p>
+					</div>
+				</div>
+			</div>
+			<div class="form-oneitem">
+				<div class="fortit">
+					<p class="oneitem-tit"><span class="onenumb">08</span>发布部门/负责人</p>
+				</div>
+				<div class="oneitem-cont">
+					<div class="predictone">
+						<p class="oneitem-tit">发布部门</p>
+						<p class="precount">杭州市广播中心</p>
+					</div>
+					<div class="predictwo">
+						<p class="oneitem-tit">负责人</p>
+						<p class="precount">橙子</p>
+					</div>
+				</div>
+			</div>
+			<div class="tocreat crepad">
+				<div class="progcreat">
+					<input type="button" value="清空" class="toemptybtn" />
+					<input type="button" value="确认创建" class="tocreatbtn" />
+				</div>
+				<p class="warnword"><i class="iconfont icon-iconfontjinggao"></i>成功创建后，需编写对应的发布策略后，方能提交审核</p>
+			</div>
+			<p class="botword">© 2017-2018 浙江省应急广播平台</p>
+		</div>
+		<div class="popwindow"></div>
+		<div class="unreason">
+			<p class="poptit">预览</p>
+			<span class="popclose"><i class="iconfont icon-guanbi"></i></span>
+			<div class="uncont">
+				<p class="unword">视频.mp4</p>
+				<input type="button" value="预览" class="un-confirm" />
+			</div>
+		</div>
+		<div class="choose">
+			<p class="choword">确定删除此任务消息吗？</p>
+			<div class="chobtn">
+				<input type="button" value="删除" class="chopri cho-delete" />
+				<input type="button" value="取消" class="cho-cancel" />
+			</div>
+			<span class="triangle"><em></em></span>
+		</div>
+		<div class="toshift">
+			<p class="poptit">格式转换</p>
+			<span class="popclose"><i class="iconfont icon-guanbi"></i></span>
+			<div class="uncont">
+				<div class="format">
+					<span class="matit">当前格式：</span>
+					<span class="themat">mp3</span>
+				</div>
+				<div class="format">
+					<span class="matit">目标格式：</span>
+					<div class="matchoose">
+						<ul class="matlist">
+							<li>
+								<span class="matype">格式一</span>
+								<div class="matcheck">
+									<input type="radio" name="matcho" id="matone" checked="checked" />
+									<label for="matone"></label>
+								</div>
+							</li>
+							<li>
+								<span class="matype">格式二</span>
+								<div class="matcheck">
+									<input type="radio" name="matcho" id="matwo" />
+									<label for="matwo"></label>
+								</div>
+							</li>
+							<li>
+								<span class="matype">格式三</span>
+								<div class="matcheck">
+									<input type="radio" name="matcho" id="mathr" />
+									<label for="mathr"></label>
+								</div>
+							</li>
+							<li>
+								<span class="matype">格式四</span>
+								<div class="matcheck">
+									<input type="radio" name="matcho" id="matfou" />
+									<label for="matfou"></label>
+								</div>
+							</li>
+							<li>
+								<span class="matype">格式五</span>
+								<div class="matcheck">
+									<input type="radio" name="matcho" id="matfiv" />
+									<label for="matfiv"></label>
+								</div>
+							</li>
+							<li>
+								<span class="matype">格式六</span>
+								<div class="matcheck">
+									<input type="radio" name="matcho" id="matsix" />
+									<label for="matsix"></label>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tomat">
+					<div class="layui-progress layui-progress-big" lay-filter="demo"><!--  lay-showpercent="true" -->
+					  <div class="layui-progress-bar" lay-percent="0%"></div><!--   layui-bg-red -->
+					</div>
+					<p class="forword">转换中...</p>
+				</div>
+				<p class="succmat"><i class="iconfont icon-11"></i>转换成功！</p>
+				<input type="button" value="转换" class="layui-btn site-demo-active"  data-type="loading"/>
+			</div>
+		</div>
+	</form>
+</div>
+
+	
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		/*$('#impcontent').bind('input propertychange', function() { 
+		    $('.oneimp-count .countnew').html($('#impcontent').val().length);  
+		});
+		$('#imparea').bind('input propertychange', function() {  
+		    $('.area-count .countnew').html($('#imparea').val().length);  
+		});*/
+		$('#impcontent').on('keyup', function() { 
+		    $('.oneimp-count .countnew').html($('#impcontent').val().length);  
+		});
+		$('#imparea').on('keyup', function() {  
+		    $('.area-count .countnew').html($('#imparea').val().length);  
+		});
+
+		
+		$(function() {
+			$(document).on('click','.filedel-btn',function(event) {
+		        showDiv();
+		        $(this).parents('li').addClass('todel');
+		        //$(myDiv).toggle();
+		        $(document).one("click",
+		        function() { 
+		            $('.choose').hide();
+		            $('.filelist li').removeClass('todel');
+		        });
+		        event.stopPropagation(); 
+		    });
+		    
+		    $('.choose').click(function(event) {
+		        event.stopPropagation(); 
+		    });
+		});
+		function showDiv() {
+			var x = event.clientX - event.offsetX;
+			var y = event.clientY - event.offsetY;
+			$('.choose').css({'display':'block','top':y-90,'left':x-130});
+		}
+
+		$('.cho-delete').click(function(){
+			$('.choose').hide();
+			$('.filelist li.todel').remove();
+		})
+		$('.cho-cancel').click(function(){
+			$('.choose').hide();
+			$('.filelist li').removeClass('todel');
+		})
+
+		$('.gb-main-item').scroll(function(){
+			if($('.choose').is(':visible')){
+				$('.choose').hide();
+				$('.filelist li').removeClass('todel');
+			}
+		})
+
+		/*var uncH = parseInt($('.uncont').css('height'));
+		$('.unreason').css({'height':uncH+45,'margin-top':-(uncH+45)/2});*/
+
+		$(document).on('click','.toswitch',function(){
+			$('.popwindow').show();
+			$('.toshift').show();
+			$('.matlist li ').eq(0).find('input').prop('checked',true);
+			//$('.succmat').hide();
+		})
+
+		$(document).on('click','.filepre-btn',function(){
+			$('.popwindow').show();
+			$('.unword').html($(this).parents('li').find('.thename').html());
+			$('.unreason').show();
+		})
+
+		$(document).on('click','.fileconv-btn',function(){
+			$('.popwindow').show();
+			$('.toshift').show();
+			$('.matlist li ').eq(0).find('input').prop('checked',true);
+		})
+
+		
+		layui.use(['form', 'element'], function(){
+			var element = layui.element,form = layui.form;
+			form.render();
+
+			var itbtn = $('<span class="itbtn"></span>');
+			$('.layui-select-title').append(itbtn);
+			$('.gb-form .layui-form-radio').remove();
+
+		  
+			//触发事件
+			var active = {
+			    loading: function(othis){
+			      var DISABLED = 'layui-btn-disabled';
+			      if(othis.hasClass(DISABLED)) return;
+			      
+			      //模拟loading
+			      var n = 0,timer = setInterval(function(){
+			        n = n + Math.random()*10|0;  
+			        if(n>100){
+			          n = 100;
+			          clearInterval(timer);
+			          othis.removeClass(DISABLED);
+			          $('.uncont .tomat').hide();
+			          $('.uncont .succmat').show();
+			        }
+			        element.progress('demo', n+'%');
+			      }, 300+Math.random()*1000);
+			      
+			      othis.addClass(DISABLED);
+			    }
+			};
+		  
+			$('.site-demo-active').on('click', function(){
+				$('.uncont .tomat').show();
+				$('.uncont .succmat').hide();
+				var othis = $(this), type = $(this).data('type');
+				active[type] ? active[type].call(this, othis) : '';
+			});
+		});
+	})
+
+
+	$('.toemptybtn').click(function(){
+		$('.imptxt').val('');
+		$('.imparea').val('请输入消息文本');
+		$('.imparea').css('color','#ccc');
+		$('.countnew').html('0');
+		$('.filelist').remove();
+		$('.gb-form .layui-form-select .layui-input').val('');
+		$('.layui-anim-upbit dd').removeClass('layui-this');
+	})
+	
+	// zTree 的参数配置，深入使用请参考 API 文档（setting 配置详解）
+	var selSetting = {
+		view:{
+			showLine:false,//去掉连接线
+			addDiyDom:addDiyDom
+		}
+	};
+	var allSetting = {
+		view:{
+			showLine:false,//去掉连接线
+		},
+		check:{//添加复选框
+			enable:true,
+		},
+		callback: {
+			onCheck: zTreeOnCheck
+		}
+	};
+
+
+	function zTreeOnCheck(event, treeId, treeNode) {
+		// 勾选复选框将触发这个方法，在这里调用ajax获取已选数据
+	    console.log(treeNode)
+		// 	selData=treeNode;//ajax获取的数据赋值给已选数据
+	 //    if(treeNode.checked){
+		//  //    var treeObj = $.fn.zTree.getZTreeObj("gb_tree_all1");//获取全部数据的树的对象
+		// 	// var nodes = treeObj.getChangeCheckedNodes();//获取勾选的数据
+	 //    }
+		// 	$.fn.zTree.init($(this), selSetting, selData);//初始化已选数据的树
+	};
+	// zTree 的数据属性，深入使用请参考 API 文档（zTreeNode 节点数据详解）
+	// 全部数据
+	var allData = [{
+	    name: "浙江省",
+	    open: true,
+	    checked:true,
+	    children: [{
+	        name: "杭州市",
+	    	checked:true,
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "宁波市",
+	    	checked:true,
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "温州市",
+	    	checked:true,
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    }]
+	},{
+	    name: "浙江省1",
+	    open: true,
+	    children: [{
+	        name: "杭州市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "宁波市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "温州市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    }]
+	}];
+	// 已选数据
+	var selData=[{
+	    name: "浙江省",
+	    open: true,
+	    children: [{
+	        name: "杭州市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "宁波市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    },{
+	        name: "温州市",
+	        children: [{
+		        name: "上城区",
+		        children: [{
+			        name: "湖滨街道"
+			    }]
+		    }]
+	    }]
+	}];
+
+	$(document).ready(function() {
+		// 初始化树
+		ztree_Initialize();
+		// $.fn.zTree.init($("#gb_tree_all1"), allSetting, zNodes);
+		// $.fn.zTree.init($("#gb_tree_all2"), allSetting, zNodes);
+	});
+	function ztree_Initialize(argument) {
+		//带关闭按钮的树
+		$(".ztree-close").each(function() {
+			$.fn.zTree.init($(this), selSetting, selData);
+		});
+		//带复选框的树
+		$(".ztree-check").each(function() {
+			$.fn.zTree.init($(this), allSetting, allData);
+		});
+	}
+	
+</script>

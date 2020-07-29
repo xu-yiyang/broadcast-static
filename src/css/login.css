@@ -1,0 +1,72 @@
+.loginout{width:100%;height:100%;background:url(../images/loginbg.jpg) no-repeat center center;background-size:100% 100%;}
+.logcent{width:1320px;height:100%;margin:0 auto;position:relative;color:#7c8491;}
+.titbg{width:36%;height:336px;background:#000;opacity:0.3;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; position:absolute;top:50%;left:0;margin-top:-168px;}
+.titbef{display:inline-block;height:100%;width:20%;background:#000;opacity:0.6;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";position:absolute;right:-20%;top:0;}
+.titaft{display:inline-block;height:100%;width:20%;background:#000;opacity:0.4;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=10)";position:absolute;right:-40%;top:0;}
+.logtit{position:absolute;left:0;top:50%;margin-top:-43px;}
+.logframe{width:540px;height:590px;-moz-border-radius: 12px;-webkit-border-radius: 12px;border-radius:12px;overflow:hidden;background:#fff;position:absolute;top:50%;right:0;margin-top:-295px;}
+.fratop{width:100%;height:122px;background:url(../images/login-popbg.png) no-repeat #4579d8;background-size:100% 100%;position:relative;}
+.fratit{display:inline-block;width:160px;height:53px;font-size:24px;color:#585d66;text-align: center;line-height:60px;letter-spacing:6px;padding-left:6px;background:#fff;border-top-left-radius:6px;border-top-right-radius:6px;position:absolute;left:50%;bottom:0;margin-left:-80px;}
+.fracent{width:100%;height:468px;padding:70px 104px 60px 104px;position:relative;}
+.fraone,.fratwo{width:100%;height:44px;position:relative;margin-bottom:24px;}
+.icone,.ictwo,.icthr{display:inline-block;width:58px;height:100%;float:left;position:relative;z-index: 1}
+.icone i,.ictwo i,.icthr i{font-size:22px;position:absolute;top:50%;left:50%;margin-top:-11px;margin-left:-12px;color:#4579d8;}
+.icone:after,.ictwo:after,.icthr:after{content:'';width:1px;height:10px;background:#d9e0e3;position:absolute;top:50%;right:0;margin-top:-5px;}
+.fraone input,.fratwo input,.fracode input{color:#ccc;position:absolute;width:100%;height:100%;top:0;left:0;padding-left:78px;font-size:14px;line-height:42px;border:1px solid #d8d8d8;border-radius:6px;}
+#pwd{/* display: none; */color:#333;border:1px solid #999;}
+.iconfont.itok,.iconfont.itwarn{display:inline-block;font-size:16px;color:#14ae8f;position:absolute;right:-24px;top:50%;margin-top:-8px;}
+.iconfont.itwarn{color:#ff5b57;font-size:15px;}
+.fraone .itwarn,.fratwo .itok{display: none}
+.frathr{width:100%;zoom:1;}
+.frathr:after{content:'';display: block;height:0;clear:both;visibility: hidden;}
+.fracode{width:200px;height:44px;float:left;position:relative;overflow: hidden;}
+.codeimg{display: inline-block;float:right;cursor: pointer;width:120px;height:44px;border:1px solid #999;border-radius:6px;position:relative;}
+.codeimg img{display: block;height:72%;width: 80%;position:absolute;top:14%;left:10%;}
+.disablebtn{cursor:default;display:inline-block;width:100%;height:44px;line-height:44px;text-align:center;color:#fff;background:#bbb;border-radius:6px;margin-top:30px;border:0;font-size:16px;letter-spacing: 10px;padding-left:10px;}
+.disablebtn:hover{color:#fff;}
+.loginbtn{background:#3d6abe;cursor:pointer;}
+.loginbtn:hover{background:#325aa5;}
+.forget{color:#878e9a;width:80px;font-size:14px;position:absolute;bottom:60px;left:50%;margin-left:-38px;padding-left:20px;}
+.forget i{position:absolute;top:2px;left:0;}
+.forget:hover{color:#4579D8;}
+.copyright{color:#797c7f;width:100%;text-align: center;line-height:56px;position:absolute;left:0;bottom:0;z-index: 1}
+ @media screen and (max-width:1400px){
+	.logcent{width:960px;}
+	.titbg{height:260px;margin-top:-130px;}
+	.logtit{width:380px;margin-top:-30px;}
+	.logframe{width:440px;height:500px;margin-top:-250px;}
+	.fratop{height:90px;}
+	.fratit{width:120px;height:43px;font-size:20px;line-height:50px;margin-left:-60px;}
+	.fracent{height:410px;padding:50px 60px 40px;}
+	.fracode{width:190px;}
+	.codeimg{width:110px;}
+	.forget{bottom:40px;}
+}
+
+
+/* forget */
+.forframe{height:650px;margin-top:-325px;}
+.forframe .fratit{letter-spacing: 4px;padding-left:4px;}
+.forcent{height:528px;padding: 30px 104px 30px;}
+.forone,.fortwo,.forthr,.forfou{width:100%;padding-bottom:20px;position:relative;}
+.forproblem{line-height:30px;}
+.forchange{width:100%;position:relative;}
+.forone input,.fortwo input,.forthr input,.forfou input{width:100%;height:44px;padding-left:20px;font-size:14px;line-height:42px;border:1px solid #d8d8d8;border-radius:6px;}
+.pro-error{position:absolute;bottom:0px;line-height:20px;font-size:12px;color:#FF6864;}
+.seetxt{display:inline-block;width:20px;height:20px;padding:2px;position:absolute;right:15px;top:12px;cursor:pointer;}
+.seetxt:hover{color:#4579D8;}
+.seepass{color:#4579D8;}
+.seepass:hover{color:#558EFA;}
+.forframe .disablebtn {margin-top:10px;}
+.tosign{position:absolute;bottom:30px;right:104px;color: #878e9a;font-size: 14px;}
+.tosign i{margin-right:3px;}
+.tosign:hover{color:#4579D8;}
+ @media screen and (max-width:1400px){
+	.forframe{height:520px;margin-top:-260px;}
+	.forcent{height:430px;padding: 20px 60px;}
+	.forproblem{line-height:24px;}
+	.forone input,.fortwo input,.forthr input,.forfou input{height:34px;line-height:32px;}
+	.seetxt{top:7px;}
+	.forframe .disablebtn {margin-top:5px;height:34px;line-height:34px;}
+	.tosign{bottom:25px;right:60px;}
+}
