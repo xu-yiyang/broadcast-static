@@ -17455,29 +17455,29 @@ UE.plugins['autoheight'] = function () {
     me.on('setHeight',function(){
         me.disableAutoHeight()
     });
-    me.addListener('ready', function () {
-        me.enableAutoHeight();
-        //trace:1764
-        var timer;
-        domUtils.on(browser.ie ? me.body : me.document, browser.webkit ? 'dragover' : 'drop', function () {
-            clearTimeout(timer);
-            timer = setTimeout(function () {
-                //trace:3681
-                adjustHeight.call(me);
-            }, 100);
+    // me.addListener('ready', function () {
+    //     me.enableAutoHeight();
+    //     //trace:1764
+    //     var timer;
+    //     domUtils.on(browser.ie ? me.body : me.document, browser.webkit ? 'dragover' : 'drop', function () {
+    //         clearTimeout(timer);
+    //         timer = setTimeout(function () {
+    //             //trace:3681
+    //             adjustHeight.call(me);
+    //         }, 100);
 
-        });
-        //修复内容过多时，回到顶部，顶部内容被工具栏遮挡问题
-        var lastScrollY;
-        window.onscroll = function(){
-            if(lastScrollY === null){
-                lastScrollY = this.scrollY
-            }else if(this.scrollY == 0 && lastScrollY != 0){
-                me.window.scrollTo(0,0);
-                lastScrollY = null;
-            }
-        }
-    });
+    //     });
+    //     //修复内容过多时，回到顶部，顶部内容被工具栏遮挡问题
+    //     var lastScrollY;
+    //     window.onscroll = function(){
+    //         if(lastScrollY === null){
+    //             lastScrollY = this.scrollY
+    //         }else if(this.scrollY == 0 && lastScrollY != 0){
+    //             me.window.scrollTo(0,0);
+    //             lastScrollY = null;
+    //         }
+    //     }
+    // });
 
 
 };
